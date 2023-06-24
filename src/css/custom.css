@@ -4,6 +4,8 @@
  * work well for content-centric websites.
  */
 
+@import url('https://fonts.cdnfonts.com/css/cascadia-code');
+
 /* You can override the default Infima variables here. */
 :root {
   --ifm-color-primary: #2e8555;
@@ -27,4 +29,67 @@
   --ifm-color-primary-lighter: #32d8b4;
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+[data-theme='dark'] {
+  --ifm-color-primary: #0077be;
+  --ifm-color-primary-dark: #005d99;
+  --ifm-color-primary-darker: #004977;
+  --ifm-color-primary-darkest: #003555;
+  --ifm-color-primary-light: #00a3cc;
+  --ifm-color-primary-lighter: #00b8e6;
+  --ifm-color-primary-lightest: #4d79ff;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+[data-theme='dark'] {
+  --ifm-color-primary: #6db3d2;
+  --ifm-color-primary-dark: #5a9fbf;
+  --ifm-color-primary-darker: #4c8ea9;
+  --ifm-color-primary-darkest: #3d7d93;
+  --ifm-color-primary-light: #8fc8e0;
+  --ifm-color-primary-lighter: #a7d8e8;
+  --ifm-color-primary-lightest: #c4e7f0;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+html,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Cascadia Code', sans-serif;
+}
+
+h1 {
+  color: rgb(169, 253, 160);
+  padding: 10px;
+  border-radius: 5px;
+  display: inline-block;
+  background-color: #2e2d48;
+}
+h2 {
+  color: rgb(253, 240, 141);
+  padding: 10px;
+  border-radius: 5px;
+  display: inline-block;
+  background-color: #2e2d48;
+}
+h3 {
+  color: rgb(247, 136, 216);
+  padding: 10px;
+  border-radius: 5px;
+  display: inline-block;
+  background-color: #2e2d48;
+}
+strong {
+  color: rgb(137, 124, 251);
+  border-radius: 5px;
+  display: inline-block;
+  background-color: #2e2d48;
+}
+[data-theme='dark'] code {
+  color: rgb(247, 182, 136);
 }

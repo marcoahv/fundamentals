@@ -1,0 +1,8 @@
+{
+  "label": "Sub 1",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "The structure of the website."
+  }
+}
