@@ -53,43 +53,39 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
-html,
-h1,
+html {
+  font-family: 'Cascadia Code', sans-serif;
+}
+
+h1 {
+  font-family: 'Cascadia Code', sans-serif;
+  color: rgba(76, 217, 248, 0.531);
+}
+
 h2,
 h3,
 h4,
 h5,
 h6 {
   font-family: 'Cascadia Code', sans-serif;
+  color: rgba(76, 217, 248, 0.531);
+  padding: 7px;
+  border-radius: 5px;
+  display: inline-block;
+  /* background-color: #2e2d48; */
 }
 
-h1 {
-  color: rgb(169, 253, 160);
-  padding: 10px;
-  border-radius: 5px;
-  display: inline-block;
-  background-color: #2e2d48;
-}
-h2 {
-  color: rgb(253, 240, 141);
-  padding: 10px;
-  border-radius: 5px;
-  display: inline-block;
-  background-color: #2e2d48;
-}
-h3 {
-  color: rgb(247, 136, 216);
-  padding: 10px;
-  border-radius: 5px;
-  display: inline-block;
-  background-color: #2e2d48;
-}
 strong {
-  color: rgb(137, 124, 251);
+  color: rgba(251, 124, 249, 0.623);
+  border-radius: 5px;
+  display: inline-block;
+  /* background-color: #2e2d48; */
+}
+
+code {
+  font-weight: bolder;
+  color: rgba(255, 213, 5, 0.677);
   border-radius: 5px;
   display: inline-block;
   background-color: #2e2d48;
-}
-[data-theme='dark'] code {
-  color: rgb(247, 182, 136);
 }
