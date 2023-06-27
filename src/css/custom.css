@@ -59,7 +59,7 @@ html {
 
 h1 {
   font-family: 'Cascadia Code', sans-serif;
-  color: rgba(76, 217, 248, 0.531);
+  color: rgba(76, 217, 248, 0.635);
 }
 
 h2,
@@ -68,7 +68,7 @@ h4,
 h5,
 h6 {
   font-family: 'Cascadia Code', sans-serif;
-  color: rgba(76, 217, 248, 0.531);
+  color: rgba(76, 217, 248, 0.635);
   padding: 7px;
   border-radius: 5px;
   display: inline-block;
@@ -87,5 +87,9 @@ code {
   color: rgba(255, 213, 5, 0.677);
   border-radius: 5px;
   display: inline-block;
+  background-color: #2e2d48;
+}
+
+details {
   background-color: #2e2d48;
 }
