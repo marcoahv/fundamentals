@@ -1,0 +1,8 @@
+{
+  "label": "Section One",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "General html stuff"
+  }
+}
