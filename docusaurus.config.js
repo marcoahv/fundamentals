@@ -83,7 +83,7 @@ const config = {
         copyright: `Copyright © ${new Date().getFullYear()} ExpoWindow.io, Built with Docusaurus.`,
       },
       prism: {
-        theme: darkCodeTheme,
+        theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
       },
     }),
