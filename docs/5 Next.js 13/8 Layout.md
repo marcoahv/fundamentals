@@ -108,7 +108,7 @@ export default function RootLayout({ children }) {
 
 - Now we can wrap the header tag, and the rest of the items will be rendered within the section tag.
 
-```js
+```jsx
 export default function ConferenceLayout({ children }) {
   return (
     <>
@@ -129,7 +129,8 @@ export default function ConferenceLayout({ children }) {
 
 I've already create a `style.css` file within the conference folder that you can see here.
 
-```css conference/styles.css
+```css
+/* conference/styles.css */
 header {
   width: 100%;
   padding: 50px 0px 50px;

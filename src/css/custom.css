@@ -97,3 +97,12 @@ h1 {
   display: inline-block;
   background-color: #2e2d48;
 }
+
+[data-theme='dark'] details {
+  background-color: #1b1b1d;
+  border-color: #446777;
+}
+
+[data-theme='dark'] details:hover {
+  border-color: #4cd9f8a2;
+}
