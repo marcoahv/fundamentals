@@ -6,18 +6,15 @@ sidebar_position: 2
 
 ---
 
-<details>
-<summary><h2>15 What Is Responsive Design?</h2></summary>
+## 15 What Is Responsive Design?
 
-<details>
-<summary><h3>1. responsive design</h3></summary>
+>
+
+### responsive design
 
 - is when we use html and css to make a web site or an application layout respond to different screen sizes
 
-</details>
-
-<details>
-<summary><h3>2. some of the different ways to achieve responsive design</h3></summary>
+### some of the different ways to achieve responsive design
 
 - set the viewport/scale
 - use fluid widths as appose to fixed
@@ -26,49 +23,61 @@ sidebar_position: 2
 - Another good idea is to use REM units over pixels
 - it keeps sizes intact with the rest of the page because a rem unit is a multiplier of whatever the root hTML elements font size is
 
-</details>
-
-<details>
-<summary><h3>3. mobile first method</h3></summary>
+### mobile first method
 
 - This is where you first design the layout for mobile devices meaning small screens and then you add your media queries for the larger screen styles and you might even display less content on mobile devices.
 
-</details>
-
-</details>
+### **Practice 15**
 
 ---
 
-<h2>16 Getting Started With Media Queries</h2>
+## 16 Getting Started With Media Queries
 
-<h3>1. We can do media queries for both width and height</h3>
+>
 
-<h3>2. as far as testing your your media queries and breakpoints</h3>
+### We can do media queries for both width and height
+
+>
+
+### as far as testing your your media queries and breakpoints
 
 - you can resize the browser
+
 - you should always check them out with the chrome tools
 
-<h3>3. Smartphones media query (max-width: 500px)</h3>
+### Smartphones media query (max-width: 500px)
 
-<h3>4. tablet media query (max-width: 768px)</h3>
+>
+
+### tablet media query (max-width: 768px)
 
 - add min-width if we want a different style for smartphones and then something different for tablets
 
 - you might sometimes see this @media only screen and (max-width: 500px)
 
-<h3>5. normal size media query (desktop)</h3>
+### normal size media query (desktop)
 
-<h3>6. widescreen media query</h3>
+>
+
+### widescreen media query
 
 - let's test this out in the device toolbar
 
-<h3>7. media query for landscape</h3>
+### media query for landscape
 
-<h3>8. we can actually have separate style sheets as our media query</h3>
+>
 
-<h2>17 Em & Rem Units</h2>
+### we can actually have separate style sheets as our media query
 
-<h3>1. let's open up our dev tools (em unit)</h3>
+### **Practice 16**
+
+---
+
+## 17 Em & Rem Units
+
+>
+
+### let's open up our dev tools (em unit)
 
 - So if we go to computed tab (in the dev tools)
 - Now headings are a bit different
@@ -76,21 +85,35 @@ sidebar_position: 2
 
 - So another reason is for nested elements
 
-<h3>2. So my suggestion would be just to drop ems altogether and use REMS</h3>
+### So my suggestion would be just to drop ems altogether and use REMS
 
-<h3>3. Using rem units</h3>
+>
 
-<h3>4. setting the html root element to 10px</h3>
+### Using rem units
 
-<h3>5. setting the html root element to 62.5%</h3>
+>
 
-<h3>6. another huge reason to use REM units this is for accessibility and browser settings</h3>
+### setting the html root element to 10px
+
+>
+
+### setting the html root element to 62.5%
+
+>
+
+### another huge reason to use REM units this is for accessibility and browser settings
+
+>
+
+### **Practice 17**
 
 ---
 
-<h2>18 Vh & Vw Units</h2>
+## 18 Vh & Vw Units
 
-<h3>1. using vh units</h3>
+>
+
+### using vh units
 
 - This is where viewport heights come in
 
@@ -107,7 +130,7 @@ sidebar_position: 2
 - `no repeat`
 - `center center/cover`
 
-<h3>2. using vw units</h3>
+### using vw units
 
 - let's work on actually centering the text
 
@@ -127,5 +150,6 @@ sidebar_position: 2
 
 - we just need to change the padding of the header
 
----
+### **Practice 18**
 
+---
