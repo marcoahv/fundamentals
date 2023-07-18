@@ -79,7 +79,7 @@ sidebar_position: 11
 
   you're also going to see camelCase property naming convention instead of html attribute names
 
-  for example `onclick` and `tabindex` will become `onClick` and `tabIndex` with an upper case C and I
+  for example `onclick` and `tabIndex` will become `onClick` and `tabIndex` with an upper case C and I
 
   we will see these differences as we progress through the course so don't worry about having to memorize them
 

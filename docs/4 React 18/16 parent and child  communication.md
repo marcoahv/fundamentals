@@ -18,11 +18,9 @@ any data in the parent component when passed as props is available in the childr
 
 let me help you understand better with an example
 
-- i'm going to create a new file called parentComponent.js
+- i'm going to create a new file called `ParentComponent.js`
 
-within the file i'm going to define a new function component
-
-- export const parent component is equal to an arrow function
+within the file i'm going to define a new function component:
 
 ```js
 export const ParentComponent = () => {}
@@ -40,9 +38,9 @@ export const ParentComponent = () => {
 }
 ```
 
-next i will create another file called childComponent.js
+next i will create another file called `ChildComponent.js`
 
-- export const child component, and for the jsx i will add a button that says greet parent
+and for the jsx i will add a button that says greet parent
 
 ```js
 export const ChildComponent = () => {
@@ -68,21 +66,38 @@ export const ParentComponent = () => {
 }
 ```
 
-now for me i have a vs code plugin which automatically imports the child component
+make sure you import child component from dot slash child component
 
-if that doesn't work for you make sure you import child component from dot slash child component
-
-back in app component i will include the parent component in the jsx, so import parent component from dot slash components slash parent component
+back in `App.js component` i will include the parent component in the jsx, so import parent component from dot slash components slash parent component
 
 and add it in the jsx
 
 ```js
+import './App.css'
+import { ParentComponent } from './components/ParentComponent'
+// import { ClickHandler } from './components/ClickHandler'
+// import { Greet } from './components/Greet'
+// import { Message } from './components/Message'
 
+function App() {
+  return (
+    <div className='App'>
+      {/* <Greet name='Bruce' heroName='Batman' />
+      <Greet name='Clark' heroName='Superman'>
+        <button>Action</button>
+      </Greet>
+      <Greet name='Diana' heroName='Wonder Woman'>
+        <p>This is children props</p>
+      </Greet> */}
+      {/* <Message /> */}
+      {/* <ClickHandler /> */}
+      <ParentComponent />
+    </div>
+  )
+}
+
+export default App
 ```
-
-now if i save all the files and take a look at the browser
-
-if i zoom in a bit you should be able to see the button greet parent
 
 if i click on the button though nothing happens right now
 

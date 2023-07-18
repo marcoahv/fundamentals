@@ -31,7 +31,7 @@ you can make
 
 let's get started
 
-- i'm going to go back to vs code and create a new file PostList.js
+- i'm going to go back to vs code and create a new file` PostList.js`
 
 and within the file i'm going to create a function component
 
@@ -106,7 +106,7 @@ export const PostList = () => {
 
   useEffect(() => {
     fetch('https://jsonplaceholder.typicode.com/posts')
-      .then((response) => response.jason())
+      .then((response) => response.json())
       .then((data) => setPosts(data))
   })
 }
@@ -122,7 +122,7 @@ export const PostList = () => {
 
   useEffect(() => {
     fetch('https://jsonplaceholder.typicode.com/posts')
-      .then((response) => response.jason())
+      .then((response) => response.json())
       .then((data) => setPosts(data))
       .catch((err) => {
         console.log(err)
@@ -145,7 +145,7 @@ export const PostList = () => {
 
   useEffect(() => {
     fetch('https://jsonplaceholder.typicode.com/posts')
-      .then((response) => response.jason())
+      .then((response) => response.json())
       .then((data) => setPosts(data))
       .catch((err) => {
         console.log(err)
@@ -171,7 +171,7 @@ export const PostList = () => {
 
   useEffect(() => {
     fetch('https://jsonplaceholder.typicode.com/posts')
-      .then((response) => response.jason())
+      .then((response) => response.json())
       .then((data) => setPosts(data))
       .catch((err) => {
         console.log(err)
@@ -203,7 +203,7 @@ export const PostList = () => {
 
   useEffect(() => {
     fetch('https://jsonplaceholder.typicode.com/posts')
-      .then((response) => response.jason())
+      .then((response) => response.json())
       .then((data) => setPosts(data))
       .catch((err) => {
         console.log(err)
@@ -214,7 +214,7 @@ export const PostList = () => {
     <div>
       <ul>
         {posts.map((post) => {
-          return <li key={posts.id}>{posts.title}</li>
+          return <li key={post.id}>{post.title}</li>
         })}
       </ul>
     </div>
@@ -231,7 +231,46 @@ make sure to import the component at the top host list from dot slash components
 slash post list
 
 ```js
+import './App.css'
+// import './appStyles.css'
+// import Styles from './appStyles.module.css'
+// import { Inline } from './components/Inline'
+// import { NameList } from './components/NameList'
+// import { UserGreeting } from './components/UserGreeting'
+// import { ParentComponent } from './components/ParentComponent'
+// import { ClickHandler } from './components/ClickHandler'
+// import { Greet } from './components/Greet'
+// import { Message } from './components/Message'
+// import { Stylesheet } from './components/Stylesheet'
+// import { Form } from './components/Form'
+import { PostList } from './components/PostList'
 
+function App() {
+  return (
+    <div className='App'>
+      {/* <Greet name='Bruce' heroName='Batman' />
+      <Greet name='Clark' heroName='Superman'>
+        <button>Action</button>
+      </Greet>
+      <Greet name='Diana' heroName='Wonder Woman'>
+        <p>This is children props</p>
+      </Greet> */}
+      {/* <Message /> */}
+      {/* <ClickHandler /> */}
+      {/* <ParentComponent /> */}
+      {/* <UserGreeting /> */}
+      {/* <NameList /> */}
+      {/* <Stylesheet /> */}
+      {/* <Inline />
+      <h1 className='error'>Error</h1>
+      <h1 className={Styles.success}>Success</h1> */}
+      {/* <Form /> */}
+      <PostList />
+    </div>
+  )
+}
+
+export default App
 ```
 
 if you now head to the browser
@@ -267,7 +306,7 @@ which is title body and user id are hard coded
 
 let's instead capture user inputs and make the first request using the data
 
-- back in vs code i'm going to create a new file called post form dot js
+- back in vs code i'm going to create a new file called `PostForm.js`
 
 within the file i'm going to create a function component
 
@@ -672,7 +711,48 @@ now let's include this component in app component
 - import the component at the top
 
 ```js
+import './App.css'
+// import './appStyles.css'
+// import Styles from './appStyles.module.css'
+// import { Inline } from './components/Inline'
+// import { NameList } from './components/NameList'
+// import { UserGreeting } from './components/UserGreeting'
+// import { ParentComponent } from './components/ParentComponent'
+// import { ClickHandler } from './components/ClickHandler'
+// import { Greet } from './components/Greet'
+// import { Message } from './components/Message'
+// import { Stylesheet } from './components/Stylesheet'
+// import { Form } from './components/Form'
+import { PostForm } from './components/PostForm'
+import { PostList } from './components/PostList'
 
+function App() {
+  return (
+    <div className='App'>
+      {/* <Greet name='Bruce' heroName='Batman' />
+      <Greet name='Clark' heroName='Superman'>
+        <button>Action</button>
+      </Greet>
+      <Greet name='Diana' heroName='Wonder Woman'>
+        <p>This is children props</p>
+      </Greet> */}
+      {/* <Message /> */}
+      {/* <ClickHandler /> */}
+      {/* <ParentComponent /> */}
+      {/* <UserGreeting /> */}
+      {/* <NameList /> */}
+      {/* <Stylesheet /> */}
+      {/* <Inline />
+      <h1 className='error'>Error</h1>
+      <h1 className={Styles.success}>Success</h1> */}
+      {/* <Form /> */}
+      <PostForm />
+      <PostList />
+    </div>
+  )
+}
+
+export default App
 ```
 
 save the file and head back to the browser

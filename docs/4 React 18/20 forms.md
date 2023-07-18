@@ -4,7 +4,7 @@ sidebar_position: 20
 
 # Forms
 
-### create a form with regular html
+### create a form like regular html
 
 all right for our next topic we are going to learn the basics of working with forms in react
 
@@ -41,7 +41,44 @@ if we include this component in app component
 - import the component at the top
 
 ```js
+import './App.css'
+import './appStyles.css'
+// import Styles from './appStyles.module.css'
+// import { Inline } from './components/Inline'
+// import { NameList } from './components/NameList'
+// import { UserGreeting } from './components/UserGreeting'
+// import { ParentComponent } from './components/ParentComponent'
+// import { ClickHandler } from './components/ClickHandler'
+// import { Greet } from './components/Greet'
+// import { Message } from './components/Message'
+// import { Stylesheet } from './components/Stylesheet'
+import { Form } from './components/Form'
 
+function App() {
+  return (
+    <div className='App'>
+      {/* <Greet name='Bruce' heroName='Batman' />
+      <Greet name='Clark' heroName='Superman'>
+        <button>Action</button>
+      </Greet>
+      <Greet name='Diana' heroName='Wonder Woman'>
+        <p>This is children props</p>
+      </Greet> */}
+      {/* <Message /> */}
+      {/* <ClickHandler /> */}
+      {/* <ParentComponent /> */}
+      {/* <UserGreeting /> */}
+      {/* <NameList /> */}
+      {/* <Stylesheet /> */}
+      {/* <Inline />
+      <h1 className='error'>Error</h1>
+      <h1 className={Styles.success}>Success</h1> */}
+      <Form />
+    </div>
+  )
+}
+
+export default App
 ```
 
 save the file and take a look at the browser
@@ -54,9 +91,9 @@ right now though the form is regular html
 
 we want to manage it with react
 
-to do that the first step is to create a state variable to handle the value and change in value of this input element
+- to do that the first step is to `create a state variable to handle the value` and change in value of this input element
 
-so in form.js, at the top import useState from react
+so in Form.js, at the top import useState from react
 
 ```js
 import { useState } from 'react'
@@ -250,7 +287,7 @@ import { useState } from 'react'
 export const Form = () => {
   const [username, setUsername] = useState(' ')
 
-  const handlerSubmit = (event) => {}
+  const handleSubmit = (event) => {}
 
   return (
     <form onSubmit={handleSubmit}>
@@ -273,7 +310,7 @@ import { useState } from 'react'
 export const Form = () => {
   const [username, setUsername] = useState(' ')
 
-  const handlerSubmit = (event) => {
+  const handleSubmit = (event) => {
     event.preventDefault()
   }
 
@@ -300,7 +337,7 @@ import { useState } from 'react'
 export const Form = () => {
   const [username, setUsername] = useState(' ')
 
-  const handlerSubmit = (event) => {
+  const handleSubmit = (event) => {
     event.preventDefault()
     alert(`Form data is ${username}`)
   }

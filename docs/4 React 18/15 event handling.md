@@ -6,33 +6,35 @@ sidebar_position: 15
 
 ### let's see how to handle events in react
 
-alright for our next topic let's discuss event handling in react
-
 - any application you build typically tends to have user interaction
 
-- when the user interacts with your app events are fired
-
-for example mouse clicks, mouse over, key press, change event, etc
+- when the user interacts with your app events are fired for example mouse clicks, mouse over, key press, change event, etc
 
 - let's see how to handle events in react
 
-### we will focus on just `the click event` but the concept holds good for other events as well
+### The click event
+
+we will focus on just the `click event` but the concept holds good for other events as well
 
 in fact we've already had a look at the click event a few minutes ago but let's look at it in a bit more detail
 
-- `let's begin by creating a new component`
+1. `let's begin by creating a new component`
 
 so in the components folder new file called `ClickHandler.js`
 
 here define a new component, export const click handler and this is going to be equal to an arrow function
 
 ```js
+// ClickHandler.js
+
 export const ClickHandler = () => {}
 ```
 
 in the jsx i'm going to add a div tag and a button within the div tag, click
 
 ```js
+// ClickHandler.js
+
 export const ClickHandler = () => {
   return (
     <div>
@@ -42,7 +44,9 @@ export const ClickHandler = () => {
 }
 ```
 
-### when the user clicks on this button a click event is fired, our goal is to capture that click event and execute some basic code
+when the user clicks on this button a click event is fired,
+
+- `our goal is to capture that click event and execute some basic code`
 
 - the first point you have to make note of is react events are named using camel case rather than lowercase
 
@@ -60,19 +64,19 @@ export const ClickHandler = () => {
 
 - the second point is with jsx you pass a function as the event handler rather than a string
 
-so instead of a string click handler with parentheses we're going to have click handler `within curly braces`
+2. so instead of a string click handler with parentheses we're going to have click handler `within curly braces`
 
 ```js
 export const ClickHandler = () => {
   return (
     <div>
-      <button onClick={ClickHandler}>Click</button>
+      <button onClick={clickHandler}>Click</button>
     </div>
   )
 }
 ```
 
-- now let's define this click handler function
+3. now let's define this `ClickHandler function`
 
 remember in javascript it is very much possible to define a function within a function
 
@@ -95,23 +99,38 @@ export const ClickHandler = () => {
 
 let's save
 
-this included in app component
+this included in App component and import the component at the top
 
 ```js
+// App.js
 
+import './App.css'
+import { ClickHandler } from './components/ClickHandler'
+// import { Greet } from './components/Greet'
+// import { Message } from './components/Message'
+
+function App() {
+  return (
+    <div className='App'>
+      {/* <Greet name='Bruce' heroName='Batman' />
+      <Greet name='Clark' heroName='Superman'>
+        <button>Action</button>
+      </Greet>
+      <Greet name='Diana' heroName='Wonder Woman'>
+        <p>This is children props</p>
+      </Greet> */}
+      {/* <Message /> */}
+      <ClickHandler />
+    </div>
+  )
+}
+
+export default App
 ```
 
-- import the component at the top
+and head back to the browser to test this out in the browse
 
-```js
-
-```
-
-and head back to the browser to test this out
-
-in the browser you can see the click button
-
-if i open the developer tools console and click on the button you should see the message button clicked in the console
+you can see the click button if i open the developer tools console and click on the button you should see the message button clicked in the console
 
 our click event handling works as expected
 

@@ -98,7 +98,7 @@ sidebar_position: 5
   reportWebVitals()
   ```
 
-  in index.js we specify the root component which is app component and the dom element which will be controlled by react
+  in index.js we specify the root component which is App component and the dom element which will be controlled by react
 
   the dom element in our example is an element with id is equal to root and if you can recollect this is the element in our index.html file
 

@@ -4,92 +4,94 @@ sidebar_position: 10
 
 # Default export vs named export
 
-### export default is what allows us to import the component with any name
+### export default
 
-  all right before we proceed i would like to highlight a point about exporting and importing components
+is what allows us to import the component with any name
 
-  please note here that we are exporting greet component as a default export from
-  greet.js
+all right before we proceed i would like to highlight a point about exporting and importing components
 
-  ```js
-  const Greet = () => {
-    return <h1>Hello Vishwas</h1>
-  }
+please note here that we are exporting greet component as a default export from
+greet.js
 
-  export default Greet
-  ```
+```js
+const Greet = () => {
+  return <h1>Hello Vishwas</h1>
+}
 
-  is what allows us to import the component with any name
+export default Greet
+```
 
-  i can change greet to myComponent, change the tag to myComponent
+is what allows us to import the component with any name
 
-  ```js
-  import './App.css'
-  import myComponent from './components/Greet'
+i can change greet to myComponent, change the tag to myComponent
 
-  function App() {
-    return (
-      <div className='App'>
-        <myComponent />
-      </div>
-    )
-  }
+```js
+import './App.css'
+import myComponent from './components/Greet'
 
-  export default App
-  ```
+function App() {
+  return (
+    <div className='App'>
+      <myComponent />
+    </div>
+  )
+}
 
-  head back to the browser and you can see that it still works as expected
+export default App
+```
 
-### named exports
+head back to the browser and you can see that it still works as expected
 
-  but in certain articles or videos you might also find `named exports`
+### named exports **->**
 
-  let me comment the default export
+but in certain articles or videos you might also find `named exports`
 
-  and prepend the constant with the export keyword
+let me comment the default export
 
-  so export const greet
+and prepend the constant with the export keyword
 
-  ```js
-  export const Greet = () => {
-    return <h1>Hello Vishwas</h1>
-  }
+so export const greet
 
-  // export default Greet
-  ```
+```js
+export const Greet = () => {
+  return <h1>Hello Vishwas</h1>
+}
 
-  this is what is termed as a named export
+// export default Greet
+```
 
-  `in this situation you have to import the component with the exact same name`
+this is what is termed as a named export
 
-  if i save the file
-  you can straight away see we have an error
+`in this situation you have to import the component with the exact same name`
 
-  (export default imported as my component was not found in components gree)t
+if i save the file
+you can straight away see we have an error
 
-  so you have to change the import statement to import the greet function
+(export default imported as my component was not found in components gree)t
 
-  `for named exports we use curly braces and then the export`
+so you have to change the import statement to import the greet function
 
-  so import greet from dot slash components slash greet
+`for named exports we use curly braces and then the export`
 
-  and use the same tag
+so import greet from dot slash components slash greet
 
-  ```js
-  import './App.css'
-  import { Greet } from './components/Greet'
+and use the same tag
 
-  function App() {
-    return (
-      <div className='App'>
-        <Greet />
-      </div>
-    )
-  }
+```js
+import './App.css'
+import { Greet } from './components/Greet'
 
-  export default App
-  ```
+function App() {
+  return (
+    <div className='App'>
+      <Greet />
+    </div>
+  )
+}
 
-  if we take a look at the browser our app is working once again
+export default App
+```
 
-  `now i am going to be using named exports for the most part but make sure you understand the difference between default and named exports`
+if we take a look at the browser our app is working once again
+
+`now i am going to be using named exports for the most part but make sure you understand the difference between default and named exports`

@@ -2,7 +2,7 @@
 sidebar_position: 14
 ---
 
-# Hooks
+# Hooks at a glance
 
 ### a hook is a special function that lets you hook into react features
 
@@ -14,30 +14,28 @@ a hook is a special function that lets you hook into react features
 
 similarly there are other hooks that let you hook into other features
 
-you have
+You have:
 
-useReducer,
+- `useReducer`, for more complex state management,
 
-for more complex state management,
+- `useEffect`
 
-useEffect
+- `useContext`
 
-useContext
+- `useRef`
 
-useRef
+- `useMemo`
 
-useMemo
-
-useCallback,
+- `useCallback`
 
 and the more recent additions to react 18 namely
 
-useTransition
+- `useTransition`
 
 and
 
-useDeferredValue
+- `useDeferredValue`
 
-- as a beginner not every hook is important in this fundamentals crash course apart from `useState`, we will later on look at `useEffect` and `useTransition`
+as a beginner not every hook is important in this fundamentals crash course apart from `useState`, we will later on look at `useEffect` and `useTransition`
 
 as for the remaining hooks they are slightly more advanced so i will point you to the right resource at the end of this video

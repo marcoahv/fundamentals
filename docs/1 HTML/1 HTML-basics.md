@@ -2031,3 +2031,301 @@ _the more popular HTML5 semantic tags_...
 - _article_...
 
 - _aside_...
+
+Now, to get a first feeling
+
+for how React keeps the user interface in sync with state,
+
+let's quickly compare the advice app that we built
+
+in the first section,
+
+with a Vanilla JavaScript implementation
+
+of the same application.
+
+So here I have them open side by side,
+
+and if you want to follow along,
+
+I actually added this vanillajavascript.html file
+
+right into the same code sandbox
+
+that we used to build this first advice app.
+
+So right here in the source folder,
+
+there is now this vanilla.js,
+
+or actually vanilla-.html file.
+
+And again, I will post the link
+
+to this code sandbox into this lecture, all right?
+
+So in case you don't really remember what we did back here,
+
+you can always pause the video
+
+and just analyze this code here for a second for yourself.
+
+So what I want to do now again,
+
+is to just quickly compare the React code
+
+that we wrote before with this Vanilla JavaScript.
+
+Now, ironically, this Vanilla JavaScript implementation
+
+is actually in an HTML file.
+
+So I placed all the HTML files
+
+and then also the JavaScript right into one HTML file,
+
+just to keep it all in the same place.
+
+But already this shows us the very first difference
+
+between the two philosophies.
+
+So here,
+
+everything is basically done in JavaScript,
+
+so even the JSX.
+
+So basically this kind of HTML here
+
+is written inside of JavaScript.
+
+So JavaScript is taking care of everything.
+
+While here, in the Vanilla JavaScript,
+
+HTML is still in charge.
+
+So we have an HTML file, and that HTML file
+
+is then including the JavaScript into it.
+
+So it's basically the other way around, right?
+
+So right inside this HTML,
+
+we still have our same H1 here, for the advice.
+
+The only difference is that it's empty.
+
+While here, we include that advice state,
+
+then we have the button and the paragraph for the message.
+
+Then inside of the script,
+
+so inside of the JavaScript part,
+
+we need to, of course,
+
+then manually select all of these three DOM elements.
+
+So I selected the advice element,
+
+the button and also this one here for the count.
+
+And so for that,
+
+all of them needed to have this class,
+
+while here, well, we don't need any of that.
+
+There is no class here in any of these elements.
+
+And also we are nowhere manually selecting them, right?
+
+So then next we have this get advice function,
+
+which we will get to in a minute,
+
+and then we still basically have two pieces
+
+which we can call state.
+
+So we have a count value, which starts at zero,
+
+and an advice.
+
+And so these are exactly the same as here, these states.
+
+Then finally, in the end, we also attach an event listener.
+
+So this get advice function right here.
+
+So we attach that to the button
+
+that we selected here manually before,
+
+while here, in the JSX,
+
+we do it using this on-click attribute right here.
+
+So right off the bat you see immediately
+
+that we need to do a lot of things manually over here,
+
+that here, happen more automatically.
+
+And again, that here it is really the JavaScript
+
+that is in charge of everything,
+
+while here, it is still the HTML.
+
+But anyway, let's now get here
+
+to the heart of the application,
+
+which is really this get advice function.
+
+So just like here, in our React implementation,
+
+we start by getting the data.
+
+And then we update the service, or actually the advice,
+
+and the count values that we defined down here, right?
+
+So we're updating the count here,
+
+and the advice right here.
+
+However, simply updating these two values
+
+will, of course, do nothing.
+
+So the user interface will not change
+
+by us updating these JavaScript values.
+
+While here, in this React example,
+
+as soon as we update the advice and the count state,
+
+automatically, React kept the user interface
+
+in sync with these two values.
+
+And so that's basically the big message that we got
+
+from the previous lecture, right?
+
+So that React and all these other front-end frameworks
+
+are really good at keeping the data automatically in sync
+
+with the user interface.
+
+And again, that's exactly what's happening here.
+
+All we care about here is to set the new data,
+
+and that's all we do.
+
+React is the one who automatically takes care
+
+of updating the user interface
+
+without us having to do anything.
+
+But here, of course,
+
+in the Vanilla JavaScript implementation,
+
+we need to manually do that.
+
+So we need to manually keep the data in sync with the UI.
+
+So we have the data here,
+
+and then we use that data to update the DOM manually.
+
+So we come here to our count element,
+
+and the advice element
+
+that we also manually selected previously,
+
+and we change their text content property,
+
+which is just normal DOM manipulation.
+
+So then here we set this one to the count variable,
+
+and this one to the advice variable.
+
+And this really is a fundamental difference
+
+and a fundamental shift
+
+in how we build front-end applications.
+
+Now, you might argue that in this very small example,
+
+doing this is not a lot of work,
+
+and maybe it might not even be necessary to learn React.
+
+And I would agree with you
+
+that we would, of course, not need React
+
+to build something really small and simple such as this.
+
+But as soon as we get just a little bit bigger than this,
+
+it starts kind of getting out of control.
+
+So we would have to select tons of elements
+
+and we would really need to create a lot of extra code
+
+that, with React, we don't have to,
+
+again, because it automatically takes care
+
+of keeping the data in sync with the user interface.
+
+That's really the main thing
+
+that I want you to keep in mind from this lecture
+
+and from the previous one.
+
+So, of course,
+
+feel free to analyze all the differences
+
+that exist here in this code,
+
+because just with this,
+
+you can really see the two different philosophies at work.
+
+I'm not going to go even deeper into this at this point,
+
+but it would be pretty interesting
+
+if you take a few minutes and really compare
+
+what's going on on this side here,
+
+and on the React implementation.
+
+And so once you're done doing that,
+
+it's now time to finally learn
+
+what React actually is in a bit more detail.
+
+So hopefully, I see you right in the next lecture soon.
