@@ -602,7 +602,7 @@ function Message(props) {
 
 ### Setting Up the Project
 
-**- Once in the desired folder, type `npx create-react-app@5 pizza-menu` to set up the project.**
+- Once in the desired folder, type `npx create-react-app@5 pizza-menu` to set up the project.
 
 - This command uses Create-React-App version 5 to create a project called "pizza-menu".
 
@@ -622,13 +622,13 @@ function Message(props) {
 
 ### Starting the App
 
-**- To start the app, we use the integrated terminal in VS Code and run the command `npm start` .**
+- To start the app, we use the integrated terminal in VS Code and run the command `npm start` .
 
 - This command starts the app and opens a new browser tab at localhost port 3000.
 
 ### Modifying the App
 
-**- We can modify the app by changing the `App` component in the `App` file.**
+- We can modify the app by changing the `App` component in the `App` file.
 
 ```jsx
 import './App.css'
