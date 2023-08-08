@@ -20,7 +20,10 @@ sidebar_position: 3
 
 **- Open the terminal in VS Code (shortcut: Control + `) and enter the following command:**
 
-- ` npx create-expo-app@latest hello-world`
+```
+
+ npx create-expo-app@latest [project-name]
+```
 
 - This command will create a new React Native project with the Expo package already installed.
 

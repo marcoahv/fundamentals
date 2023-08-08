@@ -2,7 +2,7 @@
 sidebar_position: 24
 ---
 
-### - Style Inheritance
+# Style Inheritance
 
 - In this final video of the section, we will explore style inheritance in React Native.
 

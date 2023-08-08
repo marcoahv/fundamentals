@@ -58,7 +58,7 @@ function App() {
       <Text>
         <Text style={{ color: 'white' }}>Hello</Text> World
       </Text>
-      <<Image source={logoImage} style={{ width: 300, height: 300 }} />
+      <Image source={logoImage} style={{ width: 300, height: 300 }} />
     </View>
   )
 }
@@ -151,26 +151,6 @@ export default App
 - We pass the source attribute is equal to `logoImage` which is the Adaptive icon.
 
 - And then ,as children for the image background component, Let's add a text component that says IMAGE TEXT.
-
-```jsx
-import React from 'react'
-import { View, Text, Image, ImageBackground } from 'react-native'
-const logoImage = require('./assets/adaptive-icon.png')
-
-function App() {
-  return (
-    <View style={{ flex: 1, backgroundColor: 'plum', padding: 60 }}>
-      <Text>
-        <Text style={{ color: 'white' }}>Hello</Text> World
-      </Text>
-      <Image source={logoImage} style={{ width: 300, height: 300 }} />
-      <Image source={{ uri: 'https://picsum.photos/200' }} style={{ width: 300, height: 300 }} />
-    </View>
-  )
-}
-
-export default App
-```
 
 - Save the file and we can observe that the image appears in the background with the text overlaid on top.
 

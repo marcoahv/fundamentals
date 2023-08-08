@@ -2,7 +2,7 @@
 sidebar_position: 23
 ---
 
-### - ### Shadow and Elevation
+# Shadow and Elevation
 
 - In the previous video, we learned about the differences in styling between web and React Native when it comes to some Box model properties.
 

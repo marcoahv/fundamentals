@@ -116,7 +116,7 @@ export default App
 
 ### Summary
 
-- In this video, we learned that the text component is essential for displaying text in React Native.
+- The text component is essential for displaying text in React Native.
 
 - Remember that every text node within a view must be wrapped with the text component.
 
