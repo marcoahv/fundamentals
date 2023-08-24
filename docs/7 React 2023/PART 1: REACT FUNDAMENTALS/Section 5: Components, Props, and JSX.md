@@ -520,7 +520,7 @@ function Footer() {
 
 ```jsx
 import React from 'react'
-import ReactDOM from 'react-dom/client
+import ReactDOM from 'react-dom/client'
 
 function App() {
   return (
@@ -1148,6 +1148,150 @@ function Pizza(props) {
 - Learning React involves multiple concepts, but everything will fall into place with time.
 
 ## - CHALLENGE ##1: Profile Card (v1)
+
+The goal of this challenge is to build a developer profile card just like this one:
+
+- Avatar image
+
+- Name of the developer
+
+- Short bio
+
+- List of skills
+
+### Options for Building the Project:
+
+1. Create a new Create React app on your own computer and build the project there.
+2. Use the CodeSandbox app that we used for the very first app that we built in the course.
+
+### Instructions:
+
+- Create a new React app using CodeSandbox or your own computer.
+
+```bash
+npx create-react-app 2-react-challenge-dev-profile
+```
+
+- Create a div with the class name "Card" as the container for the profile card.
+
+- Inside the Card div, create an Avatar component for the image and a div for the data.
+
+- In the data div, include an Intro component for the heading and bio.
+
+- Create a SkillList component for the list of skills, with each skill represented by a Skill component.
+
+- Customize each skill component using props for the skill name, emoji, and background color.
+
+- Upload the avatar image or any other image you want to use into the public folder in CodeSandbox.
+
+- Use the provided CSS styles to style your profile card.
+
+  - https://codesandbox.io/s/react-challenge-dev-profile-starter-ng0ghj?file=/src/styles.css
+
+### Tips:
+
+- Refer to the provided CSS file for class names to use.
+
+- Use props to pass data between components.
+
+- Focus on creating the structure of the components and customizing them with props.
+
+### Solution
+
+- the starter `styles.css` file
+
+```css
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'IBM Plex Mono', sans-serif;
+  background-color: #f7f7f7;
+}
+
+h1 {
+  margin-bottom: 12px;
+}
+
+.card {
+  width: 450px;
+  margin: 40px;
+  border: 4px solid #222;
+}
+
+.card::after {
+  content: '';
+  display: block;
+}
+
+.avatar {
+  width: 100%;
+  display: block;
+}
+
+.data {
+  padding: 32px;
+  padding-top: 24px;
+}
+
+.skill-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.skill {
+  padding: 2px 12px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+}
+```
+
+- we will once again do it all inside `index.js`
+
+- starter `index.js`
+
+```jsx
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import './styles.css'
+
+function App() {
+  return (
+    <div className='card'>
+      <Avatar />
+      <div className='data'>
+        <Intro />
+        {/* Should contain one Skill component
+        for each web dev skill that you have,
+        customized with props */}
+        <SkillList />
+      </div>
+    </div>
+  )
+}
+
+const root = ReactDOM.createRoot(document.getElementById('root'))
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+)
+```
+
+To see a solution and compare your work, you can watch the provided solution video.
+
+Good luck with the challenge and keep learning!
 
 ## - The Rules of JSX
 
