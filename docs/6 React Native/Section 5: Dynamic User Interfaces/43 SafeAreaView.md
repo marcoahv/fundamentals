@@ -2,7 +2,6 @@
 sidebar_position: 43
 ---
 
-- can you write this transcript in markdown format as in an editor?
 
 # Safe Area View Component in React Native
 

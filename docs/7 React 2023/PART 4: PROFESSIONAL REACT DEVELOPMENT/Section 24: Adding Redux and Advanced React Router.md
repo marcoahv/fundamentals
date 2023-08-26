@@ -2,30 +2,30 @@
 sidebar_position: 4
 ---
 
-## - Section Overview
+## 🟣 Section Overview
 
-## - Modeling the "User" State With Redux Toolkit
+## 🟣 Modeling the "User" State With Redux Toolkit
 
-## - Reading and Updating the User State
+## 🟣 Reading and Updating the User State
 
-## - Modeling the "Cart" State
+## 🟣 Modeling the "Cart" State
 
-## - Adding Menu Items to the Cart
+## 🟣 Adding Menu Items to the Cart
 
-## - Building the Cart Overview With Redux Selectors
+## 🟣 Building the Cart Overview With Redux Selectors
 
-## - Building the Cart Page
+## 🟣 Building the Cart Page
 
-## - Deleting Cart Items
+## 🟣 Deleting Cart Items
 
-## - Updating Cart Quantities
+## 🟣 Updating Cart Quantities
 
-## - Using the Cart for New Orders
+## 🟣 Using the Cart for New Orders
 
-## - Redux Thunks With createAsyncThunk
+## 🟣 Redux Thunks With createAsyncThunk
 
-## - Integrating Geolocation
+## 🟣 Integrating Geolocation
 
-## - Fetching Data Without Navigation: useFetcher
+## 🟣 Fetching Data Without Navigation: useFetcher
 
-## - Updating Data Without Navigation
+## 🟣 Updating Data Without Navigation

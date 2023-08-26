@@ -2,40 +2,40 @@
 sidebar_position: 6
 ---
 
-## - Section Overview
+## 🟣 Section Overview
 
-## - Introduction to Redux
+## 🟣 Introduction to Redux
 
-## - Creating a Reducer: Bank Account
+## 🟣 Creating a Reducer: Bank Account
 
-## - Creating a Redux Store
+## 🟣 Creating a Redux Store
 
-## - Working With Action Creators
+## 🟣 Working With Action Creators
 
-## - Adding More State: Customer
+## 🟣 Adding More State: Customer
 
-## - Professional Redux File Structure: State Slices
+## 🟣 Professional Redux File Structure: State Slices
 
-## - Back to React! Connecting our Redux App With React
+## 🟣 Back to React! Connecting our Redux App With React
 
-## - Dispatching Actions from Our React App
+## 🟣 Dispatching Actions from Our React App
 
-## - The Legacy Way of Connecting Components to Redux
+## 🟣 The Legacy Way of Connecting Components to Redux
 
-## - Redux Middleware and Thunks
+## 🟣 Redux Middleware and Thunks
 
-## - Making an API Call With Redux Thunks
+## 🟣 Making an API Call With Redux Thunks
 
-## - The Redux DevTools
+## 🟣 The Redux DevTools
 
-## - What is Redux Toolkit (RTK)?
+## 🟣 What is Redux Toolkit (RTK)?
 
-## - Creating the Store With RTK
+## 🟣 Creating the Store With RTK
 
-## - Creating the Account Slice
+## 🟣 Creating the Account Slice
 
-## - Back to Thunks
+## 🟣 Back to Thunks
 
-## - Creating the Customer Slice
+## 🟣 Creating the Customer Slice
 
-## - Redux vs. Context API
+## 🟣 Redux vs. Context API

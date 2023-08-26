@@ -2,20 +2,20 @@
 sidebar_position: 6
 ---
 
-## - Section Overview
+## 🟣 Section Overview
 
-## - What is Supabase?
+## 🟣 What is Supabase?
 
-## - Creating a New Database
+## 🟣 Creating a New Database
 
-## - Modeling Application State
+## 🟣 Modeling Application State
 
-## - Creating Tables
+## 🟣 Creating Tables
 
-## - Relationships Between Tables
+## 🟣 Relationships Between Tables
 
-## - Adding Security Policies (RLS)
+## 🟣 Adding Security Policies (RLS)
 
-## - Connecting Supabase With Our React App
+## 🟣 Connecting Supabase With Our React App
 
-## - Setting Up Storage Buckets
+## 🟣 Setting Up Storage Buckets

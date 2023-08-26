@@ -2,68 +2,68 @@
 sidebar_position: 9
 ---
 
-## - Section Overview
+## 🟣 Section Overview
 
-## - Client-Side Filtering: Filtering Cabins
+## 🟣 Client-Side Filtering: Filtering Cabins
 
-## - Client-Side Sorting: Sorting Cabins
+## 🟣 Client-Side Sorting: Sorting Cabins
 
-## - Building the Bookings Table
+## 🟣 Building the Bookings Table
 
-## - Uploading Sample Data
+## 🟣 Uploading Sample Data
 
-## - API-Side Filtering: Filtering Bookings
+## 🟣 API-Side Filtering: Filtering Bookings
 
-## - API-Side Sorting: Sorting Bookings
+## 🟣 API-Side Sorting: Sorting Bookings
 
-## - Building a Reusable Pagination Component
+## 🟣 Building a Reusable Pagination Component
 
-## - API-Side Pagination: Paginating Bookings
+## 🟣 API-Side Pagination: Paginating Bookings
 
-## - Prefetching With React Query
+## 🟣 Prefetching With React Query
 
-## - Building the Single Booking Page
+## 🟣 Building the Single Booking Page
 
-## - Checking In a Booking
+## 🟣 Checking In a Booking
 
-## - Adding Optional Breakfast
+## 🟣 Adding Optional Breakfast
 
-## - Checking Out a Booking (+ Fixing a Small Bug)
+## 🟣 Checking Out a Booking (+ Fixing a Small Bug)
 
-## - Deleting a Booking
+## 🟣 Deleting a Booking
 
-## - Authentication: User Login With Supabase
+## 🟣 Authentication: User Login With Supabase
 
-## - Authorization: Protecting Routes
+## 🟣 Authorization: Protecting Routes
 
-## - User Logout
+## 🟣 User Logout
 
-## - Fixing an Important Bug
+## 🟣 Fixing an Important Bug
 
-## - Building the Sign Up Form
+## 🟣 Building the Sign Up Form
 
-## - User Sign Up
+## 🟣 User Sign Up
 
-## - Authorization on Supabase: Protecting Database (RLS)
+## 🟣 Authorization on Supabase: Protecting Database (RLS)
 
-## - Building The App Header
+## 🟣 Building The App Header
 
-## - Updating User Data and Password
+## 🟣 Updating User Data and Password
 
-## - Implementing Dark Mode With CSS Variables
+## 🟣 Implementing Dark Mode With CSS Variables
 
-## - Building the Dashboard Layout
+## 🟣 Building the Dashboard Layout
 
-## - Computing Recent Bookings and Stays
+## 🟣 Computing Recent Bookings and Stays
 
-## - Displaying Statistics
+## 🟣 Displaying Statistics
 
-## - Displaying a Line Chart With the Recharts Library
+## 🟣 Displaying a Line Chart With the Recharts Library
 
-## - Displaying a Pie Chart
+## 🟣 Displaying a Pie Chart
 
-## - Displaying Stays for Current Day
+## 🟣 Displaying Stays for Current Day
 
-## - Error Boundaries
+## 🟣 Error Boundaries
 
-## - Final Touches + Fixing Bugs
+## 🟣 Final Touches + Fixing Bugs

@@ -2,32 +2,32 @@
 sidebar_position: 7
 ---
 
-## - Section Overview
+## 🟣 Section Overview
 
-## - What is React Query?
+## 🟣 What is React Query?
 
-## - Setting Up React Query
+## 🟣 Setting Up React Query
 
-## - Fetching Cabin Data
+## 🟣 Fetching Cabin Data
 
-## - Mutations: Deleting a Cabin
+## 🟣 Mutations: Deleting a Cabin
 
-## - Displaying Toasts (Notifications)
+## 🟣 Displaying Toasts (Notifications)
 
-## - Introducing Another Library: React Hook Form
+## 🟣 Introducing Another Library: React Hook Form
 
-## - Creating a New Cabin
+## 🟣 Creating a New Cabin
 
-## - Handling Form Errors
+## 🟣 Handling Form Errors
 
-## - Uploading Images to Supabase
+## 🟣 Uploading Images to Supabase
 
-## - Editing a Cabin
+## 🟣 Editing a Cabin
 
-## - Abstracting React Query Into Custom Hooks
+## 🟣 Abstracting React Query Into Custom Hooks
 
-## - Duplicating Cabins
+## 🟣 Duplicating Cabins
 
-## - Fetching Applications Settings
+## 🟣 Fetching Applications Settings
 
-## - Updating Application Settings
+## 🟣 Updating Application Settings

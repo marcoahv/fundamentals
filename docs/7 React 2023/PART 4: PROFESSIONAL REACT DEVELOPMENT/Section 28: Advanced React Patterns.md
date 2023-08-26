@@ -2,28 +2,28 @@
 sidebar_position: 8
 ---
 
-## - Section Overview
+## 🟣 Section Overview
 
-## - An Overview of Reusability in React
+## 🟣 An Overview of Reusability in React
 
-## - Setting Up an Example
+## 🟣 Setting Up an Example
 
-## - The Render Props Pattern
+## 🟣 The Render Props Pattern
 
-## - A Look at Higher-Order Components (HOC)
+## 🟣 A Look at Higher-Order Components (HOC)
 
-## - The Compound Component Pattern
+## 🟣 The Compound Component Pattern
 
-## - Building a Modal Window Using a React Portal
+## 🟣 Building a Modal Window Using a React Portal
 
-## - Converting the Modal to a Compound Component
+## 🟣 Converting the Modal to a Compound Component
 
-## - Detecting a Click Outside the Modal
+## 🟣 Detecting a Click Outside the Modal
 
-## - Confirming Cabin Deletions
+## 🟣 Confirming Cabin Deletions
 
-## - Building a Reusable Table
+## 🟣 Building a Reusable Table
 
-## - Applying the Render Props Pattern
+## 🟣 Applying the Render Props Pattern
 
-## - Building a Reusable Context Menu
+## 🟣 Building a Reusable Context Menu

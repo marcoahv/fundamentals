@@ -4,44 +4,44 @@ sidebar_position: 5
 
 ---
 
-## - Section Overview
+## 🟣 Section Overview
 
-## - Let's Build a Steps Component
+## 🟣 Let's Build a Steps Component
 
-## - Handling Events the React Way
+## 🟣 Handling Events the React Way
 
-## - What is State in React?
+## 🟣 What is State in React?
 
-## - Creating a State Variable With useState
+## 🟣 Creating a State Variable With useState
 
-## - Don't Set State Manually!
+## 🟣 Don't Set State Manually!
 
-## - The Mechanics of State
+## 🟣 The Mechanics of State
 
-## - Adding Another Piece of State
+## 🟣 Adding Another Piece of State
 
-## - React Developer Tools
+## 🟣 React Developer Tools
 
-## - Updating State Based on Current State
+## 🟣 Updating State Based on Current State
 
-## - More Thoughts About State + State Guidelines
+## 🟣 More Thoughts About State + State Guidelines
 
-## - A Vanilla JavaScript Implementation
+## 🟣 A Vanilla JavaScript Implementation
 
-## - CHALLENGE #1: Date Counter (v1)
+## 🟣 CHALLENGE #1: Date Counter (v1)
 
-## - Starting a New Project: The "Far Away" Travel List
+## 🟣 Starting a New Project: The "Far Away" Travel List
 
-## - Building the Layout
+## 🟣 Building the Layout
 
-## - Rendering the Items List
+## 🟣 Rendering the Items List
 
-## - Building a Form and Handling Submissions
+## 🟣 Building a Form and Handling Submissions
 
-## - Controlled Elements
+## 🟣 Controlled Elements
 
-## - State vs. Props
+## 🟣 State vs. Props
 
-## - EXERCISE #1: Flashcards
+## 🟣 EXERCISE #1: Flashcards
 
-## - CHALLENGE #2: Date Counter (v2)
+## 🟣 CHALLENGE #2: Date Counter (v2)

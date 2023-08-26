@@ -2,38 +2,38 @@
 sidebar_position: 3
 ---
 
-## - Section Overview
+## 🟣 Section Overview
 
-## - Project Setup and Walkthrough
+## 🟣 Project Setup and Walkthrough
 
-## - Components, Instances, and Elements
+## 🟣 Components, Instances, and Elements
 
-## - Instances and Elements in Practice
+## 🟣 Instances and Elements in Practice
 
-## - How Rendering Works: Overview
+## 🟣 How Rendering Works: Overview
 
-## - How Rendering Works: The Render Phase
+## 🟣 How Rendering Works: The Render Phase
 
-## - How Rendering Works: The Commit Phase
+## 🟣 How Rendering Works: The Commit Phase
 
-## - How Diffing Works
+## 🟣 How Diffing Works
 
-## - Diffing Rules in Practice
+## 🟣 Diffing Rules in Practice
 
-## - The Key Prop
+## 🟣 The Key Prop
 
-## - Resetting State With the Key Prop
+## 🟣 Resetting State With the Key Prop
 
-## - Using the Key Prop to Fix Our Eat-'N-Split App
+## 🟣 Using the Key Prop to Fix Our Eat-'N-Split App
 
-## - Rules for Render Logic: Pure Components
+## 🟣 Rules for Render Logic: Pure Components
 
-## - State Update Batching
+## 🟣 State Update Batching
 
-## - State Update Batching in Practice
+## 🟣 State Update Batching in Practice
 
-## - How Events Work in React
+## 🟣 How Events Work in React
 
-## - Libraries vs. Frameworks & The React Ecosystem
+## 🟣 Libraries vs. Frameworks & The React Ecosystem
 
-## - Section Summary: Practical Takeaways
+## 🟣 Section Summary: Practical Takeaways

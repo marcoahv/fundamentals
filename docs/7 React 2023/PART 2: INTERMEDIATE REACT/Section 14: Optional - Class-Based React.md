@@ -2,22 +2,22 @@
 sidebar_position: 6
 ---
 
-## - Section Overview
+## 🟣 Section Overview
 
-## - Our First Class Component
+## 🟣 Our First Class Component
 
-## - Working With Event Handlers
+## 🟣 Working With Event Handlers
 
-## - Class Components vs Function Components
+## 🟣 Class Components vs Function Components
 
-## - Starting the "Classy Weather" App
+## 🟣 Starting the "Classy Weather" App
 
-## - Fetching Weather Data
+## 🟣 Fetching Weather Data
 
-## - Displaying the Weather
+## 🟣 Displaying the Weather
 
-## - Removing Boilerplate Code With Class Fields
+## 🟣 Removing Boilerplate Code With Class Fields
 
-## - Child to Parent Communication
+## 🟣 Child to Parent Communication
 
-## - Lifecycle Methods
+## 🟣 Lifecycle Methods

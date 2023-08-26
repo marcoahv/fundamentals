@@ -2,40 +2,40 @@
 sidebar_position: 4
 ---
 
-## - Section Overview
+## 🟣 Section Overview
 
-## - The Component Lifecycle
+## 🟣 The Component Lifecycle
 
-## - How NOT to Fetch Data in React
+## 🟣 How NOT to Fetch Data in React
 
-## - useEffect to the Rescue
+## 🟣 useEffect to the Rescue
 
-## - A First Look at Effects
+## 🟣 A First Look at Effects
 
-## - Using an async Function
+## 🟣 Using an async Function
 
-## - Adding a Loading State
+## 🟣 Adding a Loading State
 
-## - Handling Errors
+## 🟣 Handling Errors
 
-## - The useEffect Dependency Array
+## 🟣 The useEffect Dependency Array
 
-## - Synchronizing Queries With Movie Data
+## 🟣 Synchronizing Queries With Movie Data
 
-## - Selecting a Movie
+## 🟣 Selecting a Movie
 
-## - Loading Movie Details
+## 🟣 Loading Movie Details
 
-## - Adding a Watched Movie
+## 🟣 Adding a Watched Movie
 
-## - Adding a New Effect: Changing Page Title
+## 🟣 Adding a New Effect: Changing Page Title
 
-## - The useEffect Cleanup Function
+## 🟣 The useEffect Cleanup Function
 
-## - Cleaning Up the Title
+## 🟣 Cleaning Up the Title
 
-## - Cleaning Up Data Fetching
+## 🟣 Cleaning Up Data Fetching
 
-## - One More Effect: Listening to a Keypress
+## 🟣 One More Effect: Listening to a Keypress
 
-## - CHALLENGE #1: Currency Converter
+## 🟣 CHALLENGE #1: Currency Converter

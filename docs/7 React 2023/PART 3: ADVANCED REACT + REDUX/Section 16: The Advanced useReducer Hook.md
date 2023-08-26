@@ -2,36 +2,36 @@
 sidebar_position: 2
 ---
 
-## - Section Overview
+## 🟣 Section Overview
 
-## - Yet Another Hook: useReducer
+## 🟣 Yet Another Hook: useReducer
 
-## - Managing Related Pieces of State
+## 🟣 Managing Related Pieces of State
 
-## - Managing State With useReducer
+## 🟣 Managing State With useReducer
 
-## - The "React Quiz" App
+## 🟣 The "React Quiz" App
 
-## - Loading Questions from a Fake API
+## 🟣 Loading Questions from a Fake API
 
-## - Handling Loading, Error, and Ready Status
+## 🟣 Handling Loading, Error, and Ready Status
 
-## - Starting a New Quiz
+## 🟣 Starting a New Quiz
 
-## - Displaying Questions
+## 🟣 Displaying Questions
 
-## - Handling New Answers
+## 🟣 Handling New Answers
 
-## - Moving to the Next Question
+## 🟣 Moving to the Next Question
 
-## - Displaying Progress
+## 🟣 Displaying Progress
 
-## - Finishing a Quiz
+## 🟣 Finishing a Quiz
 
-## - Restarting a Quiz
+## 🟣 Restarting a Quiz
 
-## - Setting Up a Timer With useEffect
+## 🟣 Setting Up a Timer With useEffect
 
-## - Section Summary: useState vs. useReducer
+## 🟣 Section Summary: useState vs. useReducer
 
-## - CHALLENGE #1: Creating a Bank Account With useReducer
+## 🟣 CHALLENGE #1: Creating a Bank Account With useReducer

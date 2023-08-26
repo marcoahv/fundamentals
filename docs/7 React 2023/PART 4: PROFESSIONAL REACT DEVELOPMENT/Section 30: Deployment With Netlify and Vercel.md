@@ -2,10 +2,10 @@
 sidebar_position: 10
 ---
 
-## - Section Overview
+## 🟣 Section Overview
 
-## - Deploying to Netlify
+## 🟣 Deploying to Netlify
 
-## - Setting Up a Git and GitHub Repository
+## 🟣 Setting Up a Git and GitHub Repository
 
-## - Deploying to Vercel
+## 🟣 Deploying to Vercel

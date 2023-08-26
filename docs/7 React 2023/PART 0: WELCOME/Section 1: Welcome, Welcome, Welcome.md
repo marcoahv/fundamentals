@@ -4,7 +4,7 @@ sidebar_position: 1
 
 ---
 
-## - Course Road map and Projects
+## 🟣 Course Road map and Projects
 
 ### Introduction to the Ultimate React Course
 
@@ -40,7 +40,7 @@ sidebar_position: 1
 
 ---
 
-## - Building Our First React App!
+## 🟣 Building Our First React App!
 
 ### Building the First React App
 
@@ -112,7 +112,7 @@ export default function App() {
     const res = await fetch('https://api.adviceslip.com/advice') // Fetch advice from API
     const data = await res.json() // Parse the response as JSON
     setAdvice(data.slip.advice) // Update the advice state variable with the fetched advice
-    setCount((c) => c + 1) // Increment the count state variable by 1
+    setCount(c => c + 1) // Increment the count state variable by 1
   }
 
   useEffect(function () {
@@ -145,7 +145,7 @@ function Message(props) {
 
 ---
 
-## - Watch Before You Start!
+## 🟣 Watch Before You Start!
 
 ### Quick Considerations for Taking the Course
 
@@ -175,7 +175,7 @@ function Message(props) {
 
 ---
 
-## - Read Before You Start!
+## 🟣 Read Before You Start!
 
 1️⃣ Download starter code
 Before starting the course, please download the starter files and final code from the GitHub repo below
@@ -203,7 +203,7 @@ https://github.com/jonasschmedtmann/ultimate-react-course
 
 ---
 
-## - Downloading Course Material
+## 🟣 Downloading Course Material
 
 ### Downloading the Course Starter Code and Final Project Files
 

@@ -2,24 +2,24 @@
 sidebar_position: 5
 ---
 
-## - Section Overview
+## 🟣 Section Overview
 
-## - Application Planning
+## 🟣 Application Planning
 
-## - Please Download Starter Files Again
+## 🟣 Please Download Starter Files Again
 
-## - Setting Up the Project: "The Wild Oasis"
+## 🟣 Setting Up the Project: "The Wild Oasis"
 
-## - Introduction to Styled Components
+## 🟣 Introduction to Styled Components
 
-## - Global Styles With Styled Components
+## 🟣 Global Styles With Styled Components
 
-## - Styled Component Props and the "css" Function
+## 🟣 Styled Component Props and the "css" Function
 
-## - Building More Reusable Styled Components
+## 🟣 Building More Reusable Styled Components
 
-## - Setting Up Pages and Routes
+## 🟣 Setting Up Pages and Routes
 
-## - Building the App Layout
+## 🟣 Building the App Layout
 
-## - Building the Sidebar and Main Navigation
+## 🟣 Building the Sidebar and Main Navigation

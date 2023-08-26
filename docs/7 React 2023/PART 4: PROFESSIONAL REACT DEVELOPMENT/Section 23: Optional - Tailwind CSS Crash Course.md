@@ -2,40 +2,40 @@
 sidebar_position: 3
 ---
 
-## - Section Overview
+## 🟣 Section Overview
 
-## - What is Tailwind CSS?
+## 🟣 What is Tailwind CSS?
 
-## - Setting Up Tailwind CSS
+## 🟣 Setting Up Tailwind CSS
 
-## - Working With Color
+## 🟣 Working With Color
 
-## - Styling Text
+## 🟣 Styling Text
 
-## - The Box Model: Spacing, Borders, and Display
+## 🟣 The Box Model: Spacing, Borders, and Display
 
-## - Responsive Design
+## 🟣 Responsive Design
 
-## - Using Flexbox
+## 🟣 Using Flexbox
 
-## - Using CSS Grid
+## 🟣 Using CSS Grid
 
-## - Styling Buttons: Element States and Transitions
+## 🟣 Styling Buttons: Element States and Transitions
 
-## - Styling Form Elements
+## 🟣 Styling Form Elements
 
-## - Reusing Styles With @apply
+## 🟣 Reusing Styles With @apply
 
-## - Reusing Styles With React Components
+## 🟣 Reusing Styles With React Components
 
-## - Absolute Positioning, z-index, and More
+## 🟣 Absolute Positioning, z-index, and More
 
-## - Configuring Tailwind: Custom Font Family
+## 🟣 Configuring Tailwind: Custom Font Family
 
-## - Styling the Menu
+## 🟣 Styling the Menu
 
-## - Styling the Cart
+## 🟣 Styling the Cart
 
-## - Styling the Order Form
+## 🟣 Styling the Order Form
 
-## - Styling the Order Overview
+## 🟣 Styling the Order Overview

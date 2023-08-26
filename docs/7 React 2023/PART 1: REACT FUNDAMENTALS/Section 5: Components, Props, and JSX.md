@@ -4,7 +4,7 @@ sidebar_position: 4
 
 ---
 
-## - Section Overview
+## 🟣 Section Overview
 
 ### Core Concepts of Building React Apps
 
@@ -60,7 +60,65 @@ In this section, we will explore three core concepts of building React apps.
 
 - This project will provide a solid foundation for further React development.
 
-## **- Rendering the Root Component and Strict Mode**
+## ** 🟣 Setting Up a Project With Create-React-App**
+
+- We are now ready to set up our first project using Create-React-App.
+
+### Using the Terminal
+
+- Create-React-App is a command-line interface tool, so we need a terminal or command prompt.
+
+- In the terminal, we navigate to the folder where we want to create the new project.
+
+### Setting Up the Project
+
+- Once in the desired folder, type **npx create-react-app@5 pizza-menu** to set up the project.
+
+- This command uses Create-React-App version 5 to create a project called "pizza-menu".
+
+### Exploring the Project Structure
+
+- The project structure contains a `package.json` file and a `node_modules` folder, which are standard in all modern JavaScript projects.
+
+- Most of the development work will happen inside the `src` (source) folder.
+
+- The `public` folder contains assets like images and the `index.html` file.
+
+### The index.html File
+
+- The `index.html` file contains a div with the id of "root", which is the root of our app.
+
+- The `index.js` file selects the root element and renders the app into it.
+
+### Starting the App
+
+- To start the app, we use the integrated terminal in VS Code and run the command **npm start** .
+
+- This command starts the app and opens a new browser tab at localhost port 3000.
+
+### Modifying the App
+
+- **We can modify the app by changing the `App` component in the `App` file.**
+
+```jsx
+import './App.css'
+
+function App() {
+  return <h1>Hello React!</h1>
+}
+
+export default App
+```
+
+- The app automatically updates when we save changes.
+
+### Conclusion
+
+- Congratulations, you've created your first Create-React-App application!
+
+- In the next section, we'll review essential JavaScript for React and start building the pizza menu project.
+
+## ** 🟣 Rendering the Root Component and Strict Mode**
 
 ### Building the Pizza Menu Project
 
@@ -154,7 +212,7 @@ root.render(
 
 - It's a good practice to always activate strict mode when developing React applications.
 
-## - Before We Start Coding: Debugging
+## 🟣 Before We Start Coding: Debugging
 
 - Techniques for dealing with errors and problems
 
@@ -216,9 +274,9 @@ root.render(
 
 - Importance of debugging skills in the coding process
 
-## - Components as Building Blocks
+## 🟣 Components as Building Blocks
 
-- React is all about components.
+### React is all about components
 
 - Components are the most fundamental concept in React.
 
@@ -248,7 +306,7 @@ root.render(
 
 - A component tree helps understand how components are nested and relate to each other.
 
-## - Creating And Reusing a Component
+## 🟣 Creating And Reusing a Component
 
 Let's continue building our application by creating a brand new component and by taking a first look at reusability.
 
@@ -440,7 +498,7 @@ root.render(
 
 - The data here in all of them is now the same because we didn't customize that data yet, but we will do that later.
 
-## - What is JSX?
+## 🟣 What is JSX?
 
 ### JSX and its Importance in React
 
@@ -472,7 +530,7 @@ root.render(
 
 - React automatically handles the synchronization between the UI and the data, providing many advantages in terms of code simplicity and maintainability.
 
-## - ## Creating More Components
+## 🟣 Creating More Components
 
 - We will now create additional components to further build our application using JSX.
 
@@ -555,7 +613,10 @@ function Footer() {
 function Pizza() {
   return (
     <div>
-      <img src='pizzas/spinaci.jpg' alt='Pizza spinaci' />
+      <img
+        src='pizzas/spinaci.jpg'
+        alt='Pizza spinaci'
+      />
       <h2>Pizza Spinaci</h2>
       <p>Tomato, mozarella, spinach, and ricotta cheese</p>
     </div>
@@ -582,7 +643,7 @@ root.render(
 
 - JSX allows us to write code that combines HTML, CSS, and JavaScript in a single block.
 
-## - JavaScript Logic in Components
+## 🟣 JavaScript Logic in Components
 
 - Components in React are JavaScript functions, allowing us to write any JavaScript logic inside them.
 
@@ -676,7 +737,10 @@ function Footer() {
 function Pizza() {
   return (
     <div>
-      <img src='pizzas/spinaci.jpg' alt='Pizza spinaci' />
+      <img
+        src='pizzas/spinaci.jpg'
+        alt='Pizza spinaci'
+      />
       <h2>Pizza Spinaci</h2>
       <p>Tomato, mozarella, spinach, and ricotta cheese</p>
     </div>
@@ -695,7 +759,7 @@ root.render(
 
 - By using JavaScript logic in components, we can incorporate dynamic behavior and make our components more interactive.
 
-## - Separation of Concerns
+## 🟣 Separation of Concerns
 
 - At this point, we have used JSX to describe the appearance of some components and have also used JavaScript inside them.
 
@@ -733,7 +797,7 @@ root.render(
 
 - This lecture aimed to provide additional fundamental React knowledge, enhancing the understanding of React's separation of concerns.
 
-## - Styling React Applications
+## 🟣 Styling React Applications
 
 - React components can include CSS styles to define their appearance.
 
@@ -862,7 +926,10 @@ function Footer() {
 function Pizza() {
   return (
     <div>
-      <img src='pizzas/spinaci.jpg' alt='Pizza spinaci' />
+      <img
+        src='pizzas/spinaci.jpg'
+        alt='Pizza spinaci'
+      />
       <h3>Pizza Spinaci</h3>
       <p>Tomato, mozarella, spinach, and ricotta cheese</p>
     </div>
@@ -899,7 +966,7 @@ root.render(
 
 - More advanced techniques like CSS modules and styled components offer scoped styling options for better code organization.
 
-## - Passing and Receiving Props
+## 🟣 Passing and Receiving Props
 
 - Props are a fundamental React concept for passing data between components.
 
@@ -928,7 +995,10 @@ function Menu() {
 function Pizza() {
   return (
     <div>
-      <img src='pizzas/spinaci.jpg' alt='Pizza spinaci' />
+      <img
+        src='pizzas/spinaci.jpg'
+        alt='Pizza spinaci'
+      />
       <h3>Pizza Spinaci</h3>
       <p>Tomato, mozarella, spinach, and ricotta cheese</p>
     </div>
@@ -958,7 +1028,10 @@ function Menu() {
 function Pizza(props) {
   return (
     <div>
-      <img src='pizzas/spinaci.jpg' alt='Pizza spinaci' />
+      <img
+        src='pizzas/spinaci.jpg'
+        alt='Pizza spinaci'
+      />
       <h3>Pizza Spinaci</h3>
       <p>Tomato, mozarella, spinach, and ricotta cheese</p>
     </div>
@@ -988,7 +1061,10 @@ function Menu() {
 function Pizza(props) {
   return (
     <div>
-      <img src={props.photoName} alt={props.name} />
+      <img
+        src={props.photoName}
+        alt={props.name}
+      />
       <h3>{props.name}</h3>
       <p>{props.ingredients}</p>
     </div>
@@ -1024,7 +1100,10 @@ function Menu() {
 function Pizza(props) {
   return (
     <div>
-      <img src={props.photoName} alt={props.name} />
+      <img
+        src={props.photoName}
+        alt={props.name}
+      />
       <h3>{props.name}</h3>
       <p>{props.ingredients}</p>
     </div>
@@ -1060,7 +1139,10 @@ function Menu() {
 function Pizza(props) {
   return (
     <div className='pizza'>
-      <img src={props.photoName} alt={props.name} />
+      <img
+        src={props.photoName}
+        alt={props.name}
+      />
       <div>
         <h3>{props.name}</h3>
         <p>{props.ingredients}</p>
@@ -1099,7 +1181,10 @@ function Menu() {
 function Pizza(props) {
   return (
     <div className='pizza'>
-      <img src={props.photoName} alt={props.name} />
+      <img
+        src={props.photoName}
+        alt={props.name}
+      />
       <div>
         <h3>{props.name}</h3>
         <p>{props.ingredients}</p>
@@ -1116,7 +1201,7 @@ function Pizza(props) {
 
 - So props is really really powerful and really one of the most fundamental things in React
 
-## - Props, Immutability, and One-Way Data Flow
+## 🟣 Props, Immutability, and One-Way Data Flow
 
 ### Props in React
 
@@ -1147,7 +1232,7 @@ function Pizza(props) {
 - Will be covered in the next section.
 - Learning React involves multiple concepts, but everything will fall into place with time.
 
-## - CHALLENGE ##1: Profile Card (v1)
+## 🟣 CHALLENGE ##1: Profile Card (v1)
 
 The goal of this challenge is to build a developer profile card just like this one:
 
@@ -1293,24 +1378,24 @@ To see a solution and compare your work, you can watch the provided solution vid
 
 Good luck with the challenge and keep learning!
 
-## - The Rules of JSX
+## 🟣 The Rules of JSX
 
-## - Rendering Lists
+## 🟣 Rendering Lists
 
-## - Conditional Rendering With &&
+## 🟣 Conditional Rendering With &&
 
-## - Conditional Rendering With Ternaries
+## 🟣 Conditional Rendering With Ternaries
 
-## - Conditional Rendering With Multiple Returns
+## 🟣 Conditional Rendering With Multiple Returns
 
-## - Extracting JSX Into a New Component
+## 🟣 Extracting JSX Into a New Component
 
-## - Destructuring Props
+## 🟣 Destructuring Props
 
-## - React Fragments
+## 🟣 React Fragments
 
-## - Setting Classes and Text Conditionally
+## 🟣 Setting Classes and Text Conditionally
 
-## - Section Summary
+## 🟣 Section Summary
 
-## - CHALLENGE ##2: Profile Card (v2)
+## 🟣 CHALLENGE ##2: Profile Card (v2)

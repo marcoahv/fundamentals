@@ -4,7 +4,7 @@ sidebar_position: 1
 
 ---
 
-## - Introduction to Part 1
+## 🟣 Introduction to Part 1
 
 ### Part One: Learning React Fundamentals
 
@@ -34,7 +34,7 @@ sidebar_position: 1
 
 - Without further ado, let's dive right into the world of React.
 
-## - Useful Resources for Part 1
+## 🟣 Useful Resources for Part 1
 
 Here are some resources that you might find helpful while studying this Part 1.
 

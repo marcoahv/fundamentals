@@ -4,7 +4,7 @@ sidebar_position: 2
 
 ---
 
-## - Section Overview
+## 🟣 Section Overview
 
 >
 
@@ -34,7 +34,7 @@ sidebar_position: 2
 
 ---
 
-## - Why Do Front-End Frameworks Exist?
+## 🟣 Why Do Front-End Frameworks Exist?
 
 ### Introduction
 
@@ -94,7 +94,7 @@ sidebar_position: 2
 
 ---
 
-## - React vs. Vanilla JavaScript
+## 🟣 React vs. Vanilla JavaScript
 
 ### Comparison of React and Vanilla JavaScript Implementation
 
@@ -239,7 +239,7 @@ function Message(props) {
 
 ---
 
-## - What is React?
+## 🟣 What is React?
 
 >
 
@@ -305,7 +305,7 @@ function Message(props) {
 
 ---
 
-## - Setting Up Our Development Environment
+## 🟣 Setting Up Our Development Environment
 
 ### Setting Up the Development Environment
 
@@ -369,7 +369,7 @@ function Message(props) {
 
 ---
 
-## - Pure React
+## 🟣 Pure React
 
 ### How we can write React code without any modern tooling
 
@@ -487,7 +487,7 @@ function Message(props) {
 
 ---
 
-## - A Quick Look at React's Official Documentation
+## 🟣 A Quick Look at React's Official Documentation
 
 - The official React documentation is located at react.dev.
   https://react.dev/
@@ -534,7 +534,7 @@ function Message(props) {
 
 ---
 
-## - Setting Up a New React Project: The Options
+## 🟣 Setting Up a New React Project: The Options
 
 ### Setting Up a React Project
 
@@ -590,7 +590,7 @@ function Message(props) {
 
 - Now, let's create our very first real React application.
 
-## **- Setting Up a Project With Create-React-App**
+## 🟣 Setting Up a Project With Create-React-App
 
 - We are now ready to set up our first project using Create-React-App.
 

@@ -2,38 +2,38 @@
 sidebar_position: 5
 ---
 
-## - Section Overview
+## 🟣 Section Overview
 
-## - Performance Optimization and Wasted Renders
+## 🟣 Performance Optimization and Wasted Renders
 
-## - The Profiler Developer Tool
+## 🟣 The Profiler Developer Tool
 
-## - A Surprising Optimization Trick With children
+## 🟣 A Surprising Optimization Trick With children
 
-## - Understanding memo
+## 🟣 Understanding memo
 
-## - memo in Practice
+## 🟣 memo in Practice
 
-## - Understanding useMemo and useCallback
+## 🟣 Understanding useMemo and useCallback
 
-## - useMemo in Practice
+## 🟣 useMemo in Practice
 
-## - useCallback in Practice
+## 🟣 useCallback in Practice
 
-## - Optimizing Context Re-Renders
+## 🟣 Optimizing Context Re-Renders
 
-## - Back to The "WorldWise" App
+## 🟣 Back to The "WorldWise" App
 
-## - Optimizing Bundle Size With Code Splitting
+## 🟣 Optimizing Bundle Size With Code Splitting
 
-## - Don't Optimize Prematurely!
+## 🟣 Don't Optimize Prematurely!
 
-## - useEffect Rules and Best Practices
+## 🟣 useEffect Rules and Best Practices
 
-## - CHALLENGE #1: Fix Performance Issues in "Workout Timer"
+## 🟣 CHALLENGE #1: Fix Performance Issues in "Workout Timer"
 
-## - Setting State Based on Other State Updates
+## 🟣 Setting State Based on Other State Updates
 
-## - Using Helper Functions In Effects
+## 🟣 Using Helper Functions In Effects
 
-## - Closures in Effects
+## 🟣 Closures in Effects

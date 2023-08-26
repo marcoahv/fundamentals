@@ -4,7 +4,7 @@ sidebar_position: 3
 
 ---
 
-## - Section Overview
+## 🟣 Section Overview
 
 >
 
@@ -46,7 +46,7 @@ sidebar_position: 3
 
 ---
 
-## - Destructuring Objects and Arrays
+## 🟣 Destructuring Objects and Arrays
 
 - Destructuring is a feature in JavaScript that allows you to extract values from objects or arrays and assign them to variables in a more concise and readable way.
 
@@ -148,7 +148,7 @@ const { theme, toggleTheme } = useContext(ThemeContext)
 
 ---
 
-## - Rest/Spread Operator in JavaScript
+## 🟣 Rest/Spread Operator in JavaScript
 
 >
 
@@ -271,7 +271,7 @@ console.log(mergedObj) // Output: { name: 'John', age: 25 }
 
 ---
 
-## - Template Literals
+## 🟣 Template Literals
 
 - Template Literals, also known as Template Strings, are a feature in JavaScript that allow for easier string interpolation and multiline strings.
 
@@ -403,7 +403,7 @@ function ProfileLink() {
 
 ---
 
-## - Ternaries Instead of if/else Statements
+## 🟣 Ternaries Instead of if/else Statements
 
 - The ternary operator is a shorthand way of writing an if-else statement in JavaScript.
 
@@ -497,7 +497,7 @@ In this example, the condition is `isLoggedIn` , which checks if the user is log
 
 ---
 
-## - Arrow Functions
+## 🟣 Arrow Functions
 
 - Arrow functions are a concise way of writing function expressions in JavaScript.
 
@@ -633,7 +633,7 @@ const MyComponent = () => {
 
 ---
 
-## - Short-Circuiting And Logical Operators: &&, ||, ??
+## 🟣 Short-Circuiting And Logical Operators: &&, ||, ??
 
 - Short-circuiting and logical operators are used in JavaScript to perform logical operations and handle conditional logic efficiently.
 
@@ -754,7 +754,7 @@ const MyComponent = ({ count }) => {
 
 ---
 
-## - Optional Chaining
+## 🟣 Optional Chaining
 
 - Optional chaining is a feature introduced in JavaScript that allows you to safely access nested properties or methods of an object without worrying about potential null or undefined values.
 
@@ -976,7 +976,7 @@ export default ConditionalRenderingComponent
 
 ---
 
-## - Introduction to Functional Array Methods
+## 🟣 Introduction to Functional Array Methods
 
 - To build any meaningful React application, it is crucial to master the three functional array methods in JavaScript - map, filter, and reduce.
 
@@ -1006,7 +1006,7 @@ export default ConditionalRenderingComponent
 
 ---
 
-## - The Array map Method
+## 🟣 The Array map Method
 
 - The Array map method is a powerful tool in JavaScript that allows you to iterate over an array and apply a function to each element.
 
@@ -1162,7 +1162,7 @@ Overall, the array map method is a versatile tool in React that can be used in v
 
 ---
 
-## - The Array filter Method
+## 🟣 The Array filter Method
 
 - The Array filter method is a built-in JavaScript method that allows you to create a new array containing elements from the original array that meet a specific condition.
 
@@ -1262,7 +1262,7 @@ const ProductList = () => {
 
 ---
 
-## - The Array reduce Method
+## 🟣 The Array reduce Method
 
 - The Array reduce method is a built-in JavaScript method that allows you to reduce an array of values to a single value.
 
@@ -1364,7 +1364,7 @@ const orders = [
 
 ---
 
-## - The Array sort Method
+## 🟣 The Array sort Method
 
 - The Array sort method in JavaScript is used to sort the elements of an array in place, meaning it modifies the original array.
 
@@ -1490,7 +1490,7 @@ dates.sort((a, b) => a - b)
 
 ---
 
-## - Working With Immutable Arrays
+## 🟣 Working With Immutable Arrays
 
 ### Immutable Operations in React
 
@@ -1578,7 +1578,7 @@ const booksAfterUpdate = booksAfterDelete.map((book) =>
 
 ---
 
-## - Asynchronous JavaScript: Promises
+## 🟣 Asynchronous JavaScript: Promises
 
 ### Reviewing Asynchronous JavaScript Techniques for Data Fetching
 
@@ -1732,7 +1732,7 @@ export default App
 
 - Once the data is fetched, it is mapped over and each item is rendered in the UI.
 
-## - Asynchronous JavaScript: Async/Await
+## 🟣 Asynchronous JavaScript: Async/Await
 
 ### Introduction to Async/Await
 

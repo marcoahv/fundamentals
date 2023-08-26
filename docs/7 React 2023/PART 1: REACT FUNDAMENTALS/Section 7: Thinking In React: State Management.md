@@ -4,36 +4,36 @@ sidebar_position: 6
 
 ---
 
-## - Section Overview
+## 🟣 Section Overview
 
-## - What is "Thinking in React"?
+## 🟣 What is "Thinking in React"?
 
-## - Fundamentals of State Management
+## 🟣 Fundamentals of State Management
 
-## - Thinking About State and Lifting State Up
+## 🟣 Thinking About State and Lifting State Up
 
-## - Reviewing "Lifting Up State"
+## 🟣 Reviewing "Lifting Up State"
 
-## - Deleting an Item: More Child-to-Parent Communication!
+## 🟣 Deleting an Item: More Child-to-Parent Communication!
 
-## - Updating an Item: Complex Immutable Data Operation
+## 🟣 Updating an Item: Complex Immutable Data Operation
 
-## - Derived State
+## 🟣 Derived State
 
-## - Calculating Statistics as Derived State
+## 🟣 Calculating Statistics as Derived State
 
-## - Sorting Items
+## 🟣 Sorting Items
 
-## - Clearing the List
+## 🟣 Clearing the List
 
-## - Moving Components Into Separate Files
+## 🟣 Moving Components Into Separate Files
 
-## - EXERCISE #1: Accordion Component (v1)
+## 🟣 EXERCISE #1: Accordion Component (v1)
 
-## - The "children" Prop: Making a Reusable Button
+## 🟣 The "children" Prop: Making a Reusable Button
 
-## - More Reusability With the "children" Prop
+## 🟣 More Reusability With the "children" Prop
 
-## - EXERCISE #2: Accordion Component (v2)
+## 🟣 EXERCISE #2: Accordion Component (v2)
 
-## - CHALLENGE #1: Tip Calculator
+## 🟣 CHALLENGE #1: Tip Calculator

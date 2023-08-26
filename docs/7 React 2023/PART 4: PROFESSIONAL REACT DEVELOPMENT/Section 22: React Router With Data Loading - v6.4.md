@@ -2,26 +2,26 @@
 sidebar_position: 2
 ---
 
-## - Section Overview
+## 🟣 Section Overview
 
-## - Setting Up a New Project: "Fast React Pizza Co."
+## 🟣 Setting Up a New Project: "Fast React Pizza Co."
 
-## - Application Planning
+## 🟣 Application Planning
 
-## - Setting Up a Professional File Structure
+## 🟣 Setting Up a Professional File Structure
 
-## - A New Way Of Implementing Routes
+## 🟣 A New Way Of Implementing Routes
 
-## - Building the App Layout
+## 🟣 Building the App Layout
 
-## - Fetching Data With React Router "Loaders": Pizza Menu
+## 🟣 Fetching Data With React Router "Loaders": Pizza Menu
 
-## - Displaying a Loading Indicator
+## 🟣 Displaying a Loading Indicator
 
-## - Handling Errors With Error Elements
+## 🟣 Handling Errors With Error Elements
 
-## - Fetching Orders
+## 🟣 Fetching Orders
 
-## - Writing Data With React Router "Actions"
+## 🟣 Writing Data With React Router "Actions"
 
-## - Error Handling in Form Actions
+## 🟣 Error Handling in Form Actions

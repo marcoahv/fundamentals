@@ -2,36 +2,36 @@
 sidebar_position: 3
 ---
 
-## - Section Overview
+## 🟣 Section Overview
 
-## - Creating Our First App With Vite: "WorldWise"
+## 🟣 Creating Our First App With Vite: "WorldWise"
 
-## - Routing and Single-Page Applications (SPAs)
+## 🟣 Routing and Single-Page Applications (SPAs)
 
-## - Implementing Main Pages and Routes
+## 🟣 Implementing Main Pages and Routes
 
-## - Linking Between Routes With `<Link />` and `<NavLink />`
+## 🟣 Linking Between Routes With `<Link />` and `<NavLink />`
 
-## - Styling Options For React Applications
+## 🟣 Styling Options For React Applications
 
-## - Using CSS Modules
+## 🟣 Using CSS Modules
 
-## - Building the Pages
+## 🟣 Building the Pages
 
-## - Building the App Layout
+## 🟣 Building the App Layout
 
-## - Nested Routes and Index Route
+## 🟣 Nested Routes and Index Route
 
-## - Implementing the Cities List
+## 🟣 Implementing the Cities List
 
-## - Implementing the Countries List
+## 🟣 Implementing the Countries List
 
-## - Storing State in the URL
+## 🟣 Storing State in the URL
 
-## - Dynamic Routes With URL Parameters
+## 🟣 Dynamic Routes With URL Parameters
 
-## - Reading and Setting a Query String
+## 🟣 Reading and Setting a Query String
 
-## - Programmatic Navigation with useNavigate
+## 🟣 Programmatic Navigation with useNavigate
 
-## - Programmatic Navigation with `<Navigate />`
+## 🟣 Programmatic Navigation with `<Navigate />`
