@@ -137,3 +137,29 @@ sidebar_position: 2
 - Click view code in Builder.
 
 - The syncing process is going to take about a minute. Once it's done, you can continue.
+
+Certainly! Here's the transcript reformatted in Markdown format as if you were reading it in an editor:
+
+---
+
+# Web Application Development with JavaScript and TypeScript
+
+## Introduction
+
+Hello and welcome to my course! Here, we will embark on a journey to create incredible web applications using JavaScript and TypeScript. JavaScript is the world's most popular programming language, and TypeScript is a powerful superset of JavaScript that adds types to enhance code maintainability and scalability.
+
+Throughout this course, you'll gain a comprehensive understanding of JavaScript and TypeScript, starting from the basics and progressing to advanced functions. You will also learn how to use them for both front-end and back-end development, enabling you to create full-stack applications with ease.
+
+By the end of this course, you'll have a strong foundation in JavaScript and TypeScript, empowering you to explore any web technology you desire. This course is designed for anyone eager to learn JavaScript and TypeScript or improve their existing skills. Whether you're a beginner or an expert, there's something valuable here for everyone. However, please note that a basic understanding of HTML and CSS is a prerequisite, as we'll use them to build web application interfaces.
+
+## About Me
+
+I'm a software developer with experience working on full-stack applications, and I'm enthusiastic about sharing my knowledge with you.
+
+## Course Overview
+
+Let's get started! Now, let's unravel the curriculum. We'll start...
+
+---
+
+And the transcript continues. Let me know if you'd like me to continue formatting the rest of it in the same way!

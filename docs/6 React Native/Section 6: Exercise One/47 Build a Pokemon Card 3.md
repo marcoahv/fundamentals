@@ -2,8 +2,6 @@
 sidebar_position: 47
 ---
 
-- can you write this transcript in markdown format as in an editor?
-
 # Build a Pokemon Card 3
 
 - Welcome to Part Three of building a Pokémon card in React Native.
