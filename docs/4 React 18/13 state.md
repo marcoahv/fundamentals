@@ -37,7 +37,7 @@ let's take a look at the comparison
 
 1. within the components folder i'm going to create a new file called `Message.js`
 
-```js
+```jsx
 src / components / Message.js
 ```
 
@@ -49,17 +49,17 @@ src / components / Message.js
 
 - the jsx we return the text `Greet visitor`
 
-```js
+```jsx
 // Message.js
 
-export const Message = (props) => {
+export const Message = props => {
   return <h1>Welcome Visitor</h1>
 }
 ```
 
 3. let me import the component in App.js
 
-```js
+```jsx
 App.js
 
 import './App.css'
@@ -69,11 +69,18 @@ import { Message } from './components/Message'
 function App() {
   return (
     <div className='App'>
-      <Greet name='Bruce' heroName='Batman' />
-      <Greet name='Clark' heroName='Superman'>
+      <Greet
+        name='Bruce'
+        heroName='Batman'
+      />
+      <Greet
+        name='Clark'
+        heroName='Superman'>
         <button>Action</button>
       </Greet>
-      <Greet name='Diana' heroName='Wonder Woman'>
+      <Greet
+        name='Diana'
+        heroName='Wonder Woman'>
         <p>This is children props</p>
       </Greet>
     </div>
@@ -85,7 +92,7 @@ export default App
 
 4. comment out rest of the components and include the message component
 
-```js
+```jsx
 import './App.css'
 // import { Greet } from './components/Greet'
 import { Message } from './components/Message'
@@ -126,12 +133,12 @@ if we take a look at the browser you should see the text welcome visitor
 
 - so at the top import use state from react
 
-```js
+```jsx
 // Message.js
 
 import { useState } from 'react'
 
-export const Message = (props) => {
+export const Message = props => {
   return <h1>Welcome Visitor</h1>
 }
 ```
@@ -140,12 +147,12 @@ export const Message = (props) => {
 
 - so `useState()` with parentheses
 
-```js
+```jsx
 // Message.js
 
 import { useState } from 'react'
 
-export const Message = (props) => {
+export const Message = props => {
   useState()
   return <h1>Welcome Visitor</h1>
 }
@@ -155,12 +162,12 @@ export const Message = (props) => {
 
 - const array message comma set message
 
-```js
+```jsx
 // Message.js
 
 import { useState } from 'react'
 
-export const Message = (props) => {
+export const Message = props => {
   const [message, setMessage] = useState()
   return <h1>Welcome Visitor</h1>
 }
@@ -177,12 +184,12 @@ makes sense in this example
 
 3. step 3, instead of `<h1>welcome visitor</h1>` we bind the state value in the jsx, `<h1>{message}</h1>`
 
-```js
+```jsx
 // Message.js
 
 import { useState } from 'react'
 
-export const Message = (props) => {
+export const Message = props => {
   const [message, setMessage] = useState('Welcome visitor')
   return <h1>{message}</h1>
 }
@@ -198,10 +205,10 @@ however since we are using state to render the message we now have the ability t
 
 before we do that `create an enclosing div tag` and then below the h1 tag `add a button` with text subscribe
 
-```js
+```jsx
 import { useState } from 'react'
 
-export const Message = (props) => {
+export const Message = props => {
   const [message, setMessage] = useState('Welcome Visitor')
   return (
     <div>
@@ -226,7 +233,7 @@ the button is now placed right below the message
 
 - to this event we assign a handler and this again is going to be within `curly braces`
 
-```js
+```jsx
 import { useState } from 'react'
 
 export const Message = (props) => {
@@ -243,10 +250,10 @@ export const Message = (props) => {
 
 - here we're going to have `an arrow function` in the function body we `call the setMessage function` returned from useState
 
-```js
+```jsx
 import { useState } from 'react'
 
-export const Message = (props) => {
+export const Message = props => {
   const [message, setMessage] = useState('Welcome Visitor')
   return (
     <div>
@@ -259,10 +266,10 @@ export const Message = (props) => {
 
 to this setMessage function `we can pass in a value` and react will update the message variable with that value let's pass in thank you for subscribing
 
-```js
+```jsx
 import { useState } from 'react'
 
-export const Message = (props) => {
+export const Message = props => {
   const [message, setMessage] = useState('Welcome Visitor')
   return (
     <div>

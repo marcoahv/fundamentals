@@ -24,7 +24,7 @@ so in the components folder new file called `ClickHandler.js`
 
 here define a new component, export const click handler and this is going to be equal to an arrow function
 
-```js
+```jsx
 // ClickHandler.js
 
 export const ClickHandler = () => {}
@@ -32,7 +32,7 @@ export const ClickHandler = () => {}
 
 in the jsx i'm going to add a div tag and a button within the div tag, click
 
-```js
+```jsx
 // ClickHandler.js
 
 export const ClickHandler = () => {
@@ -52,7 +52,7 @@ when the user clicks on this button a click event is fired,
 
 in plain html and vanilla javascript you would specify on click that is lowercase but in react it has to be `camel cased`
 
-```js
+```jsx
 export const ClickHandler = () => {
   return (
     <div>
@@ -66,7 +66,7 @@ export const ClickHandler = () => {
 
 2. so instead of a string click handler with parentheses we're going to have click handler `within curly braces`
 
-```js
+```jsx
 export const ClickHandler = () => {
   return (
     <div>
@@ -84,7 +84,7 @@ so inside the function component we can define our click handler
 
 const click handler is equal to an arrow function and within the function body we simply log to the console button clicked
 
-```js
+```jsx
 export const ClickHandler = () => {
   const clickHandler = () => {
     console.log('Button clicked')
@@ -101,7 +101,7 @@ let's save
 
 this included in App component and import the component at the top
 
-```js
+```jsx
 // App.js
 
 import './App.css'
@@ -142,9 +142,9 @@ our click event handling works as expected
 
 so we can specify event as a parameter to click handler and log it to the console
 
-```js
+```jsx
 export const ClickHandler = () => {
-  const clickHandler = (event) => {
+  const clickHandler = event => {
     console.log('Button clicked', event)
   }
   return (
@@ -163,9 +163,9 @@ in the browser click, and we see all the details about the event
 
 for example i can add another button, so copy paste, that says click 5
 
-```js
+```jsx
 export const ClickHandler = () => {
-  const clickHandler = (event) => {
+  const clickHandler = event => {
     console.log('Button clicked', event)
   }
   return (
@@ -179,15 +179,15 @@ export const ClickHandler = () => {
 
 but this time the on click handler will be an arrow function, this function receives the event as an argument
 
-```js
+```jsx
 export const ClickHandler = () => {
-  const clickHandler = (event) => {
+  const clickHandler = event => {
     console.log('Button clicked', event)
   }
   return (
     <div>
       <button onClick={clickHandler}>Click</button>
-      <button onClick={(event) => clickHandler}>Click 5</button>
+      <button onClick={event => clickHandler}>Click 5</button>
     </div>
   )
 }
@@ -195,15 +195,15 @@ export const ClickHandler = () => {
 
 we then call click handler, so parentheses, passing in the same event, but also a second argument, let's pass in a value of five
 
-```js
+```jsx
 export const ClickHandler = () => {
-  const clickHandler = (event) => {
+  const clickHandler = event => {
     console.log('Button clicked', event)
   }
   return (
     <div>
       <button onClick={clickHandler}>Click</button>
-      <button onClick={(event) => clickHandler(event, 5)}>Click 5</button>
+      <button onClick={event => clickHandler(event, 5)}>Click 5</button>
     </div>
   )
 }
@@ -211,7 +211,7 @@ export const ClickHandler = () => {
 
 in the click handler definition we can add a new parameter that says count and we set a default value of one, and log count to the console
 
-```js
+```jsx
 export const ClickHandler = () => {
   const clickHandler = (event, count = 1) => {
     console.log('Button clicked', count, event)
@@ -219,7 +219,7 @@ export const ClickHandler = () => {
   return (
     <div>
       <button onClick={clickHandler}>Click</button>
-      <button onClick={(event) => clickHandler(event, 5)}>Click 5</button>
+      <button onClick={event => clickHandler(event, 5)}>Click 5</button>
     </div>
   )
 }

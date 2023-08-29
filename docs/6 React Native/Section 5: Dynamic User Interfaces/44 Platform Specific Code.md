@@ -1,8 +1,6 @@
 ---
-sidebar_position: 4
+sidebar_position: 44
 ---
-
-- can you write this transcript in markdown format as in an editor?
 
 # Platform Specific Code
 
