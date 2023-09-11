@@ -4,7 +4,10 @@ sidebar_position: 3
 
 # Variables
 
-Variables are containers for pieces of data. That data can be one of many different data types. It's important to know and understand those data types and we will go over them in the next lesson, but right now, we are just going to look at the syntax for creating and re-assigning variables as well as the differences between how we declare them.
+- Variables are containers for pieces of data.
+- That data can be one of many different data types.
+
+- It's important to know and understand those data types and we will go over them in the next lesson, but right now, we are just going to look at the syntax for creating and re-assigning variables as well as the differences between how we declare them.
 
 ### Declaring a Variable
 
@@ -14,7 +17,10 @@ In JavScript, we need to first declare a variable with one of three keywords
 - let
 - const
 
-In modern JavaScript, you probably won't see `var` very much. `var` was the original declaration, but in `ES2015` also known as `ES6`, which was a huge update to the language, they introduced `let` and `const`. One of the reasons for this is because of `block scoping`. Now, I'm not going to talk about things like scope right now, because we haven't gotten to functions or anything, so if I talk about scope it'll go right over a lot of people's heads. I just want to focus on how we declare and assign variables and also work with constants. Just know that on the `global scope`, meaning not inside of a function or any kind of control structure, `var` and `let` work in a very similar same way. `const` is a bit different. I'll be using let and const throughout the course, unless there is a specific reason for me to use var.
+- In modern JavaScript, you probably won't see `var` very much.
+- `var` was the original declaration, but in `ES2015` also known as `ES6`, which was a huge update to the language, they introduced `let` and `const`.
+- One of the reasons for this is because of `block scoping`.
+- Now, I'm not going to talk about things like scope right now, because we haven't gotten to functions or anything, so if I talk about scope it'll go right over a lot of people's heads. I just want to focus on how we declare and assign variables and also work with constants. Just know that on the `global scope`, meaning not inside of a function or any kind of control structure, `var` and `let` work in a very similar same way. `const` is a bit different. I'll be using let and const throughout the course, unless there is a specific reason for me to use var.
 
 So let's say that we want a variable called firstName and lastName. Remember that `string` data types need to be wraped in either single or double quotes. You can also use backticks. Backticks (\`) have a special use which I'll talk about later.
 
