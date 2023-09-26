@@ -22,13 +22,13 @@ sidebar_position: 4
 
 ### Steps to Run the App on a Real Device
 
-1. **Navigate to the project folder and run the command `npm start` .**
+1. Navigate to the project folder and run the command `npm start` .
    - This will generate a QR code which we will use shortly.
-2. **Download the Expo Go app on your device.**
+2. Download the Expo Go app on your device.
    - You can find it on the App Store for iPhones or the Play Store for Android devices.
 3. `Ensure that both your computer and the mobile device are connected to the same Wi-Fi network.`
 
-4. **On your iPhone, open the Camera app and scan the QR code displayed in the terminal.**
+4. On your iPhone, open the Camera app and scan the QR code displayed in the terminal.
    - `If you have an Android device, use the QR code scanner within the Expo Go app.`
 5. After a few seconds, you should see the Hello World app running on your device.
    - The device screen may be mirrored on your computer screen.

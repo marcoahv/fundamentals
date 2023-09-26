@@ -52,4 +52,4 @@ sidebar_position: 3
 
 - It's finally time to run our first React Native Expo app.
 
-- Follow the instructions in the terminal to run the project.\*\*
+- Follow the instructions in the terminal to run the project.

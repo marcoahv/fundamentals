@@ -10,7 +10,7 @@ sidebar_position: 57
 
 ### **=>** Intro
 
-- Welcome back to the eighth section of our course, where we will focus on inputs and fonts in React Native.
+- Welcome back to the eighth section of our course, where we will focus on inputs and forms in React Native.
 
 - In this introductory video, we will clarify some key aspects and set expectations for what we are about to learn.
 
@@ -18,7 +18,7 @@ sidebar_position: 57
 
 - In web applications, we have numerous HTML elements for capturing user input, such as input fields, text areas, drop-down menus, checkboxes, radio buttons, and more.
 
-- However, in React Native, our input options are more limited. As of this recording, the core React Native library provides only two input components: Text Input and Switch. These will be our primary focus in this section.
+- However, in React Native, our input options are more limited. As of this recording, the core React Native library provides only two input components: `TextInput` and `Switch` These will be our primary focus in this section.
 
 ### **=>** Expo Expands Input Options
 
@@ -35,14 +35,15 @@ sidebar_position: 57
 
 - While libraries like React Hook Form can streamline these steps, we will learn how to handle forms manually without external dependencies in this section.
 
-### **=>** Future Topics
+### **=>** React Hook Form
 
 - In the future, we might dedicate an entire section to combining React Native with React Hook Form, so stay tuned for that.
 
 ### **=>** Project Setup
 
-- To follow along, I've created a new Expo project named "React Native Forms." You can create a similar project using the command `npx create-extra-app` followed by the project name, which is "RN Forms."
+- To follow along, I've created a new Expo project named `RNForms`
+- You can create a similar project using the command:
 
-### **=>** Next Video
-
-- With our project set up, join me in the next video, where we will learn about the Text Input component in React Native.
+```bash
+npx create-expo-app RNForms
+```
