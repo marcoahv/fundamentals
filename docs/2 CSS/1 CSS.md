@@ -4,45 +4,10 @@ sidebar_position: 1
 
 # CSS
 
-### **Introduction**
 
-- Hey everyone, my name is Vishwas, and welcome to the CSS crash course for complete beginners. In this crash course, we will take a look at the fundamentals of CSS.
+### **=>** What is CSS?
 
-### **Before We Begin**
-
-- Before we begin, let me go over a few points to give you an idea of what this video is and what it is not.
-
-- First, I would like to mention this course is for complete beginners. I'm going to assume you have no prior knowledge of CSS and teach the course. If you are someone who is already familiar with CSS, this is your cue to probably hop into another video where your time can be better utilized.
-
-- Second, this video is a continuation of the HTML crash course, so make sure you are familiar with HTML before proceeding.
-
-- Third, we're going to learn the fundamentals of CSS. CSS contains a plethora of concepts, varying from simple syntax to advanced topics that are relatively more difficult to understand. We will focus on topics that a beginner must know when getting started with web development. You can then use that knowledge to add styles to your web pages based on your artistic knowledge, very similar to how you learn the basics of a guitar string and then use that knowledge to play any song which you like.
-
-- It is worth mentioning that some of the buzzwords that you might have heard, like flexbox and CSS grid, will be their own separate videos, and this video will just be about the fundamentals of CSS.
-
-- Finally, unlike other videos on my channel, this video is a crash course and is longer in length. That doesn't mean you have to sit through the entire video at once. Take it easy, pause when necessary, and most importantly, make sure you code along with me as that is the best way to learn.
-
-- By the end of this video, you will have a solid understanding of the fundamentals of CSS. All right, with these points in mind, let's get started.
-
-### **Setup**
-
-- To work with CSS, similar to HTML, we need two things: a browser and a code editor. For the browser, I'm going to be using Chrome.
-
-- To write the CSS code, I'm going to be using Visual Studio Code. Head over to [code.visualstudio.com](https://code.visualstudio.com) and download the editor.
-
-- Once you have installed it, in the sidebar, click on "Extensions" and install the "Prettier - Code Formatter" extension. This extension will help with code formatting.
-
-- Finally, open the editor inside a folder of your choice. I have created a folder called "CSS Crash Course" and I've opened VS Code inside the folder.
-
-- Here, I'm going to create a new HTML file: `index.html`. Type `!` and tab to generate a simple HTML document. Within the `<body>` tag, add an `<h1>` tag that says "CSS Crash Course."
-
-- This pretty much is all the setup we have to do. If you reveal this file in File Explorer and open `index.html` in the browser, you should see the text as expected.
-
-- Now we are ready to learn CSS. First, let us understand what is CSS.
-
-### **What is CSS?**
-
-- CSS stands for Cascading Style Sheets and is the language used to style an HTML document.
+- CSS stands for `Cascading Style Sheets` and is the language used to style an HTML document.
 
 - CSS is a style sheet language and not a programming language.
 
@@ -52,17 +17,36 @@ sidebar_position: 1
 
 - Understanding how to select HTML elements and apply styles is crucial in learning CSS.
 
-### **How to Add CSS?**
+### **=>** How to Add CSS?
 
-- There are three different ways to add styles to an HTML document: inline styles, internal style sheets, and external style sheets.
+- There are three different ways to add styles to an HTML document:
+- inline styles,
+- internal style sheets,
+- and external style sheets.
 
 #### Inline Styles
 
 - Inline styles are CSS declarations that affect a single HTML element.
 
-- To use inline styles, add the `style` attribute to the relevant HTML element.
+  - To use inline styles, add the `style attribute` to the relevant HTML element.
 
-- For example, to apply an orange color to an `h1` tag, you add `style="color: orange"`.
+  - For example, to apply an orange color to an `h1` tag, you add `style="color: orange"`
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 style="color: orange">CSS Crash Course</h1>
+  </body>
+</html>
+```
 
 - Inline styles are straightforward but not recommended for larger projects due to maintenance challenges and mixing HTML content with presentational code.
 
@@ -70,13 +54,38 @@ sidebar_position: 1
 
 - An internal style sheet is defined within a `<style>` element within the `<head>` section of the HTML document.
 
-- A CSS rule consists of a selector and a declaration block.
+#### CSS Rule
 
-- The selector points to the HTML element you want to style, and the declaration block contains one or more style declarations.
+- A `CSS rule` consists of a `selector` and a `declaration block`
 
+![](./images/1.png)
+
+- The `selector` points to the HTML element you want to style,
+- and the `declaration block` contains one or more style declarations.
 - Each declaration consists of a property and a value separated by a colon.
-
 - For example: `h1 { property: value; }`
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      h1 {
+        color: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS Crash Course</h1>
+  </body>
+</html>
+```
 
 - Internal style sheets are more organized than inline styles but still not recommended for larger websites.
 
@@ -84,7 +93,28 @@ sidebar_position: 1
 
 - An external style sheet is a separate CSS file with a `.css` extension.
 
+![](images/2.png)
+
 - The HTML document links to the external style sheet using the `<link>` element within the `<head>` section.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="styles.css" />
+  </head>
+  <body>
+    <h1>CSS Crash Course</h1>
+  </body>
+</html>
+```
 
 - This approach is the most common and efficient way to add CSS to a website.
 
@@ -92,15 +122,16 @@ sidebar_position: 1
 
 - Changes made to the external style sheet are reflected on all linked web pages.
 
-These are the three methods for adding CSS to an HTML document. The external style sheet approach is the recommended method for larger websites and projects.
+- These are the three methods for adding CSS to an HTML document.
+- The external style sheet approach is the recommended method for larger websites and projects.
 
-### **CSS Selectors**
+### **=>** CSS Selectors
 
 - CSS selectors are used to specify which HTML elements should be styled.
 
-- A CSS rule consists of a selector and a declaration block containing style declarations.
+- A `CSS rule` consists of a selector and a declaration block containing style declarations.
 
-- We already learned about the type or element selector that selects all instances of a specific HTML element.
+- We already learned about the type or `element selector` that selects all instances of a specific HTML element.
 
 - CSS selectors help us target specific elements for styling in more complex web pages.
 
@@ -112,67 +143,130 @@ These are the three methods for adding CSS to an HTML document. The external sty
 
 - For example, `h1` selects all `h1` tags in the web page.
 
+```css
+h1 {
+  color: blue;
+}
+```
+
 - When applied, it affects all elements of the specified type.
 
 #### Universal Selector
 
-- The universal selector, denoted by an asterisk (\*), selects every element in the page.
+- The universal selector, denoted by an asterisk `*`, selects every element in the page.
 
 - It can be used to reset default browser styles.
 
 - Useful for removing default styles that we don't need.
 
+```css
+/* Simple CSS reset */
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+```
+
 #### Class Selector
 
 - The class selector targets elements with a specific class attribute.
 
-- It starts with a dot (.) followed by the class name.
+- It starts with a dot `.` followed by the class name.
 
 - Multiple elements can share the same class for consistent styling.
 
+```css
+.error {
+  color: red;
+}
+
+.success {
+  color: green;
+}
+```
+
 - For example, `.error` and `.success` classes can style different elements.
+
+```html
+<p class="error">Red text</p>
+<p class="success">Green text</p>
+```
 
 #### ID Selector
 
 - The ID selector is similar to the class selector but applies to a unique element.
 
-- It starts with a hash (#) followed by the ID name.
+- It starts with a hash `#` followed by the ID name.
+
+```css
+#test {
+  color: maroon;
+}
+```
 
 - Typically used for styling a single specific element.
+
+```html
+<p class="error">Red text</p>
+<p class="success">Green text</p>
+
+<p id="test">Id selector</p>
+```
 
 - Rarely used compared to class selectors.
 
 - Understanding and using class selectors is common and recommended for styling web elements.
 
+#### using advanced selectors
+
 - Combining selectors and using advanced selectors can provide more sophisticated styling options.
 
-- For now, focus on grasping the basics of these selectors.
+- For now, `focus on grasping the basics of these selectors.`
 
-### **Color Property**
+### **=>** Color Property
 
-- The `color` property is used to define the text color of an element in CSS.
+- The `color` property is used to `define the text color` of an element in CSS.
 
 - It can be specified in multiple ways.
 
-- Two common methods are hex values and RGBA values.
+- Two common methods are `hex` values and `RGBA` values.
 
 #### Hex Values
 
-- Hex values start with a hash symbol (#) or pound symbol.
+- `Hex values` start with a hash symbol `#` or pound symbol.
 
 - They are followed by a six-character hex code ranging from six zeros to six F's.
 
 - For example, `#000000` represents black, while `#FFFFFF` represents white.
 
+```css
+.light-text {
+  color: #ffffff; /* White */
+}
+
+.dark-text {
+  color: #000000; /* Black */
+}
+```
+
 #### RGBA Values
 
-- RGBA values allow you to specify the color using red (R), green (G), and blue (B) components.
+- `RGBA values` allow you to specify the color using red `R`, green `G`, and blue `B` components.
 
 - Each component's value can range from 0 to 255.
 
-- Additionally, an alpha (A) value controls opacity, ranging from 0 (completely transparent) to 1 (fully opaque).
+- Additionally, an alpha `A` value controls opacity, ranging from 0 (completely transparent) to 1 (fully opaque).
 
 - For example, `rgba(0, 0, 0, 0.5)` represents a semi-transparent black color.
+
+```css
+.dark-text {
+  color: rgba(0, 0, 0, 0.5);
+}
+```
 
 - Opacity in RGBA can be adjusted from 0 (transparent) to 1 (opaque).
 
@@ -180,61 +274,175 @@ These are the three methods for adding CSS to an HTML document. The external sty
 
 - You can set the `color` property to apply specific text colors.
 
+### **=>** background-color property
+
 - Similarly, you can use the `background-color` property to set background colors for elements.
+
+```html
+<div class="orange">Orange background</div>
+
+<span class="yellow">Yellow background</span>
+```
 
 - The color property sets the text color, while background-color sets the element's background color.
 
-- In HTML, you can assign classes to elements to target them with CSS.
+```css
+.orange {
+  background-color: orange;
+}
 
-- By defining styles for these classes in your CSS file, you can apply consistent styles to elements across your web page.
+.yellow {
+  background-color: yellow;
+}
+```
 
-- Remember that hex and RGBA values are just two ways to specify colors in CSS.
+### **=>** Styling Text
 
-- There are other color notations and properties for more advanced color control.
+- In CSS, text styling properties are categorized into two main groups: `font styles` and `text layout styles`
 
-- As you continue learning CSS, you'll discover additional ways to style elements and create visually appealing web pages.
-
-Here's the text you provided, formatted in Markdown with h3 tags for sections and bullet points for sentences:
-
-### **Styling Text**
-
-- In CSS, text styling properties are categorized into two main groups: font styles and text layout styles.
-
-### **Font Styles**
+### **=>** Font Styles
 
 - By default, on Windows Chrome, the font used is Times New Roman.
 
+#### font-family property
+
 - You can change the font using the `font-family` property.
 
-- Example: Create a CSS class called `font-styles` and set `font-family` to `Verdana`.
+- Example: Create a CSS class called `.font-styles` and set `font-family` to `Verdana`.
+
+```css
+.font-styles {
+  font-family: Verdana;
+}
+```
 
 - Apply the `font-styles` class to an HTML element to change its font.
 
+```html
+<h1>CSS text</h1>
+<h1 class="font-styles">CSS text</h1>
+```
+
+#### web-safe font (font stack)
+
 - Consider adding a web-safe font as a backup for better compatibility.
 
-- Two other font properties are `font-style` (italic) and `font-weight` (bold).
+```css
+.font-styles {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+```
 
-- You can also control text decoration (e.g., underline) and font size (e.g., `50px`).
+#### font-style
 
-### **Text Layout Properties**
+- Two other font properties are `font-style` (italic)
+
+```css
+.font-styles {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-style: italic;
+}
+```
+
+#### font-weight
+
+- and `font-weight` (bold).
+
+```css
+.font-styles {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-style: italic;
+  font-weight: bold;
+}
+```
+
+#### text-decoration
+
+- You can also control `text-decoration` (e.g., underline)
+
+```css
+.font-styles {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-style: italic;
+  font-weight: bold;
+  text-decoration: underline;
+}
+```
+
+#### font-size
+
+- and `font-size` (e.g., `50px`).
+
+```css
+.font-styles {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-style: italic;
+  font-weight: bold;
+  text-decoration: underline;
+  font-size: 50px;
+}
+```
+
+### **=>** Text Layout Properties
 
 - Text layout properties affect how text is positioned and spaced within its container.
 
+#### text-align
+
 - Text alignment (`text-align`) controls horizontal alignment (e.g., `center` or `right`).
+
+```css
+.container {
+  background-color: orange;
+  text-align: center;
+}
+```
+
+#### line-height
 
 - Line height (`line-height`) sets the height of each line of text, affecting line spacing.
 
+```css
+.container {
+  background-color: orange;
+  text-align: center;
+  line-height: 2;
+}
+```
+
+#### letter-spacing and word-spacing
+
 - Letter spacing (`letter-spacing`) and word spacing (`word-spacing`) adjust the space between characters and words.
+
+```css
+.container {
+  background-color: orange;
+  text-align: center;
+  line-height: 2;
+  letter-spacing: 4px;
+  word-spacing: 20px;
+}
+```
 
 - Experiment with these properties to control text layout and appearance in your web page.
 
-### **Styling Lists**
+### **=>** Styling Lists
 
 - To style lists in HTML, you can use CSS properties to customize their appearance.
+
+#### list-style-type
 
 - For example, you can change the bullet point style in an unordered list (`<ul>`).
 
 - In the HTML file, add an unordered list with items such as "bread," "milk," and "eggs."
+
+```html
+<ul>
+  <li>Bread</li>
+  <li>Milk</li>
+  <li>Eggs</li>
+</ul>
+```
 
 - By default, the bullet points are solid circles (`list-style-type: disc`).
 
@@ -250,9 +458,17 @@ Here's the text you provided, formatted in Markdown with h3 tags for sections an
 
 - To remove default spacing around the list, set the `margin` and `padding` properties to zero.
 
+```css
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+```
+
 - Learning how to style lists is essential for creating well-designed web pages.
 
-### **CSS Box Model**
+### **=>** CSS Box Model
 
 - The CSS box model is a fundamental concept in web design.
 
@@ -268,17 +484,23 @@ Here's the text you provided, formatted in Markdown with h3 tags for sections an
 
 #### Visualizing the CSS Box Model
 
-- Content Box: This is where your content is displayed and can be sized using properties like `width` and `height`.
+![](images/3.png)
 
-- Padding Box: Padding surrounds the content as white space and is controlled using padding-related properties.
+- `Content Box:` This is where your content is displayed and can be sized using properties like `width` and `height`.
 
-- Border Box: The border box wraps the content and any padding, and its size and style are controlled using border-related properties.
+- `Padding Box:` Padding surrounds the content as white space and is controlled using padding-related properties.
 
-- Margin Box: The margin is the outermost layer wrapping the content, padding, and border. It creates white space between this box and other elements and is controlled using margin-related properties.
+- `Border Box:` The border box wraps the content and any padding, and its size and style are controlled using border-related properties.
+
+- `Margin Box:` The margin is the outermost layer wrapping the content, padding, and border. It creates white space between this box and other elements and is controlled using margin-related properties.
 
 #### Applying Box Model Properties
 
 - In the HTML file, add a `div` tag with a class attribute set to "box model."
+
+```html
+<div class="box-model">CSS Box Model</div>
+```
 
 - In the CSS file, apply various box model properties to the `.box-model` class:
 
@@ -290,13 +512,26 @@ Here's the text you provided, formatted in Markdown with h3 tags for sections an
 
   - `margin: 20px`: Adds space outside the border in all directions.
 
+```css
+.box-model {
+  border: 1px solid red;
+  height: 50px;
+  width: 300px;
+  padding: 20px;
+  margin: 20px;
+}
+```
+
 #### Developer Tools and Box Model
 
 - Utilize developer tools to inspect elements and view the box model properties.
 
 - Understanding the box model and its properties is crucial for web page layout and design.
 
-- Explore additional properties like specifying padding or margin in specific directions (e.g., `padding-top`, `margin-right`) and the `border-radius` property for rounded corners.
+![](images/4.png)
+
+- Explore additional properties like specifying padding or margin in specific directions (e.g., `padding-top`, `margin-right`)
+- and the `border-radius` property for rounded corners.
 
 #### Conclusion
 
@@ -304,17 +539,15 @@ Here's the text you provided, formatted in Markdown with h3 tags for sections an
 
 - Understanding how these properties affect elements is essential for creating well-designed web pages.
 
-Here's the text you provided, formatted in Markdown with h3 tags for sections and bullet points for sentences:
-
-### **Cascade, Specificity & Inheritance**
+### **=>** Cascade, Specificity & Inheritance
 
 - Understanding cascade, specificity, and inheritance is crucial for effective CSS.
 
-- Cascade refers to how the browser determines which CSS rule to apply when multiple rules target the same element.
+- `Cascade` refers to how the browser determines which CSS rule to apply when multiple rules target the same element.
 
-- Specificity plays a key role in cascade, as different selectors have different levels of specificity.
+- `Specificity` plays a key role in cascade, as different selectors have different levels of specificity.
 
-- Inheritance is the process by which some CSS property values set on parent elements are inherited by their child elements.
+- `Inheritance` is the process by which some CSS property values set on parent elements are inherited by their child elements.
 
 #### Cascade
 
@@ -322,7 +555,27 @@ Here's the text you provided, formatted in Markdown with h3 tags for sections an
 
 - In CSS, when multiple rules with equal specificity apply to the same element, the last rule in the CSS file takes precedence.
 
-- For example, if two rules both target an `h2` element and set its color to different values, the last rule's color will be applied.
+- For example, if two rules both target an `h2` element
+
+```html
+<h2>Cascade</h2>
+```
+
+- and set its color to different values,
+
+```css
+h2 {
+  color: red;
+}
+
+h2 {
+  color: blue;
+}
+```
+
+- the last rule's color will be applied.
+
+![]
 
 #### Specificity
 
@@ -338,23 +591,31 @@ Here's the text you provided, formatted in Markdown with h3 tags for sections an
 
 - Using the `!important` keyword makes a rule the most specific, but it's not a recommended practice.
 
+![](images/6.png)
+
 #### Inheritance
 
 - Some CSS property values set on parent elements are inherited by their child elements.
 
-- Commonly inherited properties include `color` and font-related properties.
+- Commonly inherited properties include `color` and `font-related` properties.
 
 - You can rely on inheritance to style child elements without specifying styles for each one individually.
 
-#### Examples
-
-- To demonstrate cascade, add multiple rules targeting the same element, and observe which one takes precedence.
-
-- Specificity can be seen by comparing different types of selectors (element, class, ID, inline styles) applied to the same element.
-
-- Inline styles and the `!important` keyword can override other rules.
+```html
+<div class="inheritance">
+  <p>Inheritance</p>
+</div>
+```
 
 - Inheritance can be tested by setting styles on a parent element and seeing if child elements inherit those styles.
+
+```css
+.inheritance {
+  color: orange;
+  font-family: 'Segoe UI';
+  font-size: 30px;
+}
+```
 
 #### Conclusion
 
@@ -366,7 +627,7 @@ Here's the text you provided, formatted in Markdown with h3 tags for sections an
 
 Here's the text you provided, formatted in Markdown with h3 tags for sections and bullet points for sentences:
 
-### **Styling Tables**
+### **=>** Styling Tables
 
 - Tables in HTML can be styled using CSS to improve their appearance and layout.
 
@@ -380,7 +641,38 @@ Here's the text you provided, formatted in Markdown with h3 tags for sections an
 
 - You can add headings in `<th>` tags and data in `<td>` tags.
 
+```html
+<table>
+  <thead>
+    <tr>
+      <th>Heading 1</th>
+      <th>Heading 2</th>
+      <th>Heading 3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Data 1</td>
+      <td>Data 2</td>
+      <td>Data 3</td>
+    </tr>
+    <tr>
+      <td>Data 4</td>
+      <td>Data 5</td>
+      <td>Data 6</td>
+    </tr>
+    <tr>
+      <td>Data 7</td>
+      <td>Data 8</td>
+      <td>Data 9</td>
+    </tr>
+  </tbody>
+</table>
+```
+
 - The goal is to create a table with a heading row and multiple data rows.
+
+![](images/7.png)
 
 #### Adding Borders
 
@@ -388,35 +680,113 @@ Here's the text you provided, formatted in Markdown with h3 tags for sections an
 
 - For example, setting `border: 1px solid gray;` adds a 1-pixel solid gray border to table cells.
 
+```css
+td,
+th {
+  border: 1px solid #ccc;
+}
+```
+
 - Applying borders without any adjustments still makes the table look like individual cells.
+
+![](images/8.png)
 
 #### Collapsing Borders
 
 - To make the table look like a coherent unit rather than separate cells, you can use the `border-collapse` property on the `<table>` element.
 
+```css
+th,
+td {
+  border-bottom: 1px solid #ccc;
+}
+
+table {
+  border-collapse: collapse;
+}
+```
+
 - Setting `border-collapse: collapse;` merges borders between adjacent cells, creating a cleaner table appearance.
+
+![](images/9.png)
 
 #### Setting Table Width
 
 - You can control the table's width using the `width` property.
 
-- For example, setting `width: 100%;` makes the table occupy the full available width, while `width: 60%;` makes it narrower.
+- For example, setting `width: 100%;` makes the table occupy the full available width,
+
+```css
+td,
+th {
+  border: 1px solid #ccc;
+}
+
+table {
+  border-collapse: collapse;
+  width: 60%;
+}
+```
+
+- while `width: 60%;` makes it narrower.
+
+![](images/10.png)
 
 #### Text Alignment
 
 - By default, table headings (`<th>`) are center-aligned, and table data (`<td>`) is left-aligned.
 
-- You can change the text alignment using the `text-align` property.
+- You can change the text alignment using the `text-align` property and the `vertical-align`
 
-- For example, `text-align: center;` centers the text, and `text-align: right;` right-aligns it.
+```css
+td,
+th {
+  border: 1px solid #ccc;
+}
+
+table {
+  border-collapse: collapse;
+  width: 60%;
+}
+
+td {
+  text-align: center;
+  height: 50px;
+  vertical-align: bottom;
+}
+```
+
+>
+
+![](images/11.png)
 
 #### Adding Padding
 
 - To add space within the cells, you can use the `padding` property.
 
-- For instance, `padding: 15px;` adds 15 pixels of padding inside each cell.
+- For instance, `th,td {padding: 15px;}` adds 15 pixels of padding inside each cell.
+- (and remove vertical-align and height)
+
+```css
+td,
+th {
+  border: 1px solid #ccc;
+  padding: 15px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 60%;
+}
+
+td {
+  text-align: center;
+}
+```
 
 - Padding enhances the visual appearance of the table.
+
+![](images/12.png)
 
 #### Improving Table Style
 
@@ -424,7 +794,28 @@ Here's the text you provided, formatted in Markdown with h3 tags for sections an
 
 - Instead of applying borders to all sides of each cell, set `border-bottom` to separate rows.
 
-- For example, `border-bottom: 1px solid #ccc;` adds a horizontal line between rows, making the table easier to read.
+- For example, `border-bottom: 1px solid #ccc;`
+
+```css
+th,
+td {
+  border-bottom: 1px solid #ccc;
+  padding: 15px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 50%;
+}
+
+td {
+  text-align: center;
+}
+```
+
+- adds a horizontal line between rows, making the table easier to read.
+
+![](images/13.png)
 
 #### Fundamental Table Styling
 
@@ -432,7 +823,7 @@ Here's the text you provided, formatted in Markdown with h3 tags for sections an
 
 - These properties help create well-designed tables for your web pages.
 
-### **Display Property**
+### **=>** Display Property
 
 - The `display` property in CSS controls how an HTML element is displayed on the page.
 
@@ -466,7 +857,7 @@ Here's the text you provided, formatted in Markdown with h3 tags for sections an
 
 - These values allow for more complex and responsive layouts but require a deeper understanding.
 
-### **Position Property**
+### **=>** Position Property
 
 - The `position` property in CSS determines how an element is positioned within its parent container or the viewport.
 
@@ -510,7 +901,7 @@ Here's the text you provided, formatted in Markdown with h3 tags for sections an
 
 Here's the text you provided, formatted in Markdown with h3 tags for sections and bullet points for sentences:
 
-### **Position**
+### **=>** Position
 
 - The next property when it comes to CSS layout is the `position` property, which specifies the type of positioning method used for an element.
 
@@ -592,7 +983,7 @@ Here's the text you provided, formatted in Markdown with h3 tags for sections an
 
 - If it's a bit confusing at this moment in time, do not worry. It is something we all tend to struggle with as beginners, but hopefully, the examples you have seen have given you a hint as to how the different values work, which should set you up for further learning.
 
-### **CSS Units**
+### **=>** CSS Units
 
 - Okay, for the penultimate topic in this crash course, we're going to quickly take a look at the different CSS units.
 
@@ -656,7 +1047,7 @@ class equal to just `m`.
 
 - `m`, `rem`, `vh`, and `vw`—these are some of the more commonly used relative units in CSS that you, as a beginner, should be aware of.
 
-### **CSS Math Functions**
+### **=>** CSS Math Functions
 
 - All right, for the final topic in this CSS crash course, we're going to take a look at three math functions that can be used as property values.
 
