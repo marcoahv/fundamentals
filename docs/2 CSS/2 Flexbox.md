@@ -115,7 +115,7 @@ Here's the text you provided formatted using Markdown with h3 tags for sections,
   9. Finally, we have the `align-content` property,
      - This is similar to `justify-content` with the difference being this will align along the cross access and not main access. Also, this works only when there are multiple rows of flex items in the container.
 
-### **=>** Setup
+#### Setup
 
 - To get us started with Flexbox, I have set up some very simple HTML and CSS that I am now going to walk you through.
 
@@ -145,7 +145,7 @@ Here's the text you provided formatted using Markdown with h3 tags for sections,
 
 - You can see we have nine items enclosed within the container that has a solid black border.
 
-### **=>** display
+### **=>** display-flex
 
 - Now we can focus on our very first property, which is the `display` property.
 
@@ -387,7 +387,7 @@ Here's the text you provided, formatted using Markdown with h3 tags for sections
 
 - We will wrap up flex item properties with `align-self`, which allows alignment of individual flex items.
 
-### **=>** order
+### **=>** order property
 
 - Now that we know the properties that can be applied to a flex item, let's take a closer look at each of the properties, starting with the `order` property.
 
@@ -481,7 +481,7 @@ Here's the text you provided, formatted using Markdown with h3 tags for sections
 
 Here's the text you provided, formatted using Markdown:
 
-### **=>** `flex-basis`
+### **=>** flex-basis
 
 - Let's move on to the next property which is `flex-basis`.
 
@@ -503,7 +503,7 @@ Here's the text you provided, formatted using Markdown:
 
 - So, the `flex-basis` property is used to set the initial size of a flex item. You can specify values in pixels, percentages, or relative units. By default, the value is `auto`, which decides the item's width based on the item's content.
 
-### **=>** `flex`
+### **=>** flex
 
 - All right, the next property applicable to a flex item is the `flex` property, which is a shorthand for `flex-grow`, `flex-shrink`, and `flex-basis`.
 
@@ -521,7 +521,7 @@ Here's the text you provided, formatted using Markdown:
 
 - The `flex` property can be specified using one, two, or all three values. Try experimenting with different values, and you'll get a good understanding of the `flex` property.
 
-### **=>** `align-self`
+### **=>** align-self
 
 - Let's now move on to the last flex item property, which is the `align-self` property.
 

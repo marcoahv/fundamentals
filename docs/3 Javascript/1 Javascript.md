@@ -50,7 +50,7 @@ sidebar_position: 1
 
 - However, at the end of this course, I will talk about the next steps after you have had a good understanding of the fundamentals.
 
-### **=>** Setup
+#### Setup
 
 - Now, for some setup to work with JavaScript, we need three things: a browser, Node.js, and a code editor.
 

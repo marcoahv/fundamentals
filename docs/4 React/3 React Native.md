@@ -17,18 +17,23 @@ sidebar_position: 1
 - React Native is an open-source framework for building native Android and iOS applications using React.
 
 - Leveraging JavaScript, you can access platform-specific APIs while employing React components to define the appearance and behavior of
+
   your user interface.
 
 #### Why Learn React Native?
 
 - Traditionally, developing an iOS app requires knowledge of Swift or Objective-C, while building an Android app requires Java or Kotlin
+
   expertise.
+
 - With React Native, you can create an app that works seamlessly on both platforms, saving time and effort.
 
 - Learning React Native involves a minimal learning curve if you already have experience with React.
 
 - React Native is in high demand in the job market, allowing businesses to have a single team proficient in React Native instead of
+
   separate iOS and Android developers.
+
 - The expertise in React can also extend to web app development.
 
 - React Native is used by companies like Microsoft, Meta, Tesla, Pinterest, and Discord, making it a valuable addition to your skill set.
@@ -276,10 +281,14 @@ sidebar_position: 1
 
 ### **=>** Core Components
 
+>
+
 #### the core components in React Native
 
 - In this section, we will explore the core components in React Native.
+
 - When we use React to create web user interfaces, we often utilize HTML tags such as `<div>` , `<span>` , and `<p>` .
+
 - Here's an example React component that renders "Hello, World!" in the browser using `<div>` and `<p>` tags.
 
 ```jsx
@@ -312,12 +321,13 @@ export default HelloWorld
 
 | React Native Core Component | Android Equivalent | iOS Equivalent | Web Equivalent |
 | --------------------------- | ------------------ | -------------- | -------------- |
-| View                        | View               | UIView         | `<div>`        |
-| Text                        | TextView           | UILabel        | `<p>`          |
-| Image                       | ImageView          | UIImageView    | `<img>`        |
-| TextInput                   | EditText           | UITextField    | `<input>`      |
-| ScrollView                  | ScrollView         | UIScrollView   | `<div>`        |
-| Button                      | Button             | UIButton       | `<button>`     |
+
+| View | View | UIView | `<div>` |
+| Text | TextView | UILabel | `<p>` |
+| Image | ImageView | UIImageView | `<img>` |
+| TextInput | EditText | UITextField | `<input>` |
+| ScrollView | ScrollView | UIScrollView | `<div>` |
+| Button | Button | UIButton | `<button>` |
 
 - Pause the video and take a good look at each row and column in this table.
 
@@ -2045,6 +2055,7 @@ export default function App() {
 ```
 
 - If we save the file, you will notice the circular loading indicator in both iOS and Android.
+
 - They are indeed very small, and the color contrast is not great. So, I recommend you verify this on your own simulator or virtual device.
 
 - Although they have slight visual differences, they effectively convey the message that something is happening in the background.
@@ -2094,6 +2105,7 @@ export default function App() {
 ```
 
 - The `animating` prop: By default, it is set to `true`, which is why we see the indicator.
+
 - We can set it to `false` to hide the indicator.
 
 ```jsx
@@ -2124,8 +2136,11 @@ export default function App() {
 - Keep in mind that the recommended approach is to use a state variable for the `animating` prop.
 
 - In summary, the ActivityIndicator component displays a loading indicator to inform users about ongoing background processes.
+
 - You can customize it using the `size` prop to set the size,
+
 - the `color` prop to set a predefined or custom color,
+
 - and the `animating` prop to control visibility.
 
 ### **=>** Alert component
@@ -2877,17 +2892,25 @@ export default function App() {
 #### Intro
 
 - In this video, let's take a look at the different styles applicable in relation to the CSS Box model.
+
 - As you may already know, `the CSS Box model represents a box that encloses every HTML element consisting of margins, borders, padding, and the actual content`.
+
 - Interestingly, `these properties are also applicable to React Native components`.
+
 - Let's delve into the specifics of these properties in this video.
 
 #### Height and Width Properties
 
 - To begin, let's discuss the height and width properties.
+
 - These properties have already been covered in the previous videos of the series.
+
 - They're used to define the dimensions of a component.
+
 - It is important to note that `in React Native, all dimensions are unitless` and represent density independent pixels.
+
 - No specific units like Rems or pixels are required.
+
 - In our example, both the width and height are set to 100.
 
 ```jsx
@@ -2928,7 +2951,9 @@ const styles = StyleSheet.create({
 ```
 
 - But what you can do is specify percentage values.
+
 - `when the parent's dimensions are defined. Child components can have percentage dimensions`.
+
 - In this case, since the container has a flex value of 1, occupying the entire available screen space, we can set the Box's width and height to 25 percent.
 
 ```jsx
@@ -2969,15 +2994,21 @@ const styles = StyleSheet.create({
 ```
 
 - As a result, you can observe that the Box width and height now account for 25 percent of the apparent container's width and height, respectively.
+
 - Together, the two boxes occupy fifty percent of the available height and 25 percent of the available width.
+
 - So this covers the width and height aspects of the element.
 
 #### Padding
 
 - Moving on, let's talk about padding.
+
 - Similar to CSS for the web, `React Native allows us to specify padding in all four directions.`
+
 - Additionally, there are a few properties in React Native that you should be aware of.
+
 - You can individually set padding in the horizontal and vertical directions using `paddingHorizontal` and `paddingVertical` .
+
 - So, let's comment out padding and instead add `paddingHorizontal: 10` and `paddingVertical: 20` . Take a look at the UI,
 
 ```jsx
@@ -3027,6 +3058,7 @@ const styles = StyleSheet.create({
 #### Margin
 
 - The margin property also functions similarly to its CSS counterpart, and in React Native, we can utilize `marginHorizontal` and `marginVertical` as well.
+
 - So, `margin: 10` works completely fine, but we can also have `marginVertical: 10` . Take a look at the UI,
 
 ```jsx
@@ -3078,9 +3110,13 @@ const styles = StyleSheet.create({
 #### Borders
 
 - Next, let's take a look at borders in React Native.
+
 - In traditional web CSS, we often specify the border with a shorthand property like `border: 2px solid purple` .
+
 - However, this approach does not work in React Native.
+
 - Instead, we need to specify the properties individually.
+
 - First, we set `borderWidth` to 2. Next, we have `borderColor` , which is a string "purple". Finally, we have `borderStyle` , which is set to "solid" by default, so we don't need to explicitly mention it.
 
 ```jsx
@@ -3135,6 +3171,7 @@ const styles = StyleSheet.create({
 #### Border Radius
 
 - Finally, I want to highlight a nuance regarding border radius in iOS versus Android.
+
 - If we set a border radius on a text component, let's go with inline styles for now: `borderRadius: 5` and this needs a background color, so `backgroundColor: "red" `,
 
 ```jsx
@@ -3185,7 +3222,9 @@ const styles = StyleSheet.create({
 ```
 
 - you will notice that it only applies to Android and not iOS.
+
 - We have the curved border in Android but not iOS.
+
 - However, if we apply `borderRadius` to the view component, so ` borderRadius: 5`,
 
 ```jsx
@@ -3237,8 +3276,11 @@ const styles = StyleSheet.create({
 ```
 
 - you will observe that the boxes have rounded corners on both platforms.
+
 - This is an important distinction to keep in mind.
+
 - `Border radius is applicable to the view component across both platforms, but for the text component, it only applies to Android`.
+
 - If you wish to add a border radius to text, `the solution is to wrap it with a view component and apply the border radius to the view component instead.`
 
 I hope you are able to slowly recognize the differences in styling between the web and React Native, as well as the variations in styling for iOS and Android platforms.
@@ -3870,9 +3912,13 @@ const styles = StyleSheet.create({
 - With that, we conclude this section on styling in React Native.
 
 - We have seen how to add styles inline and using the stylesheet API,
+
 - how to add multiple styles to the same component using the array syntax,
+
 - the differences in styling Box model properties for the web versus React Native and for iOS versus Android.
+
 - We also had a look at shadows and elevation,
+
 - and finally, style inheritance.
 
 - In the next section, let's focus our attention on understanding layouts in React Native.
@@ -3920,11 +3966,13 @@ const styles = StyleSheet.create({
 - By default,
 
   - `the main axis runs from left to right,`
+
   - `and the cross axis is perpendicular to it`, `running from top to bottom`.
 
 - However, in React Native, it is the opposite:
 
   - `the main axis runs top to bottom`,
+
   - `and the cross axis runs left to right`.
 
 - It is very important to remember this.
@@ -4629,6 +4677,7 @@ const styles = StyleSheet.create({
 ```
 
 - we see no change in the UI.
+
 - `flexDirection` with the value of `column` sets the main axis from top to bottom
 
 #### Value 2: column-reverse
@@ -4778,6 +4827,7 @@ const styles = StyleSheet.create({
 ```
 
 - they simply overflow.
+
 - we have the four boxes but we don't see boxes five six and seven
 
 #### Summary
@@ -6250,7 +6300,9 @@ const styles = StyleSheet.create({
 - To specify the same gap for both rows and columns, you can utilize the `gap` property.
 
 - Set `gap` to 10,
+
 - comment out `rowGap` and `columnGap`,
+
 - and save the file.
 
 ```jsx
@@ -7223,7 +7275,9 @@ Alright, let's proceed to the next video where we'll learn how to work with diff
 - Let's jump straight into the code with an example.
 
 - To start, we will nest a `View` component within the container
+
 - `View` component with the `style` prop set to `Styles.box`,
+
 - and then a `Text` component with `style` set to `Styles.text`.
 
 - For the text itself, a simple "Welcome!" is sufficient.
@@ -7915,8 +7969,11 @@ const styles = StyleSheet.create({
 - Add inline styles that dynamically change based on the device dimensions.
 
 - Comment out:
+
   - the two lines outside the component,
+
   - width and height calculation in the Stylesheet API,
+
   - and the entire text key as well
 
 ```jsx
@@ -8725,6 +8782,7 @@ const styles = StyleSheet.create({
 - for that within text key we're going to spread pPlatform.select and curly braces: `text: {...Platform.select({})}`
 
 - within this object, we can specify `ios: {}` as a key to apply iOS specific Styles
+
 - and `android: {}` as a key to apply Android specific styles
 
 ```jsx
@@ -10309,6 +10367,7 @@ const styles = StyleSheet.create({
 ```
 
 - this function `getTypeDetails` returns a border color and an emoji based on the
+
   Pokemon type
 
 - Invoke this function to get `borderColor` and `emoji` based on the type.
@@ -10406,6 +10465,7 @@ const styles = StyleSheet.create({
   - Wrap the text element with a View representing the badge.
 
   - Create another View to Display the corresponding emoji within the badge view by
+
   - duplicating the line and binding `{emoji}`, which we have destructured from `getTypeDetails` function
 
 ```jsx
@@ -10603,8 +10663,11 @@ const styles = StyleSheet.create({
 #### Define the key value pairs for each of these styles
 
 - typeContainer:
+
 - badge:
+
 - typeEmoji:
+
 - typeText:
 
 ```jsx
@@ -12682,9 +12745,13 @@ Whether you're displaying a catalog of products, a collection of articles, or a 
 ```
 
 - it consists of an array of four objects
+
 - and each object contains two key value pairs `type` representing the Pokemon type and `data` representing the list of Pokemon for that type
+
 - **it is crucial to name this property `data` as that is what the `SectionList` component expects**
+
 - if your API data set for example doesn't have the `data` property you would have to transform your data
+
 - the other property though can be named anything and I've chosen to call it `type` as it seems logical
 
 **Step 1**
@@ -12876,12 +12943,15 @@ const styles = StyleSheet.create({
   1. **sections**:
 
   - It is the source of information for the Section List.
+
   - In our case, it is `groupedPokemonList`.
 
   2. **renderItem**:
 
   - This prop is a function that returns the JSX for rendering each item in the list.
+
   - It receives an object containing the current `item`, and you can define how each item should be rendered.
+
   - This is similar to what we return for the `FlatList` component but without the Pokémon type.
 
 ```jsx
@@ -13485,6 +13555,7 @@ const styles = StyleSheet.create({
 #### Project Setup
 
 - To follow along, I've created a new Expo project named `RNForms`
+
 - You can create a similar project using the command:
 
 ```bash
@@ -14504,8 +14575,6 @@ const styles = StyleSheet.create({
 
 ### **=>** Login Form
 
-#### **Login Form**
-
 >
 
 #### Intro
@@ -15000,22 +15069,26 @@ const styles = StyleSheet.create({
 
 ### **=>** KeyboardAvoidingView
 
-#### **KeyboardAvoidingView**
-
 >
 
 #### Intro
 
 - In our last video, we built the UI for our login form, but as with most things in development, there is a common hiccup we run into when dealing with forms in React Native.
+
 - Let me show that to you.
 
 #### Adding an Image
 
 - First, let's make a small change in our UI.
+
 - Above the username label, I'm going to render an image.
+
 - Make sure to import the component from React Native.
+
 - We're going to require the Adaptive icon from the assets folder:
+
 - We will also add `style` is equal to `Styles.image`,
+
 - and with the StyleSheet API, a new key `image` with a height of 200, width of 200, `alignSelf` set to `center`, and `marginBottom` of 50.
 
 ```jsx
@@ -15102,16 +15175,23 @@ const styles = StyleSheet.create({
 #### The Keyboard Overlay Issue
 
 - Now, if we jump back to our UI, we can see the form with the Adaptive icon image.
+
 - If we tap on the password field on the iOS device and press `Command+Shift+K` to bring up the keyboard, do you notice something off?
+
 - The keyboard completely overlays the input element; it's practically invisible.
+
 - And let's be honest, this is not a great user experience.
 
 #### Using KeyboardAvoidingView
 
 - Luckily, React Native has a solution for us: the `KeyboardAvoidingView` component.
+
 - Let's import it from React Native.
+
 - Now, replace our outermost `View` container with `KeyboardAvoidingView`, both opening and closing tags.
+
 - On this component, we also set a prop `behavior` is equal to `padding`.
+
 - This ensures that the component increases its padding at the bottom, matching the keyboard's height.
 
 ```jsx
@@ -15208,7 +15288,9 @@ const styles = StyleSheet.create({
 #### Addressing the Image Issue
 
 - Let's take a look at our UI, tap on the password, and our form gracefully moves up, revealing the input element.
+
 - Problem solved! Well, not entirely.
+
 - I'm going to set the image height to 400.
 
 ```jsx
@@ -15221,7 +15303,9 @@ image: {
 ```
 
 - Now, if we revisit our UI, you'll notice that the input is hiding again when the keyboard pops up.
+
 - Once again, we have a fix, and that is a prop called `keyboardVerticalOffset`.
+
 - Setting it to 100 usually does the trick.
 
 ```jsx
@@ -15319,7 +15403,9 @@ const styles = StyleSheet.create({
 #### Handling Platform-Specific Offset
 
 - But wait, there is a tiny problem for our Android users. When I tap on the password field, you can see there is this unnecessary space that is introduced by the offset.
+
 - So what is the solution? Well, a platform-specific offset.
+
 - Let's import the `Platform` module and adjust our offset to only apply to iOS devices:
 
 ```jsx
@@ -15420,11 +15506,10 @@ const styles = StyleSheet.create({
 #### Conclusion
 
 - The `KeyboardAvoidingView` can be a tricky component in React Native; it might test your patience.
+
 - But with the basics we have covered today, you're well positioned to deal with it.
 
 ### **=>** Form Validation
-
-#### **Form Validation**
 
 >
 
@@ -16001,3 +16086,444 @@ This will make sure our errors stand out.
 - But we are not done yet. In our next video, we will be handling form submission.
 
 - We will learn when to call this `validateForm` function and how to log form values if the form is indeed valid.
+
+## Section 9: Networking
+
+>
+
+### **=>** Networking
+
+>
+
+#### Intro
+
+- In this section of our course, we will delve into networking in React Native.
+
+- Our primary focus will be on fetching and submitting data to an API.
+
+- Along the way, we'll tackle loading states, error handling, and utilize the FlatList component to display our data.
+
+#### Section Goals
+
+- Our goal in this section is to work with React Native code, focusing on networking.
+
+- We'll use the JsonPlaceholder API, a free online REST API, to obtain fake data.
+
+- This API is useful for tutorials, testing, sharing code examples, and more.
+
+- We'll primarily use the `/posts` endpoint.
+
+#### React Query and Tan Stack Query
+
+- You can also use libraries like React Query or Tan Stack Query (formerly known as react-query).
+
+- However, in this section, we'll stick to plain React Native.
+
+- We might explore Tan Stack Query in a separate section later in the series.
+
+#### Getting Started
+
+- To follow along, create a new Expo project called "react-native-networking" using the following command:
+
+  ```markdown
+  npx create Expo app RN networking
+  ```
+
+#### JsonPlaceholder API
+
+- We'll use the JsonPlaceholder API for our examples.
+
+- This free API offers various endpoints for posts, comments, albums, etc.
+
+- Our focus will be on the `/posts` endpoint.
+
+- The API returns 100 posts with post IDs ranging from 1 to 100.
+
+- Each post has a user ID, title, and body.
+
+- While the text may not make sense, it's suitable for our purposes.
+
+- We can limit the number of posts returned by using a query parameter, e.g., `/posts?_limit=10`.
+
+#### Next Steps
+
+- In the next video, we'll make a GET request from our React Native application.
+
+- We'll retrieve post titles and bodies from the API and display them in the UI.
+
+#### Conclusion
+
+- Now that you're familiar with the JsonPlaceholder API and our goals for this section, let's proceed with our networking journey. See you in the next video!
+
+### **=>** GET Requests
+
+>
+
+#### Intro
+
+- In our last video, we learned about the JsonPlaceholder API.
+
+- In this video, we'll fetch data from this API within a React Native component and display it in our UI.
+
+#### Clearing Existing Code
+
+- Start by clearing out the existing JSX and styles in `app.js`.
+
+- Import `SafeAreaView` and add it to our JSX with the `style` prop.
+
+- Set the background color to `#F5F5F5`.
+
+- Add top padding for Android devices equal to `StatusBar.currentHeight`.
+
+#### Importing Necessary Components
+
+- Import `StatusBar` and `StyleSheet`.
+
+#### Fetching Data
+
+- Define an async function named `fetchData`.
+
+- Make a fetch request to the JsonPlaceholder `/posts` endpoint.
+
+- Convert the response to JSON.
+
+#### Managing State
+
+- Import `useState` and create a state variable named `postList` with an initial value of an empty array.
+
+- Use the `setPostList` function to update the state with the retrieved data.
+
+- Ensure the `fetchData` function is called when the component mounts using `useEffect`.
+
+#### Rendering Data
+
+- Import `FlatList` and use it within the `View` component.
+
+- Provide the `data` and `renderItem` props.
+
+- Style each component (card, title text, body text) using styles defined in the style section.
+
+#### Enhancing UI
+
+- Add separators, a header, and a footer using the `ItemSeparatorComponent`, `ListEmptyComponent`, `ListHeaderComponent`, and `ListFooterComponent` props.
+
+- Style the header and filter text.
+
+#### Conclusion
+
+- With these steps, we've learned how to make a GET request, bind the response to the UI, and enhance the UI's look and feel.
+
+- In the next video, we'll explore adding a loading state while data is fetched in the background.
+
+- Thank you for watching! Consider subscribing to the channel, and I'll see you in the next video.
+
+### **=>** Loading State
+
+>
+
+#### Intro
+
+- In our last video, we successfully fetched data from the JSON Placeholder API and displayed it in our UI.
+
+- In this video, we will explore how to implement a loading state while our data is being fetched in the background.
+
+#### Implementing Loading State
+
+- To add a loading state, we will need to introduce a new state variable. Let's name it `isLoading`.
+
+- With the `setup` function, set `isLoading` and the initial value to `true`.
+
+```javascript
+set isLoading true
+```
+
+- Once our data has been fetched, we will update the state to `false`.
+
+- In our `fetchData` function, right after invoking `setPostList` function, we will call `set isLoading` and set it to `false`.
+
+```javascript
+set isLoading false
+```
+
+- Now, based on the value of `isLoading`, we will conditionally render a loading spinner.
+
+- Start by importing the `ActivityIndicator` component from React Native.
+
+```javascript
+import { ActivityIndicator } from 'react-native'
+```
+
+- Then, just before the return statement, add:
+
+```javascript
+if isLoading
+  return (
+    <SafeAreaView style={Styles.loadingContainer}>
+      <ActivityIndicator size="large" color="blue" />
+      <Text>Loading</Text>
+    </SafeAreaView>
+  );
+```
+
+- Let's also define the styles for this `loadingContainer`.
+
+```javascript
+const Styles = StyleSheet.create({
+  loadingContainer: {
+    flex: 1,
+    backgroundColor: 'background-color',
+    paddingTop: StatusBar.currentHeight,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+})
+```
+
+- We want the loading indicator right in the center of our screen.
+
+#### Visualizing the Loading UI
+
+- If we now save the file and head back to the UI, with iPhone in focus, press R to refresh.
+
+- You will briefly see the loading indicator.
+
+- Given that the API is quite fast, the loading state might not be visible for long.
+
+- To better visualize the loading UI during longer API response times, you can temporarily comment out `set isLoading` to `false`.
+
+```javascript
+// set isLoading false
+```
+
+- You can see the loading indicator and the loading text.
+
+- This is the UI a user would see while data is being fetched in the background.
+
+#### Conclusion
+
+- As you can see, implementing a loading state for network requests in React Native is straightforward and enhances the user experience.
+
+- Thank you for watching, and I'll see you in the next one.
+
+### **=>** Pull to refresh
+
+>
+
+#### Intro
+
+- Welcome back, everyone. In this video, we're going to explore how to implement the pull-to-refresh functionality using the `FlatList` component in React Native.
+
+- This feature is particularly useful when you want to refresh the data displayed in your app without having to restart it.
+
+- Given that we are already fetching posts from the JSON Placeholder API, let's see how we can refresh this data.
+
+#### Implementing Pull-to-Refresh
+
+- To begin, let's introduce a new state variable to keep track of the refreshing state. We will call it `refreshing` and set its initial value to `false`.
+
+- Next, we will assign this `refreshing` state to the `refreshing` prop of our `FlatList` component. So `refreshing` is equal to the state variable `refreshing`.
+
+- We will also provide the `onRefresh` prop on the `FlatList` component, which expects a function to be executed when the `FlatList` is pulled down for refreshing. Let's assign it a function named `handleRefresh`.
+
+#### Defining the `handleRefresh` Function
+
+- Now, let's define this function. So, right after `fetchData`, const `handleRefresh`.
+
+- Within the function, we call `setRefreshing` and set it to `true`.
+
+- We will then call the `fetchData` function but this time pass `20` as the limit to fetch an additional `10` items on refresh.
+
+- We will then call `setRefreshing` once more and set it back to `false`.
+
+#### Conclusion
+
+- And that is essentially all there is to it. We don't need to add any additional JSX as the two props, `refreshing` and `onRefresh`, on the `FlatList` component automatically render a default loading spinner when the list is pulled down.
+
+- Now, if we save the file and return to our UI, you can see we have `1-10` posts to begin with.
+
+- If I scroll all the way to the top and pull down, we will briefly see a loading indicator.
+
+- But after pulling to refresh, we should now see a total of `20` cards in our UI.
+
+- Our code is working as expected.
+
+- The pull-to-refresh gesture is a common pattern in mobile development, and I wanted to highlight its implementation in this video.
+
+- I hope you found it straightforward.
+
+- Alright, in the next video, let's learn how to submit data to an API endpoint.
+
+- Thank you for watching, and please do consider subscribing to the channel and leaving a like if you're enjoying the content.
+
+### **=>** POST Request
+
+>
+
+#### Introduction
+
+- In this video, we will explore how to make a **POST request from a React Native app**.
+
+- We will use the **jsonplaceholder API** as an example, posting a new post title and body.
+
+#### Using Jsonplaceholder API
+
+- The Jsonplaceholder API accepts POST requests to the `/posts` endpoint, allowing us to focus on the React Native code.
+
+- For more information, refer to the guide on creating a resource.
+
+#### Step 1: Create State Variables
+
+- Begin by creating **state variables** to track the post title and body.
+
+- Introduce a variable to monitor the data submission process (`isPosting`), initially set to `false`.
+
+#### Step 2: Bind Variables to UI Elements
+
+- Wrap the current JSX with a **React fragment**.
+
+- Include a `View` above our list with `style` set to `Styles.inputContainer`.
+
+- Inside the `View`, add two **text inputs** for post title and body.
+
+  - Set `style` to `Styles.input`.
+
+  - Set `placeholder` to "post title".
+
+  - Set `value` to the state variable `postTitle`.
+
+  - Use `onChangeText` to call `setPostTitle`.
+
+  - Duplicate this for post body.
+
+- Include a **button** to submit the data to the API.
+
+  - Set `title` to conditionally render the button text based on the `isPosting` state.
+
+  - Disable the button when the submission is in progress.
+
+  - Define `onPress` as `addPost` (yet to be defined).
+
+  - Set `disabled` to `isPosting`.
+
+#### Styling
+
+- Define the styles for the input container and text input.
+
+  - `inputContainer` style: white background, padding, border radius, width, margin.
+
+  - `input` style: height, border color, width, margin bottom, padding, border radius.
+
+- Make sure to import the `Button` component at the top.
+
+#### Step 3: Define Button Click Handler
+
+- Uncomment `onPress` and define the `addPost` function.
+
+- Inside `addPost`, set `isPosting` to `true` at the start to disable the "Add Post" button.
+
+- Make a POST request using `fetch`.
+
+  - URL: `/posts`
+
+  - Method: POST
+
+  - Headers: Content-Type - application/json
+
+  - Body: JSON.stringify({ title: postTitle, body: postBody })
+
+- Convert the response to JSON and store it as `newPost`.
+
+- Update the post list by prepending `newPost` to it.
+
+- Reset the state of the form: `postTitle` and `postBody` to empty strings, and `isPosting` to `false`.
+
+#### Conclusion
+
+- This is how you make a POST request from a React Native component.
+
+- In this example, we used `fetch`, but you can use other libraries like Axios or TenStack Query.
+
+### **=>** GET Requests
+
+>
+
+#### Introduction
+
+- In our last video, we learned about the **Jsonplaceholder API**.
+
+- In this video, we will fetch data from this API within a **React Native component** and display it in our UI.
+
+#### Clearing Existing Code
+
+- Start by clearing out the existing JSX and styles in `app.js`.
+
+- Import `SafeAreaView` and add it to our JSX, setting the `style` prop to `Styles.container`.
+
+  - For the `container` style, leave `flex` as `1` to occupy the entire available space.
+
+  - Change the background color to `#F5F5F5`.
+
+  - Remove `alignItems` and `justifyContent`, and instead add top padding for Android equal to `StatusBar.currentHeight`. Don't forget to import `StatusBar` from `react-native`.
+
+- Nest a `View` component within the `SafeAreaView`, assign the `style` prop to `Styles.listContainer`.
+
+  - The `listContainer` style will have `flex` set to `1` and horizontal padding.
+
+  - Import `StyleSheet` if not already imported.
+
+#### Fetching Data
+
+- Define an async function named `fetchData`.
+
+- In `fetchData`, make a fetch request to the Jsonplaceholder post endpoint:
+
+  ```javascript
+  const response = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=10')
+  ```
+
+- Convert the response to JSON:
+
+  ```javascript
+  const data = await response.json()
+  ```
+
+- Store the JSON array of posts in a state variable named `postList`. Import `useState` from `react` and initialize it with an empty array.
+
+#### Component Mounting
+
+- Import `useEffect` from `react` and use it with a callback function and an empty dependency array.
+
+- Inside the callback, invoke `fetchData` to fetch data when the component mounts.
+
+#### Rendering Data
+
+- Use the `FlatList` component to render the data.
+
+  - Import `FlatList` from `react-native`.
+
+- Provide the `data` and `renderItem` props to `FlatList`:
+
+  ```javascript
+  data={postList}
+  renderItem={({ item }) => (
+    // JSX for each post item
+  )}
+  ```
+
+- Destructure `item` and return a `View` component with nested `Text` components to display each post's title and body.
+
+- Style each component using the `card`, `titleText`, and `bodyText` styles.
+
+#### Enhancing the UI
+
+- Add separators, a header, and a footer to the `FlatList` as props:
+
+  - `ItemSeparatorComponent`, `ListEmptyComponent`, `ListHeaderComponent`, and `ListFooterComponent`.
+
+- Style the header and filter text accordingly.
+
+#### Conclusion
+
+- You have now learned how to make a GET request and bind the response to the UI.
+
+- In the next video, we will learn how to add a loading state while data is fetched in the background.

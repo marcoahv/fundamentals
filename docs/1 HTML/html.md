@@ -18,7 +18,7 @@ sidebar_position: 1
 
 - Learning about these individual elements is the key to mastering HTML.
 
-### **=>** HTML Elements
+### **=>** HTML Element
 
 - An HTML element is `the building block of an HTML document.`
 

@@ -4,7 +4,6 @@ sidebar_position: 1
 
 # CSS
 
-
 ### **=>** What is CSS?
 
 - CSS stands for `Cascading Style Sheets` and is the language used to style an HTML document.
@@ -17,7 +16,7 @@ sidebar_position: 1
 
 - Understanding how to select HTML elements and apply styles is crucial in learning CSS.
 
-### **=>** How to Add CSS?
+### **=>** How to Add CSS
 
 - There are three different ways to add styles to an HTML document:
 - inline styles,
@@ -863,125 +862,61 @@ td {
 
 - There are five main values for the `position` property: `static`, `relative`, `fixed`, `absolute`, and `sticky`.
 
-#### Default: `position: static;`
+- In the HTML file, I'm going to add two `div` tags: `position content one` and `position content two`.
+- I'm going to add a class `is equal to position one` on the first `div` tag and `position two` on the second `div` tag.
+- In the CSS file, let's add class selectors, so `.position one` and let's set `border` to `1px solid red`.
+- Similarly, `position two` is going to be `border 1px solid blue`.
+
+#### Static Position
 
 - By default, HTML elements have a `position` value of `static`.
 
-- Elements with `position: static;` are positioned according to the normal document flow.
+- So let's add `position static` to both the classes.
+- With static position, elements are positioned according to the normal flow of the page.
+- In our HTML, `position content 1` is before `position content 2`.
+- If I refresh the browser, we see the same `position content 1` and then `position content 2`.
+- We can affect or change this layout with the other position values.
 
-#### Relative Position: `position: relative;`
+#### Relative Position
+
+- The second position value is `relative`.
 
 - Elements with `position: relative;` are positioned relative to their normal position in the document flow.
 
 - You can use `top`, `right`, `bottom`, and `left` properties to adjust their position.
-
-#### Fixed Position: `position: fixed;`
-
-- Elements with `position: fixed;` are positioned relative to the viewport.
-
-- They remain fixed in place, even when the page is scrolled.
-
-#### Absolute Position: `position: absolute;`
-
-- Elements with `position: absolute;` are positioned relative to their nearest positioned ancestor.
-
-- If no ancestor has a `position` value other than `static`, it's positioned relative to the initial containing block.
-
-#### Sticky Position: `position: sticky;`
-
-- Elements with `position: sticky;` behave similarly to `relative` within their parent container.
-
-- However, they become `fixed` once they reach a specified offset from the top or bottom of their parent container.
-
-#### Learning Complexity
-
-- Understanding the `position` property and its values can be challenging for beginners.
-
-- It's essential to practice and experiment with these values to grasp
-
-Here's the text you provided, formatted in Markdown with h3 tags for sections and bullet points for sentences:
-
-### **=>** Position
-
-- The next property when it comes to CSS layout is the `position` property, which specifies the type of positioning method used for an element.
-
-- There are five different values; let's understand with an example.
-
-- In the HTML file, I'm going to add two `<div>` tags: `position content one` and `position content two`.
-
-- I'm going to add a class `is equal to position one` on the first `<div>` tag and `position two` on the second `<div>` tag.
-
-- In the CSS file, let's add class selectors: `.position-one` and `.position-two`.
-
-- We'll set `border` to `one pixel solid red` for `.position-one` and `one pixel solid blue` for `.position-two`.
-
-- By default, the `position` property for an element is set to `static`. So let's add `position: static` to both the classes.
-
-- With static position, elements are positioned according to the normal flow of the page.
-
-- In our HTML, `position content 1` is before `position content 2`.
-
-- If I refresh the browser, we see the same `position content1` and then `position content2`.
-
-- We can affect or change this layout with the other `position` values.
-
-- The second `position` value is `relative`. An element with `position` set to `relative` is positioned relative to its normal position.
-
-- You can control that relative position with four other properties: `top`, `right`, `bottom`, and `left`.
-
-- For the first element, let's set `position: relative`, `top` to `50 pixels`, and `left` to `50 pixels`.
-
+- So for the first element, let's set `position relative`, `top` to `50 pixels`, and `left` to `50 pixels`.
 - If we take a look at the browser and refresh, you can see the first element, which is `position content 1`, is now pushed `50 pixels` from the top and `50 pixels` from the left.
-
-- So relative to its original position, it has been displaced by `50 pixels` in both directions.
-
+- So relative to its original position, it has been displaced by `50 pixels` and `50 pixels`.
 - Similar to `top` and `left`, you also have `right` and `bottom`, which have a similar effect but from the opposite direction.
+- What's also worth noting is that `position two` element is not adjusted to fit into any gap left by the `position one` element. So we do have an empty space here. This is how relative position works.
 
-- What's also worth noting is that `position content 2` is not adjusted to fit into any gap left by `position content 1`, so we do have an empty space here.
+#### Fixed Position
 
-- This is how relative position works.
-
-- The third value for `position` is `fixed`, which positions an element relative to the viewport.
-
+- The third value for position is `fixed`, which positions an element relative to the viewport.
 - On the second element, let's change `position` to `fixed`.
-
-- We're also going to set `bottom` to `zero pixels` and `right` to `zero pixels`.
-
+- We're also going to set `bottom` to `0 pixels` and `right` to `0 pixels`.
 - If we now take a look at the browser, scroll all the way to the top, and refresh, you can see the element placed bottom right of the screen.
-
 - What's special with fixed position is even when I scroll, the element always stays in the same place.
+- You would have probably seen feedback buttons or chatbot buttons in web pages, which are always positioned bottom right.
 
-- You would have probably seen feedback buttons or chatbot buttons in webpages, which are always positioned bottom right.
+#### Absolute Position
 
-- The next `position` value is `absolute`. When I change `fixed` to `absolute` and refresh, the element is still positioned bottom right of the screen.
+- The next position value is `absolute`. Now when I change `fixed` to `absolute` and refresh, the element is still positioned bottom right of the screen.
+- However, when I scroll, it behaves differently from that of `position fixed`.
+- However, if the element has a different parent element with a relative position, the position will then be relative to that parent element. That is slightly confusing, so let me show you the difference in the browser.
+- In the HTML, I'm going to wrap the second element with a `div` tag and add a class called `container`.
+- In the CSS, I'm going to add the styles for the `container` class, so `container position is relative`, `width 200 pixels`, `height 2000 pixels`, and `border 1 pixel solid black`.
+- If you now take a look at the browser and refresh, you can see the element is still positioned bottom right but within the parent element.
+- This is something you're going to often use when developing web pages: absolute position but within a relatively positioned parent element.
 
-- However, when I scroll, it behaves differently than `position: fixed`.
+#### Sticky Position
 
-- If the element has a different parent element with a relative position, the position will then be relative to that parent element. That is slightly confusing, so let me show you the difference.
-
-- In the HTML, I'm going to wrap the second element with a `<div>` tag and add a class called `container`.
-
-- In the CSS, I'm going to add the styles for the `container` class.
-
-- So `.container` position is `relative`, `width` is `200 pixels`, `height` is `2000 pixels`, and `border` is `one pixel solid black`.
-
-- If you now take a look at the browser, refresh, you can see the element is still positioned bottom right but within the parent element.
-
-- This is something you're going to often use when developing web pages—absolute position but within a relatively positioned parent element.
-
-- The final `position` value is `sticky`. An element with `position: sticky` is positioned based on the user's scroll position.
-
+- The final position value is `sticky`. An element with `position sticky` is positioned based on the user's scroll position.
 - For this example, on `position 1` element, set `position` to `sticky`.
-
 - Now, if we take a look at the browser and refresh, you can see we have `position content one`, but if we scroll down, it moves along with the scroll.
-
 - Beyond an offset, it just sticks in one place on a web page.
-
-- If you have something that needs to be in the normal layout of the page and always visible as they scroll, `position: sticky` is a very good option.
-
-- As you can see, there is quite a bit to learn when it comes to the `position` property. We have `position: static`, `fixed`, `relative`, `absolute`, and `sticky`.
-
-- If it's a bit confusing at this moment in time, do not worry. It is something we all tend to struggle with as beginners, but hopefully, the examples you have seen have given you a hint as to how the different values work, which should set you up for further learning.
+- If you have something that needs to be in the normal layout of the page and always visible as they scroll, `position sticky` is a very good option.
+- As you can see, there is quite a bit to learn when it comes to the `position` property. We have `position static`, `fixed`, `relative`, `absolute`, and `sticky`. If it's a bit confusing at this moment in time, do not worry; it is something we all tend to struggle with as beginners. But hopefully, the examples you have seen have given you a hint as to how the different values work, which should set you up for further learning.
 
 ### **=>** CSS Units
 

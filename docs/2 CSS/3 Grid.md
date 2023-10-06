@@ -41,7 +41,7 @@ sidebar_position: 3
 - This is just a list of the different properties, so don't get overwhelmed as to how each of them works.
 - We will dive into each of them and understand how they work with a visual example in the browser.
 
-### **=>** Setup
+#### Setup
 
 - To get us started with CSS Grid, I have set up some very simple HTML and CSS that I am now going to walk you through.
 - I have created a folder called `grid-crash-course`, and within the folder, I've created an `index.html` file and a `styles.css` file.
@@ -54,7 +54,7 @@ sidebar_position: 3
 - You can either clone, copy, or download the code.
 - If you open the HTML file in the browser, you should be able to see this layout. You can see that we have nine items enclosed within a container that has a solid black border.
 
-### **=>** display
+### **=>** display-grid
 
 - Now let's focus on our very first grid container property, which is the `display` property.
 - To create a grid container, we make use of the `display` property and set it to a value of `grid`.

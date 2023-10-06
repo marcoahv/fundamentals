@@ -4,6 +4,8 @@ sidebar_position: 1
 
 # Typescript in React
 
+https://youtu.be/TPACABQTHvM?si=Jq9kThcOggAwfwuT
+
 ### **=>** Introduction
 
 - If you want to be a React developer these days, you also need to know TypeScript.
