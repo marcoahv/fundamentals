@@ -1345,3 +1345,49 @@ Certainly, here is the text you provided formatted with Markdown using H3 tags f
 
 - Now, apart from this, you have `<script>` and `<style>` tags which you can include in the head section. `<style>` tag more so than the `<script>` tag,
 - but that is to do with CSS and JavaScript, so we will tackle them in separate videos.
+
+### **=>** HTML Entities
+
+>
+
+#### Intro
+
+- HTML entities are special codes used to represent characters that have special meaning in HTML.
+
+- These entities are used to display characters that are reserved for HTML syntax, such as angle brackets (< and >), ampersands (&), and quotation marks (" and ').
+
+Here are some commonly used HTML entities:
+
+- non-breaking space `&nbsp;` `&#160;` A non-breaking space is a space that will not break into a new line.
+
+- `<` less than `&lt;` `&#60;`
+
+- `>` greater than `&gt;` `&#62;`
+
+- `&` ampersand `&amp;` `&#38;`
+
+- `"` double quotation mark `&quot;` `&#34;`
+
+- `'` single quotation mark (apostrophe) `&apos;` `&#39;`
+
+- `¢` cent `&cent;` `&#162;`
+
+- `£` pound `&pound;` `&#163;`
+
+- `¥` yen `&yen;` `&#165;`
+
+- `€` euro `&euro;` `&#8364;`
+
+- `©` copyright `&copy;` `&#169;`
+
+- `®` registered trademark `&reg;` `&#174;`
+
+- computer code tag (`<code></code>`)
+
+```html
+<code>&lt;?php echo 'Hello' ?&gt;</code>
+```
+
+- keyboard tag (`<kbd></kbd>`) is similar
+
+These entities are useful when you want to display special characters in your HTML code without them being interpreted as part of the HTML syntax.

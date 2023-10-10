@@ -16159,63 +16159,86 @@ This will make sure our errors stand out.
 
 >
 
-#### Intro
+#### Introduction
 
-- In our last video, we learned about the JsonPlaceholder API.
+- In our last video, we learned about the **Jsonplaceholder API**.
 
-- In this video, we'll fetch data from this API within a React Native component and display it in our UI.
+- In this video, we will fetch data from this API within a **React Native component** and display it in our UI.
 
 #### Clearing Existing Code
 
 - Start by clearing out the existing JSX and styles in `app.js`.
 
-- Import `SafeAreaView` and add it to our JSX with the `style` prop.
+- Import `SafeAreaView` and add it to our JSX, setting the `style` prop to `Styles.container`.
 
-- Set the background color to `#F5F5F5`.
+  - For the `container` style, leave `flex` as `1` to occupy the entire available space.
 
-- Add top padding for Android devices equal to `StatusBar.currentHeight`.
+  - Change the background color to `#F5F5F5`.
 
-#### Importing Necessary Components
+  - Remove `alignItems` and `justifyContent`, and instead add top padding for Android equal to `StatusBar.currentHeight`. Don't forget to import `StatusBar` from `react-native`.
 
-- Import `StatusBar` and `StyleSheet`.
+- Nest a `View` component within the `SafeAreaView`, assign the `style` prop to `Styles.listContainer`.
+
+  - The `listContainer` style will have `flex` set to `1` and horizontal padding.
+
+  - Import `StyleSheet` if not already imported.
 
 #### Fetching Data
 
 - Define an async function named `fetchData`.
 
-- Make a fetch request to the JsonPlaceholder `/posts` endpoint.
+- In `fetchData`, make a fetch request to the Jsonplaceholder post endpoint:
 
-- Convert the response to JSON.
+  ```javascript
+  const response = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=10')
+  ```
 
-#### Managing State
+- Convert the response to JSON:
 
-- Import `useState` and create a state variable named `postList` with an initial value of an empty array.
+  ```javascript
+  const data = await response.json()
+  ```
 
-- Use the `setPostList` function to update the state with the retrieved data.
+- Store the JSON array of posts in a state variable named `postList`. Import `useState` from `react` and initialize it with an empty array.
 
-- Ensure the `fetchData` function is called when the component mounts using `useEffect`.
+#### Component Mounting
+
+- Import `useEffect` from `react` and use it with a callback function and an empty dependency array.
+
+- Inside the callback, invoke `fetchData` to fetch data when the component mounts.
 
 #### Rendering Data
 
-- Import `FlatList` and use it within the `View` component.
+- Use the `FlatList` component to render the data.
 
-- Provide the `data` and `renderItem` props.
+  - Import `FlatList` from `react-native`.
 
-- Style each component (card, title text, body text) using styles defined in the style section.
+- Provide the `data` and `renderItem` props to `FlatList`:
 
-#### Enhancing UI
+  ```javascript
+  data={postList}
+  renderItem={({ item }) => (
+    // JSX for each post item
+  )}
+  ```
 
-- Add separators, a header, and a footer using the `ItemSeparatorComponent`, `ListEmptyComponent`, `ListHeaderComponent`, and `ListFooterComponent` props.
+- Destructure `item` and return a `View` component with nested `Text` components to display each post's title and body.
 
-- Style the header and filter text.
+- Style each component using the `card`, `titleText`, and `bodyText` styles.
+
+#### Enhancing the UI
+
+- Add separators, a header, and a footer to the `FlatList` as props:
+
+  - `ItemSeparatorComponent`, `ListEmptyComponent`, `ListHeaderComponent`, and `ListFooterComponent`.
+
+- Style the header and filter text accordingly.
 
 #### Conclusion
 
-- With these steps, we've learned how to make a GET request, bind the response to the UI, and enhance the UI's look and feel.
+- You have now learned how to make a GET request and bind the response to the UI.
 
-- In the next video, we'll explore adding a loading state while data is fetched in the background.
-
-- Thank you for watching! Consider subscribing to the channel, and I'll see you in the next video.
+- In the next video, we will learn how to add a loading state while data is fetched in the background.
 
 ### **=>** Loading State
 
@@ -16443,87 +16466,193 @@ const Styles = StyleSheet.create({
 
 - In this example, we used `fetch`, but you can use other libraries like Axios or TenStack Query.
 
-### **=>** GET Requests
+### **=>** Error Handling
 
 >
 
-#### Introduction
+#### Intro
 
-- In our last video, we learned about the **Jsonplaceholder API**.
+- Welcome back, in this video, we will add the final touch to our networking code by handling errors when fetching and submitting data. Let's get started.
 
-- In this video, we will fetch data from this API within a **React Native component** and display it in our UI.
+#### Step 1: Define Error State Variable
 
-#### Clearing Existing Code
+- Define a state variable to track any errors that might occur.
+- Use the `setError` setter function to set `error`, and the initial value is an empty string.
 
-- Start by clearing out the existing JSX and styles in `app.js`.
+#### Step 2: Try-Catch Blocks for Fetch and Post
 
-- Import `SafeAreaView` and add it to our JSX, setting the `style` prop to `Styles.container`.
+- Add try-catch blocks to our fetch data and add post functions to handle any errors that might occur during the fetch or post operations.
+- In the try block, reset any error that was present, and within the catch block, call `setError` with a message "failed to fetch post list" for error feedback to the user.
 
-  - For the `container` style, leave `flex` as `1` to occupy the entire available space.
+```javascript
+try {
+  // Fetch data or add post
+} catch (error) {
+  console.log('Error fetching data or adding new post: ', error)
+  setError('failed to fetch post list') // Or "failed to add new post"
+}
+```
 
-  - Change the background color to `#F5F5F5`.
+#### Step 3: Render UI Based on Error State
 
-  - Remove `alignItems` and `justifyContent`, and instead add top padding for Android equal to `StatusBar.currentHeight`. Don't forget to import `StatusBar` from `react-native`.
+- Use the error state to render appropriate UI to the user.
+- If there is an error present, render a view component with the text from the `error` state variable. Otherwise, render the existing JSX.
 
-- Nest a `View` component within the `SafeAreaView`, assign the `style` prop to `Styles.listContainer`.
+```javascript
+return (
+  <SafeAreaView>
+    {error ? (
+      <View style={Styles.errorContainer}>
+        <Text style={Styles.errorText}>{error}</Text>
+      </View>
+    ) : (
+      // Existing JSX
+    )}
+  </SafeAreaView>
+);
+```
 
-  - The `listContainer` style will have `flex` set to `1` and horizontal padding.
+#### Error Styles
 
-  - Import `StyleSheet` if not already imported.
+- Define styles for the error container and text.
 
-#### Fetching Data
+```javascript
+const Styles = StyleSheet.create({
+  errorContainer: {
+    backgroundColor: 'red',
+    padding: 10,
+    borderRadius: 5,
+    width: '80%',
+    margin: 10,
+    alignItems: 'center',
+  },
+  errorText: {
+    color: 'white',
+    fontSize: 16,
+    textAlign: 'center',
+  },
+})
+```
 
-- Define an async function named `fetchData`.
+#### Note on Handling Localhost URLs in Android Emulator
 
-- In `fetchData`, make a fetch request to the Jsonplaceholder post endpoint:
+- Localhost URLs do not work from the Android emulator.
+- Consider using your computer's IP address instead of "localhost" for API requests from Android devices.
 
-  ```javascript
-  const response = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=10')
-  ```
+#### Debugging Features in React Native
 
-- Convert the response to JSON:
-
-  ```javascript
-  const data = await response.json()
-  ```
-
-- Store the JSON array of posts in a state variable named `postList`. Import `useState` from `react` and initialize it with an empty array.
-
-#### Component Mounting
-
-- Import `useEffect` from `react` and use it with a callback function and an empty dependency array.
-
-- Inside the callback, invoke `fetchData` to fetch data when the component mounts.
-
-#### Rendering Data
-
-- Use the `FlatList` component to render the data.
-
-  - Import `FlatList` from `react-native`.
-
-- Provide the `data` and `renderItem` props to `FlatList`:
-
-  ```javascript
-  data={postList}
-  renderItem={({ item }) => (
-    // JSX for each post item
-  )}
-  ```
-
-- Destructure `item` and return a `View` component with nested `Text` components to display each post's title and body.
-
-- Style each component using the `card`, `titleText`, and `bodyText` styles.
-
-#### Enhancing the UI
-
-- Add separators, a header, and a footer to the `FlatList` as props:
-
-  - `ItemSeparatorComponent`, `ListEmptyComponent`, `ListHeaderComponent`, and `ListFooterComponent`.
-
-- Style the header and filter text accordingly.
+- Pressing `Command + D` on iOS brings up the developer menu.
+- Two debugging options:
+  1. Show Element Inspector: Inspect elements, view the Box model, see styles applied.
+  2. JavaScript Debugger: Inspect network requests, view API calls in the debugger.
 
 #### Conclusion
 
-- You have now learned how to make a GET request and bind the response to the UI.
+- Handling errors in networking in React Native.
+- Debugging features in React Native for iOS simulator.
+- Stay tuned for more advanced topics in the upcoming sections of the series.
 
-- In the next video, we will learn how to add a loading state while data is fetched in the background.
+## Section 10: Navigation
+
+>
+
+### **=>** Navigation
+
+>
+
+#### Intro
+
+- In this 10th section of our course, we're going to dive into navigation in React Native.
+- At the heart of any mobile application is navigation; it's the mechanism that allows users to move across different screens, access features, and generally use your app effectively.
+
+### Solutions for handling navigation
+
+- In React Native, a go-to solution for handling navigation is the React Navigation library.
+- It's worth mentioning that Expo has its own built-in routing feature, but it is exclusive to Expo projects.
+- On the other hand, React Navigation works both with and without Expo. In React Native apps, we will explore Expo's router in a later section of the series and focus on React Navigation in this section.
+
+- React Navigation provides a variety of Navigators like stack, drawer, and tab Navigators.
+  - Stack Navigators provide a way for your app to transition between screens, where each new screen is placed on top of a stack.
+  - Drawer Navigator renders a navigation drawer on the side of the screen, which can be opened and closed via gestures.
+  - Tab Navigator at the bottom of your screen lets you easily switch between different routes. We will look at examples of all three.
+
+#### Setting Up the Project
+
+- For this section, I have set up a new Expo project called "RN Navigation." If you wish to code along, create a similar project using the command:
+
+  ```shell
+  npx create-expo-app RN-navigation
+  ```
+
+- In this project folder, we're going to install React Navigation as a dependency. You can find the command in the React Navigation docs on the "Getting Started" page. Copy the command:
+
+  ```shell
+  npm install @react-navigation/native
+  ```
+
+  and run it in your terminal.
+
+- We will also install two dependencies: `react-native-screens` and `react-native-safe-area-context`. Copy the command:
+
+  ```shell
+  npm install react-native-screens react-native-safe-area-context
+  ```
+
+  and paste it in your project folder.
+
+- Finally, to work with React Navigation, we need a wrapping component for the whole app, and that is the `NavigationContainer` component. You can go back to the doc, scroll down to the section on Navigation Container, copy the code, and paste it in `App.tsx`. We don't really need to import React; the rest of the code we will write in this section will go in between the opening and closing tags of `NavigationContainer`.
+
+- Join me in the next video, where we will kick things off by setting up stack navigation in our React Native app. I'll see you in the next one.
+
+### **=>** Stack Navigation
+
+>
+
+#### Intro
+
+- Now that we have React Navigation in place, it's time to dive into one of its fundamental Navigators, which is the stack Navigator.
+
+- Stack navigation follows a straightforward principle: each new screen is stacked on top of the previous one. It's like a deck of cards - when you navigate to a new screen, a new card is placed on top of the stack, and when you navigate back, the top card is removed, revealing the previous screen.
+- This navigation pattern is common in many mobile apps, allowing users to drill down into detailed views and then retrace their steps when done.
+- It's particularly useful in scenarios where a linear flow of screens is required, for example, viewing a list of items, tapping on an item to see its details, and then tapping on a link contained within to view more details.
+
+#### Stack Navigator and Native Stack Navigator
+
+- The React Navigation library offers two Navigators for stack navigation: Stack Navigator and Native Stack Navigator.
+
+  - `Stack Navigator`: This is a JavaScript-based Navigator that offers a high degree of customization, making it a great choice for apps that require a unique navigation experience.
+
+    - However, this customization comes at the cost of performance, especially when compared to its counterpart, the Native Stack Navigator.
+
+  - `Native Stack Navigator`: The Native Stack Navigator leverages the native navigation constructs of iOS and Android, providing better performance and a more native feel to the transitions and gestures.
+    - The caveat is that it might not offer the same level of customization as the Stack Navigator.
+
+#### Setting Up the Project
+
+- First, we have to install the Native Stack Navigator library in our project. Go to the React Navigation docs, and under Navigators, select Native Stack. Copy the installation command:
+
+  ```shell
+  npm install @react-navigation/native-stack
+  ```
+
+  and paste it in the terminal.
+
+- Next, in `App.js`, at the top, import the `createNativeStackNavigator` function from `react-navigation/native-stack` and invoke it to create a Native Stack Navigator instance.
+
+- Now, set up the Navigator within our `App` component. Within `NavigationContainer`, use `createNativeStackNavigator`, and within this, use `stack.Screen`. This component accepts a `name` prop (which we have set to "home") and a `component` prop (which refers to the React Native component that will render a view).
+
+- Let's define that component in the project. Create a new folder called `screens`, and within it, create a new file, `HomeScreen.js`. Define a simple React Native component that renders the text "Home Screen."
+
+- In `App.js`, import `HomeScreen` and assign it to the `component` prop on `stack.Screen`.
+
+- We now have one screen defined in our application. Of course, navigation isn't of much use with just one screen, so let's create a second one. Create a new file, `AboutScreen.js`, in the `screens` folder and define a similar component, but change all occurrences of "home" to "about."
+
+- In `App.js`, duplicate the `stack.Screen` line, changing `name` to "aboutScreen," and make sure to import the component at the top.
+
+- Our basic stack Navigator has been set up. If you now run the app using `npm start`, check the two devices, and you will see the "Home Screen" rendered by default at the top. We also have a header of sorts with the `name` prop on `stack.Screen` displayed as the title.
+
+- The library also takes care of rendering the content within a `SafeAreaView`, avoiding the notch at the top. By default, the topmost screen within the Navigator is the initial screen. You can change this by setting the `initialRouteName` prop on `createNativeStackNavigator`.
+
+- Let's set it to "aboutScreen," which is the name of the "About" screen.
+
+- Save the file, restart the server, and you can see the "About Screen" is displayed as the initial screen. But how do we navigate between the two screens? Let's learn that in the next video.
