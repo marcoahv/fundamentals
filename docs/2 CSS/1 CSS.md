@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# CSS
+# BASICS
 
 ### **=>** What is CSS?
 

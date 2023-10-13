@@ -4,57 +4,78 @@ sidebar_position: 3
 
 # Asynchronous JavaScript
 
-### **=>** What, Why and How?
+### **=>** Why async JavaScript is important
+
+#### Introduction
 
 - We need to understand the basics of async programming and why async JavaScript is important.
 - Under this topic, we have a few concepts to cover from an interview point of view: timeouts and intervals, callbacks, promises, async/await, and the all-important event loop.
 - If you are a junior dev applying for an interview, a surface knowledge of these topics will suffice. However, if you are applying for a more senior role, you're expected to have a deeper understanding of all these topics.
-- So, here is how we are going to approach this part. In this lecture, we are going to understand the "what" and "why" of async JavaScript. In the upcoming videos, we will see the "how" of async JavaScript by understanding and solving exercise problems on timeouts, callbacks, promises, and async/await.
+- In this lecture, we are going to understand the "what" and "why" of async JavaScript. In the upcoming videos, we will see the "how" of async JavaScript by understanding and solving exercise problems on timeouts, callbacks, promises, and async/await.
 - We will wind up async JavaScript by understanding how all of them behave with respect to the event loop.
-- With that in mind, let's begin.
-- Now, the first point to understand about JavaScript is that, in its most basic form, JavaScript is a `synchronous`, `blocking`, `single-threaded` language.
-- The three points mentioned here are really important. Let's understand what they mean.
-  - The first point is that JavaScript is `synchronous`. So, if we have two functions that log messages to the console, code executes top-down with only one line executing at any given time. So, if we have Function A and Function B, and we call both the functions, JavaScript will always log A and then B.
-  - The second point is that JavaScript is `blocking`, which is because of its synchronous nature. No matter how long a previous process takes, the subsequent process won't kick off until the former is completed. So, if Function A has to execute an intensive chunk of code, JavaScript has to finish that task without moving on to Function B, even if that code takes 10 seconds or 1 minute. You might have seen this happen in the browser when a web app runs in a browser and it executes an intensive chunk of code without returning control to the browser. The browser can appear to be frozen. This is called `blocking`. The browser is blocked from continuing to handle user input and perform other tasks until the web app returns control of the processor.
-  - The last point is that JavaScript is `single-threaded`. A thread is simply a process that your JavaScript program can use to run a task, and each thread can only do one task at a time. Unlike a few other languages which support multi-threading and can thus run multiple tasks in parallel, JavaScript has just the one thread, called the main thread, for executing any code.
-- This brings us back to the point that, in its most basic form, JavaScript is a synchronous, blocking, single-threaded language.
-- But, as you might have already guessed, this model of JavaScript creates a huge problem. What if we have a task to retrieve data from the database and then run some code on that data that is retrieved?
-- We have to wait on the first line for the data to be fetched, and when the data finally comes back, we can resume with our normal execution. But that could take like one second or even more, and during that time, we can't run any further code. In JavaScript, if it simply proceeds to the next line without waiting, we have an error because the data is not what we expect it to be.
-- So, we need a way to have asynchronous behavior with JavaScript.
-- Now, the question is, how do we cater to asynchronous programming in JavaScript?
-- Well, as it turns out, just JavaScript is not enough to achieve that. We need new pieces which are outside of JavaScript to help us write asynchronous code, which is where web browsers come into play.
-- Web browsers define functions and APIs that allow us to register functions that should not be executed synchronously and should instead be invoked asynchronously when some kind of an event occurs. For example, that could be the passage of time, the user's interaction with the mouse, or the arrival of data over the network.
-- This means that you can let your code do several things at the same time without stopping or blocking your main thread.
-- Alright, I hope you now have a fair understanding of what, why, and how of async JavaScript. In the next lecture, let's begin with the traditional methods JavaScript has available for running code asynchronously.
+
+#### Synchronous, Blocking, Single-Threaded JavaScript
+
+- JavaScript, in its most basic form, is a synchronous, blocking, single-threaded language.
+- These three points are crucial. Let's understand what they mean.
+  - JavaScript is synchronous, meaning that code executes top-down with only one line executing at any given time.
+  - JavaScript is blocking, which means that subsequent processes won't start until the previous one is completed.
+  - JavaScript is single-threaded, having just one thread, the main thread, for executing code.
+
+#### Challenges of Synchronous JavaScript
+
+- This model of JavaScript creates a significant problem, especially when we have tasks that require waiting, like retrieving data from a database.
+- We need a way to have asynchronous behavior in JavaScript.
+
+#### Asynchronous Programming in JavaScript
+
+- To cater to asynchronous programming in JavaScript, we rely on functions and APIs defined by web browsers.
+- These functions and APIs allow us to register functions that should not be executed synchronously but should be invoked asynchronously when some event occurs (e.g., the passage of time, user interactions, or data arrival over the network).
+- This enables running multiple tasks simultaneously without blocking the main thread.
+
+#### Conclusion
+
+- JavaScript's synchronous, blocking, and single-threaded nature necessitates the use of asynchronous techniques.
+- Web browsers provide functions and APIs to enable asynchronous behavior in JavaScript.
+- In the next lecture, we will explore the traditional methods JavaScript offers for running code asynchronously.
 
 ### **=>** Timeouts and Intervals
 
+#### Timeouts and Intervals
+
 - In this lecture, let's look at the traditional methods JavaScript has available for running code asynchronously after a set time period elapsed or at regular intervals of time.
 - In other words, let's look at the `setTimeout` function and the `setInterval` function.
-- Let's begin with `setTimeout`. The `setTimeout` function executes a particular block of code once after a specified time has elapsed.
-- Let's understand the parameters it accepts. The first parameter is a function to run or a reference to a function defined elsewhere. The second parameter is a number representing the duration in milliseconds to wait before executing the code.
-- After the second parameter, you can pass in zero or more values that represent any parameters you want to pass to the function when it is run.
-- Suppose we have a function `greet` which logs "hello" to the console. We can pass that function into `setTimeout` with a duration of two seconds. The text "hello" will be logged to the console after two seconds.
-- If the `greet` function were to accept a parameter like we see in the next example, we can pass the parameter value as the third argument to `setTimeout`, and after two seconds, "hello vishwas" would be logged to the console.
-- Once a `setTimeout` has been called, sometimes you might want to cancel it. To clear a timeout, you can use the `clearTimeout` method, passing in the identifier returned by `setTimeout` as a parameter.
-- So, in the code snippet on line 5, you can see that we assigned the return value from `setTimeout` to a constant called `timeoutId`. On line 6, we pass that id into the `clearTimeout` method, which will basically ensure our `greet` function will not run after the two-second duration. So, nothing is logged to the console as the `greet` function never executes.
-- A more practical scenario is clearing timeouts when the component is unmounting to free up the resources and also prevent the code from incorrectly executing on an unmounted component.
-- So, that is about `setTimeout`. It runs code once after a set period of time.
 
-- If, however, you want to repeatedly run the same code over and over again at regular intervals, you can make use of the `setInterval` function. The signature remains the same as the `setTimeout` function: the first parameter is the code to execute, the second parameter is the duration in milliseconds, and then zero or more arguments for the passed-in function.
-- In this sample code snippet, the function `greet` is called every two seconds, which logs "hello" to the console every two seconds.
-- Another point to keep in mind is that intervals keep running a task forever, so you should clear the interval when appropriate. You can do that using the `clearInterval` function. So, capture the return value from `setInterval` and pass it in as an argument to `clearInterval`.
-- That is pretty much the basics of timeouts and intervals. Now, there are a few more points to highlight, so let's go through them:
-  - The first point is that timers and intervals are not part of JavaScript itself; they are implemented by the browser, and `setTimeout` and `setInterval` are basically names given to that functionality in JavaScript.
-  - Let me repeat that: timers and intervals are not features of JavaScript. However, JavaScript lets us use those features, which are implemented in the browser and, of course, Node.js.
-  - The second point is about the duration parameter. The duration specified is the minimum delay and not guaranteed delay. For example, if we call `setTimeout` with two seconds, two seconds is the minimum time after which the passed-in function will execute. It could, in fact, take 5 seconds. JavaScript will only run the function when two seconds have elapsed and the call stack is free. If not, the function has to wait before it is executed. So, if I type in `setTimeout` with 0 milliseconds as the duration, it doesn't imply that the function will run immediately. It is the minimum duration after which the function will run.
-  - Now, if you're confused with this point, you don't have to worry. We're going to understand this in detail when we talk about the event loop a few lectures down the line.
-  - The third and final point is about recursive `setTimeout` versus `setInterval`. It is possible to achieve the same effect as `setInterval` with a recursive `setTimeout`.
-  - So, we have `setInterval` with a duration of 100 milliseconds, and we have the same functionality with recursive `setTimeout`. Basically, the `run` function keeps calling itself every 100 milliseconds.
-  - However, there are two differences in these approaches:
-    - The first one is that, in the case of recursive `setTimeout`, the same 100 milliseconds are guaranteed between executions. The code will log "hello" to the console, wait 100 milliseconds before it runs again, irrespective of how long the code takes to run. The interval will remain the same. `setInterval`, on the other hand, works differently in the sense that the duration interval includes the time taken to execute the code you want to run. So, if the first time the code takes 40 milliseconds to run, the interval is only 60 milliseconds. If the second time the code takes 50 milliseconds to run, the interval is only 50 milliseconds. Typically, it shouldn't affect your code too much, but if your code can take longer to run than the time interval itself, it's always better to go with recursive `setTimeout` rather than `setInterval`. This will keep the time intervals constant between executions, regardless of how long the code takes to execute, and also you won't get any errors.
-- The second difference is that with recursive `setTimeout`, you can actually calculate a different delay before running each iteration. So, recursive `setTimeout` gives you the flexibility of running the same code over and over but with different intervals, whereas `setInterval` is always a fixed interval duration.
-- All right, now that we have a good understanding of `setTimeout` and `setInterval`, let's head into the next lecture where we discuss some really important exercise problems from an interview point of view.
+#### setTimeout
+
+- The `setTimeout` function executes a particular block of code once after a specified time has elapsed.
+- Parameters:
+  - The first parameter is a function to run or a reference to a function defined elsewhere.
+  - The second parameter is a number representing the duration in milliseconds to wait before executing the code.
+- You can pass zero or more values after the duration as parameters for the function.
+- Example: If we have a function `greet` that logs "hello" to the console, we can pass it into `setTimeout` with a duration of two seconds.
+- To cancel a timeout, use `clearTimeout` with the identifier returned by `setTimeout`.
+
+#### Clearing Timeouts
+
+- A more practical scenario is clearing timeouts when the component is unmounting to free up resources and prevent code from executing on an unmounted component.
+
+#### setInterval
+
+- `setInterval` is used to repeatedly run the same code at regular intervals.
+- The signature is similar to `setTimeout`: first parameter is the code to execute, the second parameter is the duration in milliseconds, and zero or more arguments for the passed-in function.
+- Example: Function `greet` is called every two seconds, logging "hello" to the console.
+- You should clear intervals when appropriate using `clearInterval` by capturing the return value from `setInterval`.
+
+#### Additional Points
+
+- Timers and intervals are not part of JavaScript itself; they are implemented by the browser, and `setTimeout` and `setInterval` are names given to that functionality in JavaScript.
+- The duration parameter is the minimum delay, not guaranteed. JavaScript will execute the function when the specified time has elapsed and the call stack is free.
+- Recursive `setTimeout` versus `setInterval`: Recursive `setTimeout` guarantees the same interval between executions, while `setInterval` considers the time taken to execute the code, potentially leading to varying intervals. Recursive `setTimeout` offers more flexibility in choosing different intervals for each iteration.
+
+#### Conclusion
+
+- With a good understanding of `setTimeout` and `setInterval`, in the next lecture, we will delve into essential exercise problems from an interview perspective.
 
 ### **=>** Callbacks
 
@@ -89,8 +110,6 @@ sidebar_position: 3
   - Callbacks are functions passed as arguments to other functions. They can be synchronous if they execute immediately or they can be asynchronous, where they get executed after some time has passed, some event has occurred, or some data has been fetched.
   - Callbacks were the go-to pattern for asynchronously running code after fetching some data. However, as more and more requests had to be made based on the data obtained from the previous requests, developers started to encounter what is known as the "callback hell."
   - Callback hell makes the code difficult to reason about. An alternative and the recommended approach now is to use promises. Let's learn about that in the next lecture.
-
-Sure, here's the provided text formatted with Markdown using H3 headers, bullet points, and backticks for code terminology:
 
 ### **=>** Promise
 

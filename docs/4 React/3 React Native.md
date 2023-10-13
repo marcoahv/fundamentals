@@ -8370,7 +8370,7 @@ const styles = StyleSheet.create({
 
 - useWindowDimensions should be a go-to approach for responsive styles.
 
-### **=>** SafeAreaView Component in React Native
+### **=>** SafeAreaView Component
 
 >
 
@@ -16477,11 +16477,13 @@ const Styles = StyleSheet.create({
 #### Step 1: Define Error State Variable
 
 - Define a state variable to track any errors that might occur.
+
 - Use the `setError` setter function to set `error`, and the initial value is an empty string.
 
 #### Step 2: Try-Catch Blocks for Fetch and Post
 
 - Add try-catch blocks to our fetch data and add post functions to handle any errors that might occur during the fetch or post operations.
+
 - In the try block, reset any error that was present, and within the catch block, call `setError` with a message "failed to fetch post list" for error feedback to the user.
 
 ```javascript
@@ -16496,6 +16498,7 @@ try {
 #### Step 3: Render UI Based on Error State
 
 - Use the error state to render appropriate UI to the user.
+
 - If there is an error present, render a view component with the text from the `error` state variable. Otherwise, render the existing JSX.
 
 ```javascript
@@ -16537,19 +16540,24 @@ const Styles = StyleSheet.create({
 #### Note on Handling Localhost URLs in Android Emulator
 
 - Localhost URLs do not work from the Android emulator.
+
 - Consider using your computer's IP address instead of "localhost" for API requests from Android devices.
 
 #### Debugging Features in React Native
 
 - Pressing `Command + D` on iOS brings up the developer menu.
+
 - Two debugging options:
+
   1. Show Element Inspector: Inspect elements, view the Box model, see styles applied.
   2. JavaScript Debugger: Inspect network requests, view API calls in the debugger.
 
 #### Conclusion
 
 - Handling errors in networking in React Native.
+
 - Debugging features in React Native for iOS simulator.
+
 - Stay tuned for more advanced topics in the upcoming sections of the series.
 
 ## Section 10: Navigation
@@ -16563,17 +16571,23 @@ const Styles = StyleSheet.create({
 #### Intro
 
 - In this 10th section of our course, we're going to dive into navigation in React Native.
+
 - At the heart of any mobile application is navigation; it's the mechanism that allows users to move across different screens, access features, and generally use your app effectively.
 
-### Solutions for handling navigation
+#### Solutions for handling navigation
 
 - In React Native, a go-to solution for handling navigation is the React Navigation library.
+
 - It's worth mentioning that Expo has its own built-in routing feature, but it is exclusive to Expo projects.
+
 - On the other hand, React Navigation works both with and without Expo. In React Native apps, we will explore Expo's router in a later section of the series and focus on React Navigation in this section.
 
 - React Navigation provides a variety of Navigators like stack, drawer, and tab Navigators.
+
   - Stack Navigators provide a way for your app to transition between screens, where each new screen is placed on top of a stack.
+
   - Drawer Navigator renders a navigation drawer on the side of the screen, which can be opened and closed via gestures.
+
   - Tab Navigator at the bottom of your screen lets you easily switch between different routes. We will look at examples of all three.
 
 #### Setting Up the Project
@@ -16613,7 +16627,9 @@ const Styles = StyleSheet.create({
 - Now that we have React Navigation in place, it's time to dive into one of its fundamental Navigators, which is the stack Navigator.
 
 - Stack navigation follows a straightforward principle: each new screen is stacked on top of the previous one. It's like a deck of cards - when you navigate to a new screen, a new card is placed on top of the stack, and when you navigate back, the top card is removed, revealing the previous screen.
+
 - This navigation pattern is common in many mobile apps, allowing users to drill down into detailed views and then retrace their steps when done.
+
 - It's particularly useful in scenarios where a linear flow of screens is required, for example, viewing a list of items, tapping on an item to see its details, and then tapping on a link contained within to view more details.
 
 #### Stack Navigator and Native Stack Navigator
@@ -16625,6 +16641,7 @@ const Styles = StyleSheet.create({
     - However, this customization comes at the cost of performance, especially when compared to its counterpart, the Native Stack Navigator.
 
   - `Native Stack Navigator`: The Native Stack Navigator leverages the native navigation constructs of iOS and Android, providing better performance and a more native feel to the transitions and gestures.
+
     - The caveat is that it might not offer the same level of customization as the Stack Navigator.
 
 #### Setting Up the Project
@@ -16656,3 +16673,240 @@ const Styles = StyleSheet.create({
 - Let's set it to "aboutScreen," which is the name of the "About" screen.
 
 - Save the file, restart the server, and you can see the "About Screen" is displayed as the initial screen. But how do we navigate between the two screens? Let's learn that in the next video.
+
+### **=>** Navigation between Screens
+
+>
+
+#### Intro
+
+- Now that we have two screens in our stack Navigator (home and about), let's explore how we can navigate from one to the other.
+
+- We have two primary ways to handle navigation between screens: using the `navigation` prop and the `useNavigation` hook. Let's explore both methods and understand their use cases.
+
+#### Using the `navigation` prop
+
+- Every screen component in your application is provided with the `navigation` prop automatically by React Navigation.
+
+- The `navigation` prop has various methods to initiate navigation actions, one of which is `navigate`.
+
+- Let's see how we can use that method to navigate from our home screen to the about screen:
+
+  - At the top, import the `Button` component from `react-native`.
+
+  - Below the `Text` element, invoke the `Button` component with `title` set to "Go to About" and specify the `onPress` prop to navigate to the about screen.
+
+  - In the `onPress` handler, destructure the `navigation` prop on the home screen, and within an arrow function, call `navigation.navigate` with the name of the screen, which is "about."
+
+- If we save the file and change the initial route name to "home" (which is also the default route), press R to restart the app. We should see the "Go to About" button on both iOS and Android.
+
+  - Click on "Go to About," and we are navigated to the about screen. It's really simple.
+
+#### Using the `useNavigation` hook
+
+- Alternatively, if you prefer using hooks, React Navigation provides a `useNavigation` hook.
+
+- Import it at the top and then invoke it within the component:
+
+  - `const navigation = useNavigation();`
+
+- Delete the `navigation` prop, and everything else remains the same. Restart the app, and we see the behavior remains the same.
+
+- Now you might ask when to use one over the other.
+
+- The `navigation` prop is easy to use and doesn't require any additional import if you're within a screen component.
+
+- However, the `useNavigation` hook can be used in any component, not just screen components, making it a more flexible option when you have nested components or are working with utility components that need to initiate navigation.
+
+- So, my recommendation would be to use the `navigation` prop for all screen components and use the `useNavigation` hook only when it is necessary.
+
+- Back in the UI, when you navigate from the home screen to the about screen, you can see that React Navigation keeps the home screen in the stack and adds the about screen on top of it.
+
+- If you press the back button, it pops the about screen off the stack and navigates back to the home screen, following the last-in-first-out principle of stack navigation.
+
+- This stacking behavior ensures a natural navigation flow within your app, allowing users to move forward to new screens or step back to previous screens effortlessly.
+
+- As an exercise, I would encourage you to try and add a button in the about screen to navigate to the home screen.
+
+- Let me know in the comment section if you were able to achieve that.
+
+- Now that you have grasped the basics of navigating between screens, join me in the next video where we will explore passing data between screens.
+
+### **=>** Passing Data between Screens
+
+>
+
+#### Intro
+
+- In the previous video, we learned how to navigate between screens. In this video, we will learn how to pass data while navigating. Let's get straight into the code.
+
+#### Passing Data Between Screens
+
+- For our example, let's pass a `name` parameter from the `home` screen to the `about` screen and render that `name` value in the `about` screen.
+
+- The `navigation.navigate` method, which we have already used to navigate between screens, also accepts a second argument: a route parameters object. This object can contain the data you want to pass to the new screen.
+
+- Let's specify a key-value pair: `name` set to the string "WhichWas." We can access this parameter on the `about` screen using the `route.params` prop. This prop is provided to all screen components.
+
+- Within the component, destructure `name` from `route.params` and update the JSX to render `{name}`.
+
+- If we now save the files, start our application, and go to the devices and then to the `about` screen, we see the text "about WhichWas." We are able to pass data between screens.
+
+#### Setting Default Parameter Value
+
+- It is also possible to set a default parameter value. In `app.js`, on the `about` screen, specify `initialParams`, which is an object, and set `name` to "guest."
+
+- Now, if we remove the data when navigating from the `home` screen, restart the application, and go to the devices, and then to the `about` screen, we see the text "about guest." "Guest" is the default value for the `name` parameter.
+
+#### Updating Parameters
+
+- It's also possible to update the parameters from the given screen using the `navigation` prop. In the `about` screen, destructure `navigation` and in the JSX, add a new `Button`. Make sure to import the component from `react-native`.
+
+- Specify `title` as "Update the name" and on `onPress`, invoke `navigation.setParams`, passing in an object with `name` set to "CodeEvolution."
+
+- If we restart our application, go to the device, go to the `about` screen, and click on "Update the name," we see "about CodeEvolution."
+
+#### Sending Data Back
+
+- You can also send data back to the previous screen in the same way. Create a `Button` with the `title` "Go back with data," and on `onPress`, use `navigation.navigate` to go to the `home` screen with `result` as "Data from about."
+
+- In the `home` screen, destructure `route` and add another `Text` component that renders `route.params.result`.
+
+- If you now click on "Go back with data," we see "Data from about."
+
+- As you can see, React Navigation's parameter handling provides a seamless way to pass and retrieve data between screens, making your navigation structure more dynamic and responsive to user interaction.
+
+#### Customizing Appearance and Behavior
+
+- In the next video, we will dive deeper into customizing the appearance and behavior of our Navigator and screens.
+
+### **=>** Stack Navigation Options
+
+>
+
+#### Intro
+
+- Now that we are familiar with basic navigation, it's time to explore some of the options that the stack Navigator supports in this video.
+- We will dive into specifying a screen title, styling headers, and setting content styles.
+
+#### Screen Title
+
+- Every screen in our stack can display a title in the header serving as a handy guide for users to understand their current location within the app.
+- By default, the `name` prop on the screen component is showcased as the screen title (e.g., "home" and "about").
+- This can be customized by specifying a `title` option.
+  - Use the `options` prop to specify an object with the key `title`, like this:
+  ```javascript
+  options: {
+    title: 'Welcome Home'
+  }
+  ```
+- The home screen title now reads "Welcome Home."
+
+#### Styling Headers
+
+- It's often desirable to style the header to resonate with the application's theme.
+- This includes setting the background color, text color, and font weight among other attributes.
+- To style the header, you can use the `headerStyle` option:
+  - Set `background color`, `header tint color`, and `header title style font weight` as follows:
+  ```javascript
+  options: {
+      headerStyle: {
+          backgroundColor: "purple",
+      },
+      headerTintColor: "white",
+      headerTitleStyle: {
+          fontWeight: "bold",
+      },
+  }
+  ```
+
+#### Header Left and Header Right
+
+- You can add custom components to the left and right of the header.
+- To add a button on the right-hand side of the title, use the `headerRight` option:
+  - This should be equal to a function that returns a component.
+  - Import `Pressable` and `Text` components if needed.
+  - Example code:
+  ```javascript
+  options: {
+      headerRight: () => (
+          <Pressable onPress={() => alert("Menu button pressed")}>
+              <Text style={{ color: "white", fontSize: 16 }}>Menu</Text>
+          </Pressable>
+      ),
+  }
+  ```
+
+#### Header Left
+
+- Similar to `headerRight`, there is also the `headerLeft` option, which adds an element on the left side of the header.
+
+#### Styling Content
+
+- To style the content of your screens, you can use the `contentStyle` option.
+- For instance, to set a background color, use:
+
+```javascript
+options: {
+  contentStyle: {
+    backgroundColor: '#HEX_VALUE'
+  }
+}
+```
+
+- This sets the background color to a hex value.
+
+#### Uniform Style Across All Screens
+
+- For a more uniform style across all screens in the stack, you need to lift these options to the `Stack Navigator` using the `screenOptions` prop.
+- For example, you can specify `screenOptions` and move all styling options to it.
+- This ensures the same styling applies to all screens in the stack.
+
+### **=>** Dynamic Stack Navigator Options
+
+>
+
+#### Intro
+
+- In the previous video, we dived into some of the options provided by the stack Navigator.
+- We explored setting a title for the home screen, a background color for the header, and even a background color for the content.
+
+#### Dynamically Set Header Title
+
+- There are instances where you might want to dynamically set certain options, with the title being a prime example.
+- Let's say, instead of a generic title like "about," we want to personalize it with the name of the person passed in as a parameter.
+
+#### Stack.Screen Component
+
+- One way to dynamically set the header title is directly from the `Stack.Screen` component by passing a function to the `options` prop.
+- In the context of our About screen component, we would specify `options` as a function which returns an object.
+- The function receives the `route` prop from the screen, which we can destructure to access the desired parameters and use them as part of the title.
+- For example, you can set the title like this:
+  ````markdown
+  ```javascript
+  options: ({ route }) => ({
+    title: route.params.name,
+  })
+  ```
+  ````
+- When navigating from the Home screen and passing a `name`, the title will display the passed-in name parameter.
+
+#### Leveraging React Hook
+
+- Alternatively, we can leverage a React hook to set a dynamic title.
+- Comment out the `options` prop on the About screen and head over to the About screen component.
+- Bring in `useLayoutEffect` from React and invoke it within the component.
+- Pass in a function with a dependency array.
+- Within the function, invoke `navigation.setOptions` and pass in the options object.
+- Set the title to `name`, which we have extracted from `route.params`.
+- This approach is dependent on the `navigation` prop as well as the `name`.
+
+#### Use Effect vs. Use Layout Effect
+
+- If we replace `useLayoutEffect` with just `useEffect`, the title update might show a noticeable delay, which is not the smoothest user experience.
+- `useLayoutEffect` is the recommended option for immediate updates.
+
+#### Choosing Between the Two
+
+- Use `Stack.Screen` options when the title or navigation options are driven by Route parameters or are static.
+- Opt for `useLayoutEffect` when the navigation options depend on the screen component's internal logic, state, or props or when they need to be updated post-render.

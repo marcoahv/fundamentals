@@ -46,6 +46,34 @@ sidebar_position: 1
 
 - This line is the very first line of every HTML document.
 
+#### what would happen if we do not include a doctype tag in an html document?
+
+- If you do not include a `<!DOCTYPE>` declaration in an HTML document, the browser will likely render the document in "`quirks mode`"
+- Quirks mode is a rendering mode that emulates the way older browsers, particularly the early versions of Internet Explorer, interpreted HTML and CSS. This mode is used for backward compatibility, but it can lead to unexpected and inconsistent rendering of your web page.
+
+Here are some potential issues that may arise if you don't include a `<!DOCTYPE>` declaration:
+
+1. `Inconsistent Rendering`: Different browsers may interpret the document differently, leading to inconsistencies in how your web page is displayed.
+
+2. `Limited CSS Support`: Quirks mode may not fully support modern CSS features, resulting in difficulties styling your web page as desired.
+
+3. `Box Model Issues`: The box model, which defines how elements are sized and spaced, may be interpreted differently in quirks mode, causing layout problems.
+
+4. `Deprecated HTML Features`: Some deprecated or obsolete HTML features might be supported, potentially leading to non-standard or inefficient code.
+
+5. `Reduced Accessibility`: Accessibility features may not work as expected, making it more challenging to create web content that's usable by people with disabilities.
+
+- To avoid these issues and ensure consistent rendering and compatibility with modern web standards, it's best practice to include a valid `<!DOCTYPE>` declaration at the beginning of your HTML document.
+- The `<!DOCTYPE>` declaration specifies the document type and version of HTML or XHTML being used, helping the browser to render the page correctly.
+
+For example, for HTML5, you should include the following `<!DOCTYPE>` declaration:
+
+```html
+<!DOCTYPE html>
+```
+
+Including this declaration at the beginning of your HTML document is essential for creating well-structured and predictable web pages that work consistently across various web browsers.
+
 #### html tag
 
 - Next, we write our first HTML element, which is the `html` element.

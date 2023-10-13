@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-# CSS Flexbox
+# FLEXBOX
 
 ### **=>** What is Flexbox?
 
