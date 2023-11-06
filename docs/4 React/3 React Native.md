@@ -16910,3 +16910,252 @@ options: {
 
 - Use `Stack.Screen` options when the title or navigation options are driven by Route parameters or are static.
 - Opt for `useLayoutEffect` when the navigation options depend on the screen component's internal logic, state, or props or when they need to be updated post-render.
+
+### **=>** Drawer Navigation
+
+- Having learned about stack navigation, it's time to switch gears and explore another essential Navigator, which is the `drawer Navigator`.
+- Similar to how `stack Navigator` stacks screens one over the other, `drawer Navigator` introduces a hidden menu sliding from either side of the screen. It is particularly beneficial in apps with multiple main sections that require a neat and organized navigation structure.
+
+#### Installation
+
+- Let's understand better with code. First, we have to install the `drawer Navigator` package in our project. I will follow the documentation for this installation to make it easier for you.
+- In the `react navigation docs` under `Navigator`, click on `drawer`. Scroll down and copy the installation command.
+- Within the project, paste the command: `npm install @react-navigation/drawer`.
+
+#### Library Installation
+
+- Next, you need to install and configure the libraries that are required by the `drawer Navigator`. That would be `react native gesture Handler` and `react native reanimated`.
+- Copy the command and paste it in the terminal.
+
+#### Code Separation
+
+- Now rename `app.js` to `app stack.js` to separate the code from the previous tutorials.
+- Within the project folder, create a new file `app.js`.
+
+#### Importing Libraries
+
+- Import `react native gesture Handler`. Make sure it's at the top and there is nothing else before it.
+- Import `navigation container` from `react navigation`.
+- Import `create drawer navigator` from `react navigation drawer`. Invoke it and create a `drawer navigation` instance that we can work with.
+
+#### Missing Step
+
+- Now there is one step missing from the docs. If you browse the docs for the `reanimated` package, you will come across this step two where we need to add the `babel` plugin.
+- So, copy the plugins array and open `Babel` configuration (`babel.config.js`) in the project. Paste it after presets and remove the three dots.
+
+#### Clearing Cache
+
+- In step three, they also recommend we clear the cache before starting the app. Let's add this `-C` option in `package.json` to start the script.
+- So, `npm start -C`.
+
+#### Component Creation
+
+- Our installation and setup step is now complete. Next, within `app.js`, create a `react component` and default export the same.
+- Add the `navigation container` within the app component and inside `navigation container`, invoke `drawer.Navigator`.
+
+#### Defining Screens
+
+- Define two screens in the `screens` folder: create a `dashboard screen.js` and a `settings screen.js`.
+- This component will render just a title.
+
+#### Adding Screens
+
+- In `app.js`, on each `drawer screen` component, we specify a `name` prop, which is the label on our drawer.
+- `dashboard` and `settings`. We will also add a `component` prop to which we assign the individual screen, `dashboard screen` and `settings screen`.
+
+#### Restart Server
+
+- We can now restart our server: `npm start`.
+- Press `I` to run the app on iOS simulator and `A` to run on Android emulator.
+- If the app is still not working, press `R` to restart the application on the devices.
+
+#### Using the Drawer
+
+- We can now see an icon to toggle the drawer; a swipe from the left edge also reveals our drawer.
+- From the drawer menu, we can navigate to the `dashboard` and `settings` screen.
+- In each screen, the `name` prop is displayed as the screen title: `settings` and `dashboard`, which correspond to the `name` prop.
+
+#### Programmatic Navigation
+
+- It's also possible to toggle the drawer programmatically. In `dashboard screen`, import `button` component, destructure the `navigation` prop, and add a button with title set to `toggle drawer`.
+- On press, we call `navigation.toggleDrawer`.
+
+#### Navigating Programmatically
+
+- Along similar lines, you can use the `jump to` method on the `navigation` prop to navigate programmatically without the drawer UI.
+- Duplicate, change the title to `settings`, and call the `jump to` method passing in `settings`.
+- Click on `settings`, and we are navigated to the settings screen, which is set as the active item in the drawer.
+
+#### Conclusion
+
+- The drawer navigation is pretty straightforward. In the next video, let's take a look at some of the options we can specify on the drawer Navigator.
+- Thank you for watching, and I'll see you in the next one.
+
+### **=>** Drawer Navigation Options
+
+- Now that we have set up a basic `drawer Navigator`, let's quickly take a look at some options to customize its appearance.
+- We will specify the `options` prop on the `dashboard screen`.
+
+#### Title Option
+
+- The first option is `title`. Let's assign the text `my dashboard`.
+- This gets rendered as the header title as well as the drawer label, which is `my dashboard`.
+- If you want a different drawer label, specify the `drawerLabel` option and assign a value. Let's go with `dashboard label`.
+- You can see the header title is now different from the drawer label.
+
+#### Custom Colors
+
+- Next, we can specify `drawer active tint color` and `drawer active background color`. This affects the active item in the drawer.
+
+#### Entire Drawer Color
+
+- Finally, for the entire drawer color, we can specify `drawer content style` and set `background color` to `#C6CBEF`. Don't forget the hash symbol.
+- Save the file, take a look at the device, and we can see the new color.
+
+#### Further Customization
+
+- Now, there are a few more options that you can use to customize the behavior of the drawer, but I would say they are often not necessary.
+- Please refer to the docs if you wish to further customize the drawer's appearance and behavior.
+- These five options are very helpful.
+
+#### Conclusion
+
+- Thank you for watching, and in the next video, let's take a look at tab navigation in React Native.
+
+### **=>** Tab Navigation
+
+- Now that we have learned about stack and drawer navigations, let's learn about tab navigation in this video.
+- Tab navigation offers a way to switch between different screens by tapping on a tab, which is usually displayed at the bottom of the screen.
+- It's a common and intuitive navigation pattern found in many apps, providing a seamless user-friendly experience.
+
+#### Installation
+
+- First, we have to install the `bottom tabs Navigator` library in our project. I'll follow the documentation for this installation to make it easier for you.
+- Open the page on `bottom tabs` under `Navigators` and copy the installation command.
+- Run it in the terminal: `npm install @react-navigation/bottom-tabs`.
+
+#### Code Separation
+
+- Now rename `app.js` to `app draw.js` to separate the code from the previous tutorials.
+- Within the project folder, create a new `app.js` file.
+
+#### Importing Libraries
+
+- Import `navigation container` from `react navigation`.
+- In the next line, import `create bottom tab Navigator` function from `react navigation bottom tabs`.
+- Invoke the function and create a `tab Navigator` instance.
+
+#### Creating Components
+
+- Next, create a `react component` and default export the same.
+- Add the `navigation container` within the app component and inside `navigation container`, invoke `tab.Navigator`.
+- As children to `tab.Navigator`, invoke `tab.Screen` once for each screen you wish to include as a tab.
+
+#### Defining Screens
+
+- Let's reuse the `settings screen` from before and create two additional screens.
+- In the `screens` folder, create a `profile screen.js` and a `course list screen.js`.
+- Copy-paste the code from `settings screen` and change the component name and the text that is rendered.
+- So, `profile` and `course list`.
+
+#### Configuring Tab Screens
+
+- Back in `app.js`, on each `tab.Screen` component, we specify a `name` prop, which is the label on our tabs: `course list`, `profile`, and `settings`.
+- We also assign a `component` prop to which we assign the individual screens.
+- Make sure to import the component at the top. For example, `profile screen` and `settings screen`.
+
+#### Tab Navigation in Action
+
+- If we head back to the devices, we can see the tab navigation at the bottom.
+- We have three tabs: one for `course list`, one for `profile`, and one for `settings`.
+- The same in Android. The tabs allow for easy navigation to the respective screens.
+- The `name` prop on `tab.Screen` is displayed as the label, which you see at the bottom, as well as the title in the header.
+
+#### Conclusion
+
+- As you can see, it is really simple to create a tabbed navigation in React Native.
+- In the next video, let's take a look at some options for the tab Navigator.
+- Thank you for watching, and I'll see you in the next one.
+
+### **=>** Tab Navigation Options
+
+- Now that we have set up a basic tab Navigator, let's look at some of the options we can specify.
+
+#### Screen Options
+
+- Let's start with screen options on the `tab Navigator`.
+- First, we have `tab bar label position`. By default, it is set to `below icon`, which is what you see currently - label below the icon.
+- We can change this to `beside icon`, and the label is now to the right of the icon. Typically, `below icon` is set for mobile devices, and `beside icon` for iPad and tablets. Let's stick with `below icon` as we are dealing with two mobile devices.
+
+- The next option is `tab bar show label`. This is set to `True` by default. If we set it to `false`, the tab label is hidden, and only the icon is displayed. We do want the label, so I will flip it back to `True`.
+
+- Next, we have `tab bar active tint color`, which sets the active tab font color. Let's set it to `purple`, and you can see the new purple color being reflected.
+
+- There is also `tab bar inactive color` (inactive tint color), which applies the color for inactive tabs. It is set to `gray` by default, but you can go ahead and change it based on your theme.
+
+#### Tab Screen Options
+
+- By default, the `Tab screen name` is rendered as the `tab bar label`. You can change that using the `tab bar label` option on the `profile tab.screen` component. Let's specify `options`, which is an object, and we set `tab bar label` to `my profile`. If we head back to the devices, we can see the updated tab bar label. The header title, though, remains the same as the `name` prop.
+
+- Next, you would want to customize the icon in the tab. The easiest way to add icons is using Expo icons. Import `ion icons` from `@Expo/Vector icons`. As an option, specify the `tab bar icon` option. This is going to return `ion icons` with `name` equal to `person`, which is one of the icons present, and `size` equal to `20`. Take a look at the devices, and we see the `person` icon being rendered for the `profile` tab.
+
+- To ensure the icon picks up on the active and inactive tint color, you can destructure a `color` prop and assign it to the `color` prop on `ION icons`. So, `color` is equal to `color`, and you can see the icon is now purple or gray instead of black.
+
+- Finally, you can specify `tab bar badge` to add a badge to the icon. This is particularly useful if you have a notifications tab or an inbox tab that requires the user's attention to items on the screen.
+
+#### Additional Options
+
+- Apart from these basic options, you have a few more which may come in handy depending on your requirements. It is also possible to define a completely custom `tab bar component` and pass it into `react navigation`. Unless you have a lot of time to work on that, I would recommend you stick to the default bottom tab that `react navigation` offers.
+
+#### Conclusion
+
+- Now that we have seen the three different types of Navigators in react native, in the next video, let's learn how to Nest Navigators.
+- Thank you for watching. Please do consider subscribing to the channel, and I'll see you in the next one.
+
+### **=>** Nesting Navigators
+
+- For the final video in this section on react native navigation, let's learn how to Nest Navigators.
+- Nesting Navigators allows us to combine the powers of different types of Navigators, creating a seamless and organized user experience.
+- It's like having a main road with smaller branching lanes, each having its own set of rules yet interconnected.
+
+#### Nesting Example
+
+- Let's dive into code and explore how to Nest Navigators in our react native app.
+- For our example, we will Nest a stack Navigator within a tab Navigator. We're going to reuse the Navigators we have already created.
+
+#### Modifying app.js
+
+- Let's begin by making a small change in `app.js`, which contains our stack Navigator.
+- Create and export a constant called `about stack` which returns the stack Navigator.
+- So, from the function `app`, cut `stack Navigator` and return it from `about stack`.
+- Invoke `about stack` within `navigation container` to not break any code we have written before.
+
+#### Creating a New Tab Screen
+
+- For this video, we will only be using `about stack`.
+- Back in `app.js`, where our tab Navigator is present, create a new `tab screen`. The name will read `about stack`, and `component` will be equal to the new `about stack` component we've exported from `app stack.js`.
+- Make sure to import the component at the top.
+
+#### Nested Navigation
+
+- That is pretty much it. We have nested `about stack`, which is a stack Navigator, within our tab Navigator.
+- If we head back to the devices, we should now see a fourth tab called `about stack`. Clicking on the tab will present the home screen, which is part of the `about stack Navigator`. We can navigate to the `about screen` from here.
+
+#### Handling Headers
+
+- We do, however, have two headers, one from each of the Navigators. Ideally, you would want the stack Navigator to control the heading. In this scenario, to hide the tab Navigator heading on `tab screen`, specify `options`, which is an object.
+- Set `headerShown` to `false`.
+
+#### Conclusion
+
+- If we head back to the devices, we now have only one header from the stack Navigator. This is how you Nest Navigators with react navigation.
+- Ideally, you should try to achieve the behavior you want with as little nesting as possible. Not only the code but also the UX will be confusing with many levels of nesting.
+- With that, we come to the end of this section on navigation in react native. We've learned about react navigation, which is a go-to package for navigation in react native. We've learned about the three different types of Navigators, namely stack, drawer, and tab.
+- We've also seen how to navigate to different screens with each of them and customize the look and feel as well.
+- Thank you for watching. Please do leave a like if you're enjoying the content, and I'll see you in the next one.
+
+<!-- This is part of the transcript of a video tutorial on web development.
+
+help me do the following:
+
+Write this text in its entirety, word by word, using markdown format, adding sub-headings for all its parts in h4 tags, starting every sentence with a bullet point, and using backticks for code terminology. -->

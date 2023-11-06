@@ -194,31 +194,52 @@ and for `mobile`, we're going to work from `640 pixels` to `0`.
 - I'll change the `count` from `5` to `12`, which is the web standard.
 - I'll change the `margin` to `64`, so the spacing from the sides here.
 - I'll change the `gutter` to be `24 pixels`.
+
+> ![](./images/17.png)
+
 - Here we have our first grid for the `desktop`. Looks good.
-- Now, usually, you would add a grid maybe as the first thing when you start creating a design because you want it as guidelines.
-- But I'm just going to show you how we scale the grid for the different device sizes here.
+
+  > Now, usually, you would add a grid maybe as the first thing when you start creating a design because you want it as guidelines. But I'm just going to show you how we scale the grid for the different device sizes here.
+
 - So we have the `desktop grid` set up, looks cool.
+
 - Now, we can see that it's not actually mapping correctly. This container is not really mapping.
 - So I want to map this exactly to the grid because if it's mapped to the grid when we start resizing stuff, these things are actually going to stay committed to the columns.
+
+> ![](./images/18.png)
+
 - They're now going to listen to the columns when we change sizes.
 - Make sure everything is within the columns here, and it looks like it is. Cool.
 
 #### Adjusting Grids for Tablet View
 
-- So, then we have the first one. If I change this to `1440` again, it's still responsive. Cool.
 - Now, duplicate this because for `tablet`, we have a very similar layout.
-- I'll change this to be named `tablet`.
+- I'll change this (frame) to be named `tablet`.
 - I'll go into the `layout grid` here, change from `12 columns` to `8`.
 - I'll change the margin to be `32 pixels`.
+
+> ![](./images/19.png)
+
 - You can see that, okay, so we changed the grid, but the content inside of here doesn't follow.
 - So we have to realign stuff. I'll take this; I'll drag it to the side there and I'll increase the width.
 - Do the same with this `nav bar` like that.
 - And now, if we change the size, it still works. Cool.
-- Now we want this to be `1024` in width, and there we have the layout.
+- Now we want this to be `1024` in width,
+
+> ![](./images/20.png)
+
+- and there we have the layout.
 - But not quite done because one thing I want to change for our `tablet`, and this is quite common when it comes to `tablet` views and `mobile` views, is that I want to stack my content differently.
 - This is where `Auto Layout` once again is going to be very helpful for us.
 - So I can go into my `hero content container` here, I can go to the `Auto Layout` settings and change to `Vertical Direction` instead of `horizontal direction`.
-- You can see how it now stacks vertically. I'm not done there though. I want to change this image to be on the top instead, so I'll switch the order like that.
+
+> ![](./images/21.png)
+
+- You can see how it now stacks vertically.
+- I'm not done there though. I want to change this image to be on the top instead, so I'll switch the order like that.
+
+> ![](./images/22.png)
+
 - Now it's starting to look more like the thing I want.
 - So this is my `tablet view`. Now I'll grab the `tablet view`, duplicate that.
 
@@ -231,22 +252,43 @@ and for `mobile`, we're going to work from `640 pixels` to `0`.
 - Change the whole width of this container or this `Frame` to `640`.
 - And now I realize I forgot something for `tablet` and `mobile`. I actually want to hide those links.
 - I want to change this to be some kind of a hamburger menu but that doesn't contain a hamburger. That just says `menu` like this, and plus.
-- Okay, cool. So there we have our different layouts. Let's call this `mobile`, our different device sizes.
+- Okay, cool. So there we have our different layouts. Let's call this `mobile`
+
+> ![](./images/23.png)
+
+- our different device sizes.
 
 ### **=>** Step 3: Sizing for Different Devices
 
 - With all the grids set up with our different breakpoints, the last step I want to show you is how to size things differently for `desktop`, `tablet`, and `mobile`.
 
+> ![](./images/24.png)
+
 - A desktop is the main size here; we're not going to change that. So `tablet` will be the first size we change.
 - You might be looking for some kind of a golden number here, like what multiple can I use when I change the sizes? There's no right answer; it depends on your layout and website.
 
 - For this layout, I've used the same text size for a bunch of elements, so the logo type, menu text within the button, body text, and button text all have `32 pixels` in size.
-- We're going to stay consistent; we're going to have the same change in size for these. I change these to maybe `28` for `tablet`, and then for the heading, I'll change it from `96 to `72`.
+- We're going to stay consistent; we're going to have the same change in size for these. I change these to maybe `28` for `tablet`,
+
+> ![](./images/25.png)
+
+- and then for the heading, I'll change it from `96 to 72`.
+
+> ![](./images/26.png)
 
 - Also, when it comes to changes in size for different devices, maybe we want to change the spacing.
 - I'll change the spacing between the items in here to `24`.
+
+> ![](./images/27.png)
+
 - I'll change the spacing between the image and this text container to maybe be `64`.
+
+> ![](./images/28.png)
+
 - I'll change the spacing between this item here, the image, and the text to the top to be maybe `32`.
+
+> ![](./images/29.png)
+
 - And I think that looks fine; that's for `tablet`.
 
 - Now, for `mobile`, I'm going to once again target all my text sizes to share the same text size.
@@ -257,6 +299,8 @@ and for `mobile`, we're going to work from `640 pixels` to `0`.
 
 - The spacing to the top here, maybe `24`, and this one to the outermost top is going to be `16`, like we have on the sides, and something like that.
 - So now we've added all the different sizes.
+
+> ![](./images/30.png)
 
 - Now, if we look at the responsive behavior, it looks good here, looks good on `tablet`, and it looks good on `mobile`.
 
