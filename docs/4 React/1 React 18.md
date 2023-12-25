@@ -6,404 +6,284 @@ sidebar_position: 1
 
 ### **=>** What is react?
 
-#### react is an open source javascript library for building user interfaces
+- `React` is an open-source JavaScript library for building user interfaces.
 
-there are two key points in this definition
+#### Key Points in the Definition
 
-the first one is that react is a javascript library, it is not a framework it is a library
+- There are two key points in this definition. The first one is that `React` is a JavaScript library; it is not a framework, but a library.
 
-it is focused on doing one thing and doing that one thing really well
-and that is the second part building user interfaces
+- It is focused on doing one thing and doing that one thing really well, and that is the second part: building user interfaces.
 
-so react does not focus on the other aspects of your application like routing or http requests it is responsible only for building rich user interfaces
+#### Specific Focus of React
 
-however there is no need to worry as react has a rich ecosystem and plays really well with other libraries and is more than capable of building enterprise scale web applications
+- So, `React` does not focus on the other aspects of your application, like routing or HTTP requests.
+
+- It is responsible only for building rich user interfaces.
+
+#### Rich Ecosystem
+
+- However, there is no need to worry, as `React` has a rich ecosystem and plays really well with other libraries.
+
+- It is more than capable of building enterprise-scale web applications.
 
 ### **=>** Why learn React?
 
-#### it is one of the most popular ui libraries
+- Now that we know what `React` is and for what purpose it is used,
 
-well the first reason is a practical one `it is one of the most popular ui libraries` and is well known in the job market, learn react and you could land that front-end developer job you've always wanted
+- Let's see why you might want to learn `React`. Well, the first reason is a practical one.
 
-second reason is that `react has a great community behind it`, you will be able to find tons of articles and stack overflow solutions to most of the problems that you will encounter when learning react
+#### Popularity and Job Market
 
-#### the technical aspects of react and why it is a good choice
+- It is one of the most popular UI libraries and is well-known in the job market.
+- Learn `React`, and you could land that front-end developer job you've always wanted.
 
-- `react has a component based architecture`
+#### Strong Community Support
 
-this lets you break down your application into small encapsulated parts which can then be composed to make more complex user interfaces
+- The second reason is that `React` has a great community behind it.
+  - You will be able to find tons of articles and Stack Overflow solutions to most of the problems that you will encounter when learning `React`.
 
-components also make it possible to write reusable code
+#### Technical Aspects of React
 
-for enterprise applications the ability to reuse code is a huge plus point
+- Next, let me touch slightly on the technical aspects of `React` and why it is a good choice.
+  - `React` has a component-based architecture.
+  - This lets you break down your application into small encapsulated parts, which can then be composed to make more complex user interfaces.
+  - Components also make it possible to write reusable code for enterprise applications. The ability to reuse code is a huge plus point.
 
-- `another key point is that react is declarative`
+#### Declarative Nature of React
 
-now what does that mean?
+- Another key point is that `React` is declarative.
+  - Now, what does that mean?
+  - Well, basically, you just have to tell `React` what you want through code, and `React` with its `React DOM` library will build the actual UI.
+  - `React` will abstract away the difficult parts and make it painless for you to create complex UIs.
 
-well basically you just have to tell react what you want through code and react with its react dom library will build the actual ui
+#### Enhancing Your Skill Set
 
-react will abstract away the difficult parts and make it painless for you to create complex uis
-
-the bottom line is that react will be a great addition to your skill set
+- The bottom line is that `React` will be a great addition to your skill set.
 
 ### **=>** Setting up our development environment
 
-#### for react we need three things, a browser, node.js and a code editor.
+- Let's begin by setting up our development environment for `React`. We need three things:
 
-for browser i am going to be using `chrome`
+1. A browser
+2. `Node.js`
+3. A code editor
 
-for node.js head over to nodejs.org you will need to download and install `the latest stable release`
+- For the browser, I am going to be using `Chrome`.
+- You can choose to use any browser you already have installed.
 
-to write code i am going to be using `vscode`
+- For `Node.js`, head over to [nodejs.org](https://nodejs.org).
+- You will need to download and install the latest stable release.
+- Click on LTS, which downloads the installer, then double-click the installer. Stick to the defaults and install `Node.js`.
 
-and make sure to `install the prettier extension` which will help with formatting
+- To write code, I am going to be using `VS Code`.
+- Head over to [code.visualstudio.com](https://code.visualstudio.com), download, and install it.
+- Once you have VS Code installed, from the Side Panel, open the Extensions Panel, and make sure to install the Prettier extension, which will help with formatting.
 
-i have created `a folder` called `react 18 crash course` and i've opened vs code inside the folder
+- Finally, open the editor inside a folder of your choice.
+- I have created a folder called `react-crash-course`, and I've opened VS Code inside the folder.
+
+- This pretty much is all the setup we need. We are now ready to create our `React` application.
 
 ### **=>** Create a new react app
 
-#### to create a new react app we will be making use of `create react app`
+- To create a new `React` app, we will be making use of `create-react-app`.
 
-create react app is a command line interface tool that allows you to quickly create and run react
-applications with no configuration
+- `create-react-app` is a command-line interface tool that allows you to quickly create and run `React` applications with no configuration.
 
-so open the integrated terminal and run the command npx create-react-app followed by the name of the project let's call it react-demo
+- Open the integrated terminal view in VS Code and run the command:
 
-```css
-npx create-react-app react-demo
-```
+  ```bash
+  npx create-react-app@latest react-demo
+  ```
 
-the command takes a few seconds and once it completes you should have a new folder called react-demo
+  Followed by the name of the project. Let's call it `react-demo`.
 
-this folder contains our react application
+- The command takes a few seconds, and once it completes, you should have a new folder called `react-demo`. This folder contains our `React` application.
 
-#### `to run this application` first navigate inside the project folder cd react-demo now run the command npm start
+#### Running the React Application
 
-```css
-npm start
-```
+- To run this application, first navigate inside the project folder:
 
-the command will open the browser on localhost port 3000 with your react demo application up and running and you can see the instruction edit source app.js and save to reload
+  ```bash
+  cd react-demo
+  ```
 
-- let's go back to vs code expand the source folder and edit app.js
+- Now run the command:
 
-- i will change the text to hello world and save the file
+  ```bash
+  npm start
+  ```
 
-- when the changes are saved the browser automatically refreshes and
-  you should see hello world displayed in the browser
+  The command will open the browser on `localhost` port `3000` with your `React` demo application up and running. You can see the instruction: "Edit `src/App.js` and save to reload."
+
+- Let's go back to VS Code, expand the `src` folder, and edit `App.js`.
+
+- Change the text to "Hello, World!" and save the file.
+
+- When the changes are saved, the browser automatically refreshes, and you should see "Hello, World!" displayed in the browser. So there you go, your first `React` application is up and running.
 
 ### **=>** The applications folder structure and files
 
-#### package.json
+- Now that we understand how to generate a simple `React` app, let's understand the application's folder structure.
 
-this file contains the `dependencies` and the `scripts` required for the project
+- At the root level, we have three folders and four files to begin with.
 
-you can see that we are using react and react dom version 18 and they are listed as dependencies
+#### Package.json
 
-both the libraries are necessary to create react applications
+- Let's start with `package.json`. This file contains the dependencies and the scripts required for the project.
+  - We are using `React` and `React DOM` version 18, listed as dependencies.
+  - Both libraries are necessary to create `React` applications.
+  - There are scripts to run the application, build the application, or run tests.
+  - Configuration for `eslint` is present, which is a tool to highlight possible errors in the code.
+  - Finally, there's a compatible browser list.
 
-we also have a few scripts to `start` the application, `build` the application or even run `tests`
+#### Lock and Log Files
 
-we then have `the configuration for eslint` which is a tool to highlight possible errors in the code
+- Based on whether you have `npm` or `yarn` as a package manager, you're going to see your `package-lock.json` or `yarn.lock` files.
+  - These files ensure consistent installation of your dependencies, and you don't really have to worry about them.
 
-finally we have the compatible browser list
+#### .gitignore and README Files
 
-#### package-lock.json file
+- There's a `.gitignore` file to ignore files and folders from version control.
+- Also, a standard `README` file.
 
-next based on whether you have npm or yarn as a package manager you're going to see your unlock or package log files
+#### Folders
 
-this file ensures consistent installation of your dependencies and you don't really have to worry about it
+- Now let's talk about the folders.
 
-#### .gitignore file
+#### The first one is `node_modules`.
 
-we also have a git ignore file to ignore files and folders from version control
+- This is the folder in which all the dependencies are installed. It is generated when you run the `create-react-app` command or when you run `npm install`.
 
-#### README.md file
+#### The next folder is the `public` folder.
 
-and a standard readme file
+- This folder contains six files.
+- Out of the six, `manifest.json`, along with the favicon and the two logos, is concerned with progressive web apps, which is out of scope for our discussion.
+- We have the `robots.txt` file needed for search engines and is not `React` specific.
+- As a beginner, you only have to concentrate on the `index.html` file.
+- The `index.html` file is the only HTML file you're going to have in your application. For single-page applications, the UI might dynamically change in the browser, but it is this HTML file that gets served up. Typically, you're not going to add any code in this file, maybe some changes in the head section, but definitely not in the body tag.
+- You want `React` to control the UI, and for that purpose, we have one `div` tag with `id` equal to `root`. At runtime, the `React` application takes over this `div` tag and is ultimately responsible for the UI.
 
-#### node_modules folder
+#### The next folder is the `src` folder,
 
-next let's talk about the folders the first one is node underscore modules
+- which is the folder we will be working with the most during development.
+- The starting point of our `React` application is `index.js`.
+- In `index.js`, we specify the root component, which is `App` component, and the DOM element that will be controlled by `React`.
+- The DOM element, in our example, is an element with `id` equal to `root`.
+- This `div` element is the root DOM node because everything inside it will be managed by `React`.
+- That brings us to the `App` component, which is present in `App.js`.
 
-this is the folder in which all the dependencies are installed
+- This file is responsible for the HTML displayed in the browser. In other words, the `App` component represents the view.
+- `App.js` is where the HTML for the UI is defined.
 
-it is generated when you run the create react app command or when you run npm install
+- For the "Hello, World!" application, the `App` component is rendered inside the root DOM node.
+- `App.js` is where we edited the text a minute ago.
 
-#### public folder
+- `create-react-app` also generates a CSS file for styling and a `test.js` file for unit tests.
+- The CSS file contains classes applied in the `App` component, and the test file contains a simple test case.
+- There's an `index.css` file that applies styles to the `body` tag and is referenced in `index.js`.
+- The `logo.svg` is referenced in the `App` component at the top.
+- Finally, there are `reportWebVitals` for performance and analytics tracking and `setupTests`, which is related to testing.
+- These two files can be ignored as a beginner.
 
-the next folder is the public folder
-
-this folder contains six files
-
-out of the six `manifest.json` along with the `favicon` and the `two logos` are concerned with progressive web apps which is out of scope for our discussion
-
-we have the `robots.txt` file which is needed for search engines and is nothing react specific
-
-#### the index.html file
-
-so as a beginner you only have to concentrate on the index.html file
-
-the index.html file is the only html file you're going to have in your application
-
-we are building single page applications and this is it
-
-the ui might dynamically change in the browser but it is this html file that gets served up
-
-typically you're not going to add any code in this file maybe some changes in the head section but definitely not in the body tag
-
-#### we have one div tag with id is equal to root
-
-you want react to control the ui and for that purpose we have one div tag with id is equal to root
-
-at runtime the react application takes over this div tag and is ultimately responsible for the ui
-
-please make a note of this div tag as we will come back to it shortly
-
-#### the source folder
-
-the next folder is the source folder which is the folder we will be working with the most during development
-
-#### index.js file
-
-the starting point of our react application is index.js
-
-```js
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import './index.css'
-import App from './App'
-import reportWebVitals from './reportWebVitals'
-
-const root = ReactDOM.createRoot(document.getElementById('root'))
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-)
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals()
-```
-
-in index.js we specify the root component which is App component and the dom element which will be controlled by react
-
-the dom element in our example is an element with id is equal to root and if you can recollect this is the element in our index.html file
-
-we call this div element as a `root dom node` because everything inside it will be managed by react
-
-for the hello world application the app component is rendered inside the root dom node
-
-#### App.js file
-
-that brings us to the app component which is present in app.js
-
-this is also the file we edited a minute ago and is responsible for the html displayed in the browser
-
-in other words `the app component represents the view which we see in the browser`
-
-#### App.css file
-
-with app.js create react app also generates a css file for styling. the css file contains classes which are applied in the app component
-
-#### App.test.js file
-
-and a test.js file for unit tests. the test file contains a simple test case
-
-#### index.css file
-
-we also have an index.css file which applies styles to the body tag and is referenced in index.js
-
-#### logo.svg
-
-we have the logo svg which is referenced in the app component
-
-#### reportWebVitals.js
-
-and finally report web vitals for performance and analytics tracking
-
-#### setupTests.js
-
-and setup tests which is again related to testing
-
-these two files can be ignored as a beginner
-
-so that is the folder structure of a react application created using create
-react app
-
-#### when you run the command npm start...
-
-index.html file is served in the browser
-
-index.html contains the root dom node
-
-next the control enters index.js
-
-react dom library renders the app component onto the root dom node
-
-the app component contains the html which is ultimately displayed in the
-browser
-
-### **=>** React 17 vs React 18
-
-#### there is a small update needed in index.js
-
-at the moment create react app installs version 18 as a dependency but the root api still uses version 17 of react
-
-let's fix it before proceeding
-
-at the top comment out the import `statement for react` dom and instead add import create root from react dom client
-
-next comment out the react dom render method and instead add const container is equal to document.getElementById root const root is equal to the create root function which we have imported passing in container and finally root dot render the app component
-
-doing this will enable you to use react 18 features
-
-if you are watching this video a few weeks or months after the video has been published you might not have to do this as create react app might be updated by then but for now make this small change to render the app component
-
-```js
-import React from 'react'
-// import ReactDOM from 'react-dom'
-import ReactDOM from 'react-dom/client'
-import './index.css'
-import App from './App'
-import reportWebVitals from './reportWebVitals'
-
-// ReactDOM.render(
-//   <React.StrictMode>
-//     <App />
-//   </React.StrictMode>,
-//   document.getElementById('root')
-// )
-
-const root = ReactDOM.createRoot(document.getElementById('root'))
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-)
-```
-
-now i have mentioned the word component `several` times already but what exactly is a component?
-let's understand that next
+- So that is the folder structure of a `React` application created using `create-react-app`.
+- When you run the command `npm start`, `index.html` file is served in the browser, and `index.html` contains the root DOM node.
+  - Next, the control enters `index.js`, and the `React DOM` library renders the `App` component onto the root DOM node.
+  - The `App` component contains the HTML, which is ultimately displayed in the browser.
 
 ### **=>** What is a component?
 
-#### in react a component represents a part of the user interface
+- I have mentioned the word "component" several times already, but what exactly is a component?
 
-for example a traditional website can be broken down into header site nav main content and footer
+> Let's understand that next. In `React`, a component represents a part of the user interface.
 
-each section is represented by a component in react
+- For example, a traditional website can be broken down into header, site nav, main content, and footer.
+- Each section is represented by a component. In `React`, all the components, when composed in the right way, make up the entire website.
 
-- `composition`
+> We also have a component that contains all the four components.
 
-all the components when composed in the right way make up the entire website
+- It is called the root component and is usually named as the app component.
 
-- `Root (App) component`
+> Components are also reusable.
 
-we also have a component that contains all the four components it is called as root component and is usually named as app component
+- The same component can be used with different properties to display different information.
+- For example, the site nav component can be the left side nav as well as the right side nav.
+- The UI can remain the same, but the content can change.
 
-- `components are also reusable`
+#### Component Code Structure
 
-the same component can be used with different properties to display different information
+> Now, how does a component translate to code in our application?
 
-for example the site nav component can be the left side nav as well as the right side nav
+- A component's code is usually placed in a JavaScript file. For example, the `AppComponent` is placed in `App.js`.
 
-the ui can remain the same but the content can change
+- Alright, so a component is basically the code inside a `.js` file.
+- But what does that code look like? That depends on the type of the component.
 
-#### component code
+#### Types of Components
 
-- `now how does a component translate to code in our application?`
-
-a component code is usually placed in a javascript file
-
-for example AppComponent is placed in App.js
-
-all right so a component is basically the code inside a dot js file
-but
-
-- `what does that code look like?`
-
-that depends on the type of the component
-
-we have two types function components and class components
+- We have two types: function components and class components.
 
 ### **=>** Function Components
 
-in the year 2022 function components are pretty much what you need to learn and our focus is going to be just that
+- In the year 2022, function components are pretty much what you need to learn.
 
-#### class components
+- Our focus is going to be just that; class components are not necessary from a beginner's point of view.
+- However, I will let you know where to learn about them at the end of this video.
 
-  - `class components are not necessary from a beginner's point of view`
+#### Function Components in React
 
-  but i will let you know where to learn about them at the end of this video
-
-#### function component
-
-  - `function components are literally javascript functions`
-
-  they may accept some input properties and return html which describes the ui
+- So, what does a function component code look like?
+- Function components are literally JavaScript functions.
+- They may accept some input properties and return HTML, which describes the UI.
 
 #### let's examine the App component
 
-  the first thing to notice is `the file extension`, .js
-  so it is a javascript file
+- The first thing to notice is the file extension `.js`, so it is a JavaScript file.
 
-  ```js App.js
-  import logo from './logo.svg'
-  import './App.css'
+- If we take a look at the code, you can clearly see that this is a JavaScript function called `App`, which returns some HTML.
 
-  function App() {
-    return (
-      <div className='App'>
-        <header className='App-header'>
-          <img src={logo} className='App-logo' alt='logo' />
-          <p>Hello World!</p>
-          <a
-            className='App-link'
-            href='https://reactjs.org'
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    )
-  }
+```js App.js
+import logo from './logo.svg'
+import './App.css'
 
-  export default App
-  ```
+function App() {
+  return (
+    <div className='App'>
+      <header className='App-header'>
+        <img
+          src={logo}
+          className='App-logo'
+          alt='logo'
+        />
+        <p>Hello World!</p>
+        <a
+          className='App-link'
+          href='https://reactjs.org'
+          target='_blank'
+          rel='noopener noreferrer'>
+          Learn React
+        </a>
+      </header>
+    </div>
+  )
+}
 
-  if we take a look at the code you can clearly see
-  that `this is a javascript function` called app which returns some html
+export default App
+```
 
-  the html contains a wrapping div tag, the header tag,
-  an image, a paragraph and a link
+- The HTML contains a wrapping `div` tag, the `header` tag, an image, a paragraph, and a link.
 
-  the component is exported from the file as the default export
-  this allows us to import the same in index dot js
+- The component is exported from the file as the default export. This allows us to import the same in `index.js`.
 
-  - create react app generates a simple react application and hence we have just the one component which is app component
-
-  in the real world application you can
-  have tens hundreds or even thousands of components
-
-  facebook which uses react supposedly has
-  more than thirty thousand components
-
-  more complex the application more the
-  number of components
-
+- `create-react-app` generates a simple React application, and hence we have just the one component, which is the `App` component.
+- In the real-world application, you can have tens, hundreds, or even thousands of components.
+- Facebook, which uses React, supposedly has more than thirty thousand components. More complex the application, more the number of components.
 
 ### **=>** Create a function component
 
-#### create a function component ourselves
+- To get a better hang of components, let's now create a function component ourselves.
 
-**-** to keep things simple in the app component i am going to `remove all the html except the outer div tag,`
-remove the logo import as well at the top
+- To keep things simple, in the `App` component, I am going to remove all the HTML except the outer `div` tag. Also, remove the logo import at the top.
 
 ```js App.js
 import './App.css'
@@ -415,47 +295,41 @@ function App() {
 export default App
 ```
 
-**-** now let's create our first component which will simply output the message `hello Vishwas`
+- Now, let's create our first component, which will simply output the message "Hello Vishwas."
 
-now a component is nothing but a
-javascript file let's start with that
+#### Creating the `Greet.js` File
 
-1. first within the source folder i'm going
-   to create a new folder called components
+- A component is nothing but a JavaScript file.
+- Let's start with that first.
+- Within the `src` folder, I'm going to create a new folder called `components`.
 
-   ```js
-   src/
-     components/
-   ```
+```js
+  src/
+    components/
+```
 
-2. and within the folder i'm going to create a new file called Greet.js
+- Within the folder, I'm going to create a new file called `Greet.js`.
 
 ```js
 src / components / Greet.js
 ```
 
-now within the file define a new function
+- Now, within the file, define a new function:
+- function Greet, we return an h1 tag that says "hello vishwas"
 
-function Greet we return an h1 tag that says hello vishwas
-
-```js Greet.js
-// Greet.js
-
-function Greet() {
+```javascript
+function greet() {
   return <h1>Hello Vishwas</h1>
 }
 ```
 
-and that is pretty much it you have created your first function component
+- And that is pretty much it. You have created your first function component.
 
 #### Exporting the function
 
-but as it stands now the html hello vishwas is not going to be rendered in
-the browser, `the great component is in no way connected with the rest of our application`
-
-1. so what we have to do is export the greet function from greet.js
-
-so export default greet
+- But as it stands now, the HTML "Hello Vishwas" is not going to be rendered in the browser.
+- The `Greet` component is in no way connected with the rest of our application.
+- So what we have to do is `export` the `Greet` function from `Greet.js`,
 
 ```js Greet.js
 function Greet() {
@@ -465,10 +339,7 @@ function Greet() {
 export default Greet
 ```
 
-4. import it in app.js
-
-`import` greet from dot slash components slash greed
-(we are allowed to omit the dot js file extension)
+- And also `import` it in `App.js`,
 
 ```js App.js
 import './App.css'
@@ -481,16 +352,9 @@ function App() {
 export default App
 ```
 
-5. and then include it in the app component
+- We are allowed to omit the `.js` file extension.
 
-now to include the grid component in app component we simply specify the component as a
-custom html tag
-
-so within the outer div tag
-include the greet component as an html tag
-
-if there is no content between the
-opening and closing tags you can simply change it into a self-closing tag
+- Now, to include the `Greet` component in the `App` component, we simply specify the component as a custom HTML tag.
 
 ```js
 import './App.css'
@@ -507,16 +371,13 @@ function App() {
 export default App
 ```
 
-now if we save all the files and take a look at the browser
-you should be able to see hello vishwas
-your first function component is up and running
+- If there is no content between the opening and closing tags, you can simply change it into a `self-closing tag`.
 
-#### using an arrow function to create a function component
+- Now, if we save all the files and take a look at the browser, you should be able to see "Hello Vishwas." Your first function component is up and running.
 
-let's rewrite the code
+#### using an arrow function
 
-const greet is equal to an arrow function
-which returns hello vishwas
+- It's also possible to use an arrow function to create a function component. Let's rewrite the code.
 
 ```js
 const Greet = () => {
@@ -526,22 +387,15 @@ const Greet = () => {
 export default Greet
 ```
 
-if you're new to arrow functions
-please pause the video and try to get a basic understanding of how they work
-as we will be using them a lot throughout the series
+- If you're new to arrow functions, please pause the video and try to get a basic understanding of how they work, as we will be using them a lot throughout the series.
 
-take a look at the browser and we still see hello vishwas
+- Take a look at the browser, and we still see "Hello Vishwas."
 
 ### **=>** Default export vs named export
 
-#### export default
+- Before we proceed, I would like to highlight a point about exporting and importing components.
 
-is what allows us to import the component with any name
-
-all right before we proceed i would like to highlight a point about exporting and importing components
-
-please note here that we are exporting greet component as a default export from
-greet.js
+- Please note here that we are exporting the `Greet` component as a default export from `Greet.js`.
 
 ```js
 const Greet = () => {
@@ -551,18 +405,18 @@ const Greet = () => {
 export default Greet
 ```
 
-is what allows us to import the component with any name
+- This is what allows us to import the component with any name.
 
-i can change greet to myComponent, change the tag to myComponent
+- I can change `Greet` to `MyComponent`, change the tag to `<MyComponent>`,
 
 ```js
 import './App.css'
-import myComponent from './components/Greet'
+import MyComponent from './components/Greet'
 
 function App() {
   return (
     <div className='App'>
-      <myComponent />
+      <MyComponent />
     </div>
   )
 }
@@ -570,17 +424,13 @@ function App() {
 export default App
 ```
 
-head back to the browser and you can see that it still works as expected
+- head back to the browser, and you can see that it still works as expected.
 
-#### named exports
+- But in certain articles or videos, you might also find named exports.
 
-but in certain articles or videos you might also find `named exports`
+#### Named Export Example
 
-let me comment the default export
-
-and prepend the constant with the export keyword
-
-so export const greet
+- Let me comment the default export and prepend the constant with the `export` keyword:
 
 ```js
 export const Greet = () => {
@@ -590,22 +440,15 @@ export const Greet = () => {
 // export default Greet
 ```
 
-this is what is termed as a named export
+- This is what is termed as a `named export`.
 
-`in this situation you have to import the component with the exact same name`
+- In this situation, you have to import the component with the exact same name.
 
-if i save the file
-you can straight away see we have an error
+- If I save the file, you can straight away see we have an error:
 
-(export default imported as my component was not found in components gree)t
+  "export 'default' (imported as 'myComponent') was not found in './components/greet."
 
-so you have to change the import statement to import the greet function
-
-`for named exports we use curly braces and then the export`
-
-so import greet from dot slash components slash greet
-
-and use the same tag
+- So you have to change the import statement to import the `Greet` function. For named exports, `we use curly braces` and then the export:
 
 ```js
 import './App.css'
@@ -622,129 +465,105 @@ function App() {
 export default App
 ```
 
-if we take a look at the browser our app is working once again
+- And use the same tag. If we take a look at the browser, our app is working once again.
 
-`now i am going to be using named exports for the most part but make sure you understand the difference between default and named exports`
+- Now, I am going to be using named exports for the most part, but make sure you understand the difference between default and named exports.
 
 ### **=>** JSX
 
-#### JSX is a syntax extension to javascript
+> For our next topic, we're going to quickly take a look at JSX.
 
-  for our next topic we're going to
-  quickly take a look at jsx
+- JSX is probably the word you're going to see and hear a lot in the world of React.
+- So, it's really important that you at least know what JSX is from a beginner's point of view.
 
-  jsx is probably the word you're going to
-  see and hear a lot in the world of react
+> If we take a look at our `Greet` component, we see HTML being returned.
 
-  so it's really important that you at least know what jsx is from a beginner's
-  point of view
+- However, this is not HTML; it is called JSX and `is a syntax extension to JavaScript`.
 
-  if we take a look at our greet component we see html being returned
+> In React, JSX is what describes how the UI should look like.
 
-  however this is not html it is called jsx and `is a syntax extension to javascript`
-
-  in react jsx is what describes how the
-  ui should look like
-
-  in this case it should be an h1 element
+- In this case, it should be an `h1` element.
 
 #### Javascript expressions in JSX
 
-  jsx comes with the full power of javascript
+> JSX comes with the full power of JavaScript.
 
-  for example if we have to evaluate an expression, `within a pair of curly braces` let's specify two plus two
+- For example, if we have to evaluate an expression within a pair of curly braces:
 
-  ```js Greet.js
-  export const Greet = () => {
-    return <h1>Hello Vishwas {2 + 2}</h1>
-  }
+```js Greet.js
+export const Greet = () => {
+  return <h1>Hello Vishwas {2 + 2}</h1>
+}
 
-  // export default Greet
-  ```
+// export default Greet
+```
 
-  save and we see four in the browser
+- Save, and we see four in the browser.
 
-  - `we can also run conditional code, map over a list, etc`
+> We can also run conditional code, map over a list, etc.
 
-  you will slowly get used to what jsx
-  is capable of as we progress through this course
+- You will slowly get used to what JSX is capable of as we progress through this course.
+
+- However, at this point in time, let me point out some of the differences you're going to see in JSX compared to regular HTML.
 
 #### javascript reserved words in JSX
 
-  however at this point in time let me
-  point out some of the differences you're going to see in jsx compared to regular
-  html
+> The first one, which is already present in `App.js`, is `class` being replaced by `className`.
 
-  the first one which is already present in app.js is `class` being replaced by `className`
+- In `App.js`, you can see `className` is equal to `App`, and `App` is a class defined in `App.css`.
 
-  in app.js you can see className is equal to app
-  and app is a class defined in app.css
+```js App.js
+import './App.css'
+import { Greet } from './components/Greet'
 
-  ```js App.js
-  import './App.css'
-  import { Greet } from './components/Greet'
+function App() {
+  return (
+    <div className='App'>
+      <Greet />
+    </div>
+  )
+}
 
-  function App() {
-    return (
-      <div className='App'>
-        <Greet />
-      </div>
-    )
-  }
+export default App
+```
 
-  export default App
-  ```
-
-  similarly we also have the `for` attribute being replaced by `htmlFor`
-
-  since it is a keyword in javascript
+- Similarly, we also have the `for` attribute being replaced by `htmlFor` since it is a keyword in JavaScript.
 
 #### camelCase property naming convention in JSX
 
-  you're also going to see camelCase property naming convention instead of html attribute names
+> You're also going to see camelCase property naming convention instead of HTML attribute names.
 
-  for example `onclick` and `tabIndex` will become `onClick` and `tabIndex` with an upper case C and I
+- For example, `on-click` and `tab-index` will become `onClick` and `tabIndex` with an upper case 'C' and 'I'.
 
-  we will see these differences as we progress through the course so don't worry about having to memorize them
+- We will see these differences as we progress through the course, so don't worry about having to memorize them.
 
 #### react elements
 
-  (What Are React Elements? https://youtu.be/nI1ey-u5VeQ)
+> The last point you have to know as a beginner (and something you can dig into after the course) is about React elements.
 
-  the last point you have to know as a beginner and something you can dig into after the
-  course is about react elements
+- We write JSX, which appears to be similar to HTML, since it is the easiest way to write what the component should render in the UI.
+- Under the hood, JSX produces what are called `React elements`, which are, in turn, converted to objects that are used to construct the DOM.
 
-  we write jsx which appears to be similar to html since it is the easiest way to write what the component should render in the ui
+- The topic might be overwhelming as a beginner, so for now, just keep in mind a React component returns JSX, and JSX is simply a syntax extension to JavaScript.
 
-  - `under the hood jsx produces what are called react elements` which are in turn converted to
-    objects that are used to construct the dom
+- We will be writing a lot of JSX throughout this course, so you will get used to it, even if it hasn't made much sense so far.
 
-  the topic might be overwhelming as a beginner so for now just keep in mind:
-
-  - a react component returns jsx
-
-  - and jsx is simply a syntax extension to javascript
-
-  we will be writing a lot of jsx throughout this course so you will get used to it even if it hasn't made much sense so far
-
-  ### **=>** Props
+### **=>** Props
 
 #### components are reusable
 
-alright our next topic of discussion is an important one it is about `props`
+> Our next topic of discussion is an important one it is about `props`
 
 - earlier in the video i mentioned that `components are reusable`
 
 so you can create a component that returns any jsx you want to and include
 it in any part of your application
 
-for example let's say we need to reuse
-the greet component
+for example let's say we need to reuse the `Greet` component
 
-- all you have to do is include the greet
-  tag as many times as you want
+- all you have to do is include the `Greet` tag as many times as you want
 
-if i duplicate it twice
+- if i duplicate it twice
 
 ```js
 import './App.css'
@@ -763,12 +582,12 @@ function App() {
 export default App
 ```
 
-save the file and take a look at the browser you can see hello vishwas displayed three times
+- save the file and take a look at the browser you can see hello vishwas displayed three times
 
 #### props allows the component content to be dynamic.
 
-now all this is great given what we return from the component
-this isn't really helpful is it
+> now all this is great given what we return from the component
+> this isn't really helpful is it
 
 - what would be great is if we could pass in the name of the person we want to greet,that way reusing the same component we could greet three different people instead of greeting vishwas three times
 
@@ -776,7 +595,7 @@ that is where props come into picture
 
 `props short for properties is the optional input that any component can accept, it allows the component content to be dynamic.`
 
-#### let's understand how props work 
+#### let's understand how props work
 
 - our intention here is to pass a name from the app component to the greet component and render that name in the browser
 
@@ -835,7 +654,7 @@ but how do we
 - the first step `add a parameter to the function component`, we are going to call it props
 
 ```js
-export const Greet = (props) => {
+export const Greet = props => {
   return <h1>Hello Vishwas</h1>
 }
 ```
@@ -850,7 +669,7 @@ so if you want to display the name that has been passed to the component
 we need to use props.name (so hello props.name)
 
 ```js
-export const Greet = (props) => {
+export const Greet = props => {
   return <h1>Hello props.name</h1>
 }
 ```
@@ -864,7 +683,7 @@ we need to instead ask react to evaluate the jsx expression
 and we do that `by wrapping the expression with curly braces`
 
 ```js
-export const Greet = (props) => {
+export const Greet = props => {
   return <h1>Hello {props.name}</h1>
 }
 ```
@@ -876,7 +695,7 @@ the reusability of components makes much more sense now that we understand props
 
 we can have a template (Greet.js) and pass in the data we want the component to use (in App.js, were we use the component)
 
-#### let's add another prop 
+#### let's add another prop
 
 - let's add another prop to make sure we get a good understanding of how it works
 - i'm going to add a second attribute `heroName` and assign the appropriate
@@ -891,9 +710,18 @@ import { Greet } from './components/Greet'
 function App() {
   return (
     <div className='App'>
-      <Greet name='Bruce' heroName='Batman' />
-      <Greet name='Clark' heroName='Superman' />
-      <Greet name='Diana' heroName='Wonder Woman' />
+      <Greet
+        name='Bruce'
+        heroName='Batman'
+      />
+      <Greet
+        name='Clark'
+        heroName='Superman'
+      />
+      <Greet
+        name='Diana'
+        heroName='Wonder Woman'
+      />
     </div>
   )
 }
@@ -906,7 +734,7 @@ export default App
 ```js
 // Greet.js
 
-export const Greet = (props) => {
+export const Greet = props => {
   return (
     <h1>
       Hello {props.name}, a.k.a. {props.heroName}
@@ -917,11 +745,11 @@ export const Greet = (props) => {
 
 now if you take a look at the browser you can see the output is what we expect it to be
 
-#### using the reserved children prop 
+#### using the reserved children prop
 
-- sometimes it is also possible that you might not have an idea as to what content is being passed in but we still want the component to render that unknown content
+- Sometimes it is also possible that you might not have an idea as to what content is being passed in but we still want the component to render that unknown content.
 
-- we can do that by specifying the content between the opening and closing tag of the component and retrieving it using the reserved children property in the props object
+- We can do that by specifying the content between the opening and closing tag of the component and retrieving it using the reserved `children` property in the `props` object
 
 - `let's understand better with an example`
 
@@ -934,9 +762,17 @@ import { Greet } from './components/Greet'
 function App() {
   return (
     <div className='App'>
-      <Greet name='Bruce' heroName='Batman' />
-      <Greet name='Clark' heroName='Superman' />
-      <Greet name='Diana' heroName='Wonder Woman'></Greet>
+      <Greet
+        name='Bruce'
+        heroName='Batman'
+      />
+      <Greet
+        name='Clark'
+        heroName='Superman'
+      />
+      <Greet
+        name='Diana'
+        heroName='Wonder Woman'></Greet>
     </div>
   )
 }
@@ -953,9 +789,17 @@ import { Greet } from './components/Greet'
 function App() {
   return (
     <div className='App'>
-      <Greet name='Bruce' heroName='Batman' />
-      <Greet name='Clark' heroName='Superman' />
-      <Greet name='Diana' heroName='Wonder Woman'>
+      <Greet
+        name='Bruce'
+        heroName='Batman'
+      />
+      <Greet
+        name='Clark'
+        heroName='Superman'
+      />
+      <Greet
+        name='Diana'
+        heroName='Wonder Woman'>
         <p>This is children props</p>
       </Greet>
     </div>
@@ -980,7 +824,7 @@ export const Greet = (props) => {
 
 ```
 
-if i save the file and take a look at the browser you can see we have an error, this is because the jsx returned by a component should contain only one wrapper element
+- if i save the file and take a look at the browser you can see we have an error, this is because the jsx returned by a component should contain only one wrapper element
 
 5. so we wrap h1 tag and props.children with a div tag
 
@@ -988,7 +832,7 @@ so within the outermost html element you can nest as many html elements you want
 to but the component should return only one element
 
 ```js
-export const Greet = (props) => {
+export const Greet = props => {
   return (
     <div>
       <h1>
@@ -1007,7 +851,7 @@ we have the additional content being rendered "this is children props"
 
 - this paragraph corresponds to the inner html of the greet tag component
 
-#### Adding a Child button 
+#### Adding a Child button
 
 so if i were to add a button to the second greet component
 with text action
@@ -1019,11 +863,18 @@ import { Greet } from './components/Greet'
 function App() {
   return (
     <div className='App'>
-      <Greet name='Bruce' heroName='Batman' />
-      <Greet name='Clark' heroName='Superman'>
+      <Greet
+        name='Bruce'
+        heroName='Batman'
+      />
+      <Greet
+        name='Clark'
+        heroName='Superman'>
         <button>Action</button>
       </Greet>
-      <Greet name='Diana' heroName='Wonder Woman'>
+      <Greet
+        name='Diana'
+        heroName='Wonder Woman'>
         <p>This is children props</p>
       </Greet>
     </div>
@@ -1035,10 +886,10 @@ export default App
 
 - and take a look at the browser the button should be rendered for superman
 
- for the properties you know for sure are going to be passed you can pass them as attributes
+for the properties you know for sure are going to be passed you can pass them as attributes
 `name and heroName`
 
- if you have no clue what is going to be passed as props or if you have to pass in dynamic html content `pass it in between the component tags`
+if you have no clue what is going to be passed as props or if you have to pass in dynamic html content `pass it in between the component tags`
 
 and in the component definition render the content using `{props.children}`
 
@@ -1047,7 +898,7 @@ if at all something is specified it is rendered in the browser and if nothing is
 - the children props is very useful when you have to compose new components from
   existing components
 
-#### the basic idea behind props 
+#### the basic idea behind props
 
 - when specifying the component you can include additional attributes
 
@@ -1064,7 +915,7 @@ in our example if i try to assign a value to props dot name
 is equal to vishwas save
 
 ```js
-export const Greet = (props) => {
+export const Greet = props => {
   props.name = 'Vishwas'
 
   return (
@@ -1756,7 +1607,7 @@ if i click on the button though nothing happens right now
 #### Execute the function defined in the parent component
 
 - but what i want is when we click on the button, in the child component, i want to execute the function defined in the parent component
-- 
+-
 - basically the child component calls a parent components function
 
 as i mentioned already this is achieved using props
@@ -1784,7 +1635,7 @@ make note of the absence of the parentheses
 we can now grab hold of this function in our child component, specify props parameter, and on click of the button we call props dot greet handler
 
 ```js
-export const ChildComponent = (props) => {
+export const ChildComponent = props => {
   return (
     <div>
       <button onClick={props.greetHandler}>Greet Parent</button>
@@ -1814,7 +1665,7 @@ let me convert the onClick handler into an arrow function
 props.greetHandler with parentheses
 
 ```js
-export const ChildComponent = (props) => {
+export const ChildComponent = props => {
   return (
     <div>
       <button onClick={() => props.greetHandler()}>Greet Parent</button>
@@ -1828,7 +1679,7 @@ now we can pass in any number of parameters to the greet handler
 to keep this simple let's pass one argument which is the string child
 
 ```js
-export const ChildComponent = (props) => {
+export const ChildComponent = props => {
   return (
     <div>
       <button onClick={() => props.greetHandler('child')}>Greet Parent</button>
@@ -1843,7 +1694,7 @@ let's incorporate this argument in the greet parent function secret parent and w
 import { ChildComponent } from './ChildComponent'
 
 export const ParentComponent = () => {
-  const greetParent = (childName) => {
+  const greetParent = childName => {
     alert('Hello parent')
   }
 
@@ -1859,7 +1710,7 @@ from es6 and we interpolate child name parameter
 import { ChildComponent } from './ChildComponent'
 
 export const ParentComponent = () => {
-  const greetParent = (childName) => {
+  const greetParent = childName => {
     alert(`Hello parent ${childName}`)
   }
 
@@ -2087,7 +1938,7 @@ the function receives an argument which i am going to call as `name`
 ```js
 export const NameList = () => {
   const names = ['Bruce', 'Clark', 'Diana']
-  return <div>{names.map((name) => {})}</div>
+  return <div>{names.map(name => {})}</div>
 }
 ```
 
@@ -2107,7 +1958,7 @@ export const NameList = () => {
   const names = ['Bruce', 'Clark', 'Diana']
   return (
     <div>
-      {names.map((name) => {
+      {names.map(name => {
         return <h2>{name}</h2>
       })}
     </div>
@@ -2172,7 +2023,7 @@ export const NameList = () => {
   const names = ['Bruce', 'Clark', 'Diana']
   return (
     <div>
-      {names.map((name) => {
+      {names.map(name => {
         return <h2 key={name}>{name}</h2>
       })}
     </div>
@@ -2783,7 +2634,10 @@ export const Form = () => {
     <form>
       <div>
         <label>Username</label>
-        <input type='text' value={username} />
+        <input
+          type='text'
+          value={username}
+        />
       </div>
     </form>
   )
@@ -2835,7 +2689,11 @@ export const Form = () => {
     <form>
       <div>
         <label>Username</label>
-        <input type='text' value={username} onChange={(event) => setUsername(event.target.value)} />
+        <input
+          type='text'
+          value={username}
+          onChange={event => setUsername(event.target.value)}
+        />
       </div>
     </form>
   )
@@ -2868,7 +2726,11 @@ export const Form = () => {
     <form>
       <div>
         <label>Username</label>
-        <input type='text' value={username} onChange={(event) => setUsername(event.target.value)} />
+        <input
+          type='text'
+          value={username}
+          onChange={event => setUsername(event.target.value)}
+        />
       </div>
       <button type='submit'>Submit</button>
     </form>
@@ -2904,7 +2766,11 @@ export const Form = () => {
     <form onSubmit={handleSubmit}>
       <div>
         <label>Username</label>
-        <input type='text' value={username} onChange={(event) => setUsername(event.target.value)} />
+        <input
+          type='text'
+          value={username}
+          onChange={event => setUsername(event.target.value)}
+        />
       </div>
       <button type='submit'>Submit</button>
     </form>
@@ -2923,13 +2789,17 @@ import { useState } from 'react'
 export const Form = () => {
   const [username, setUsername] = useState(' ')
 
-  const handleSubmit = (event) => {}
+  const handleSubmit = event => {}
 
   return (
     <form onSubmit={handleSubmit}>
       <div>
         <label>Username</label>
-        <input type='text' value={username} onChange={(event) => setUsername(event.target.value)} />
+        <input
+          type='text'
+          value={username}
+          onChange={event => setUsername(event.target.value)}
+        />
       </div>
       <button type='submit'>Submit</button>
     </form>
@@ -2946,7 +2816,7 @@ import { useState } from 'react'
 export const Form = () => {
   const [username, setUsername] = useState(' ')
 
-  const handleSubmit = (event) => {
+  const handleSubmit = event => {
     event.preventDefault()
   }
 
@@ -2954,7 +2824,11 @@ export const Form = () => {
     <form onSubmit={handleSubmit}>
       <div>
         <label>Username</label>
-        <input type='text' value={username} onChange={(event) => setUsername(event.target.value)} />
+        <input
+          type='text'
+          value={username}
+          onChange={event => setUsername(event.target.value)}
+        />
       </div>
       <button type='submit'>Submit</button>
     </form>
@@ -2973,7 +2847,7 @@ import { useState } from 'react'
 export const Form = () => {
   const [username, setUsername] = useState(' ')
 
-  const handleSubmit = (event) => {
+  const handleSubmit = event => {
     event.preventDefault()
     alert(`Form data is ${username}`)
   }
@@ -2982,7 +2856,11 @@ export const Form = () => {
     <form onSubmit={handleSubmit}>
       <div>
         <label>Username</label>
-        <input type='text' value={username} onChange={(event) => setUsername(event.target.value)} />
+        <input
+          type='text'
+          value={username}
+          onChange={event => setUsername(event.target.value)}
+        />
       </div>
       <button type='submit'>Submit</button>
     </form>
@@ -3116,8 +2994,8 @@ export const PostList = () => {
 
   useEffect(() => {
     fetch('https://jsonplaceholder.typicode.com/posts')
-      .then((response) => response.json())
-      .then((data) => setPosts(data))
+      .then(response => response.json())
+      .then(data => setPosts(data))
   })
 }
 ```
@@ -3132,9 +3010,9 @@ export const PostList = () => {
 
   useEffect(() => {
     fetch('https://jsonplaceholder.typicode.com/posts')
-      .then((response) => response.json())
-      .then((data) => setPosts(data))
-      .catch((err) => {
+      .then(response => response.json())
+      .then(data => setPosts(data))
+      .catch(err => {
         console.log(err)
       })
   })
@@ -3155,9 +3033,9 @@ export const PostList = () => {
 
   useEffect(() => {
     fetch('https://jsonplaceholder.typicode.com/posts')
-      .then((response) => response.json())
-      .then((data) => setPosts(data))
-      .catch((err) => {
+      .then(response => response.json())
+      .then(data => setPosts(data))
+      .catch(err => {
         console.log(err)
       })
   }, [])
@@ -3181,9 +3059,9 @@ export const PostList = () => {
 
   useEffect(() => {
     fetch('https://jsonplaceholder.typicode.com/posts')
-      .then((response) => response.json())
-      .then((data) => setPosts(data))
-      .catch((err) => {
+      .then(response => response.json())
+      .then(data => setPosts(data))
+      .catch(err => {
         console.log(err)
       })
   }, [])
@@ -3213,9 +3091,9 @@ export const PostList = () => {
 
   useEffect(() => {
     fetch('https://jsonplaceholder.typicode.com/posts')
-      .then((response) => response.json())
-      .then((data) => setPosts(data))
-      .catch((err) => {
+      .then(response => response.json())
+      .then(data => setPosts(data))
+      .catch(err => {
         console.log(err)
       })
   }, [])
@@ -3223,7 +3101,7 @@ export const PostList = () => {
   return (
     <div>
       <ul>
-        {posts.map((post) => {
+        {posts.map(post => {
           return <li key={post.id}>{post.title}</li>
         })}
       </ul>
@@ -3340,13 +3218,22 @@ export const PostForm = () => {
   return (
     <form>
       <div>
-        <input type='text' placeholder='User ID' />
+        <input
+          type='text'
+          placeholder='User ID'
+        />
       </div>
       <div>
-        <input type='text' placeholder='Title' />
+        <input
+          type='text'
+          placeholder='Title'
+        />
       </div>
       <div>
-        <input type='text' placeholder='Body' />
+        <input
+          type='text'
+          placeholder='Body'
+        />
       </div>
     </form>
   )
@@ -3369,13 +3256,22 @@ export const PostForm = () => {
   return (
     <form>
       <div>
-        <input type='text' placeholder='User ID' />
+        <input
+          type='text'
+          placeholder='User ID'
+        />
       </div>
       <div>
-        <input type='text' placeholder='Title' />
+        <input
+          type='text'
+          placeholder='Title'
+        />
       </div>
       <div>
-        <input type='text' placeholder='Body' />
+        <input
+          type='text'
+          placeholder='Body'
+        />
       </div>
     </form>
   )
@@ -3401,13 +3297,22 @@ export const PostForm = () => {
   return (
     <form>
       <div>
-        <input type='text' placeholder='User ID' />
+        <input
+          type='text'
+          placeholder='User ID'
+        />
       </div>
       <div>
-        <input type='text' placeholder='Title' />
+        <input
+          type='text'
+          placeholder='Title'
+        />
       </div>
       <div>
-        <input type='text' placeholder='Body' />
+        <input
+          type='text'
+          placeholder='Body'
+        />
       </div>
     </form>
   )
@@ -3433,13 +3338,25 @@ export const PostForm = () => {
   return (
     <form>
       <div>
-        <input type='text' placeholder='User ID' value={userId} />
+        <input
+          type='text'
+          placeholder='User ID'
+          value={userId}
+        />
       </div>
       <div>
-        <input type='text' placeholder='Title' value={title} />
+        <input
+          type='text'
+          placeholder='Title'
+          value={title}
+        />
       </div>
       <div>
-        <input type='text' placeholder='Body' value={body} />
+        <input
+          type='text'
+          placeholder='Body'
+          value={body}
+        />
       </div>
     </form>
   )
@@ -3471,7 +3388,7 @@ export const PostForm = () => {
           type='text'
           placeholder='User ID'
           value={userId}
-          onChange={(e) => setUserId(e.target.value)}
+          onChange={e => setUserId(e.target.value)}
         />
       </div>
       <div>
@@ -3479,7 +3396,7 @@ export const PostForm = () => {
           type='text'
           placeholder='Title'
           value={title}
-          onChange={(e) => setTitle(e.target.value)}
+          onChange={e => setTitle(e.target.value)}
         />
       </div>
       <div>
@@ -3487,7 +3404,7 @@ export const PostForm = () => {
           type='text'
           placeholder='Body'
           value={body}
-          onChange={(e) => setBody(e.target.value)}
+          onChange={e => setBody(e.target.value)}
         />
       </div>
     </form>
@@ -3517,7 +3434,7 @@ export const PostForm = () => {
           type='text'
           placeholder='User ID'
           value={userId}
-          onChange={(e) => setUserId(e.target.value)}
+          onChange={e => setUserId(e.target.value)}
         />
       </div>
       <div>
@@ -3525,7 +3442,7 @@ export const PostForm = () => {
           type='text'
           placeholder='Title'
           value={title}
-          onChange={(e) => setTitle(e.target.value)}
+          onChange={e => setTitle(e.target.value)}
         />
       </div>
       <div>
@@ -3533,7 +3450,7 @@ export const PostForm = () => {
           type='text'
           placeholder='Body'
           value={body}
-          onChange={(e) => setBody(e.target.value)}
+          onChange={e => setBody(e.target.value)}
         />
       </div>
       <button type='submit'>Submit</button>
@@ -3556,7 +3473,7 @@ export const PostForm = () => {
   const [title, setTitle] = useState('')
   const [body, setBody] = useState('')
 
-  const submitHandler = (event) => {
+  const submitHandler = event => {
     event.preventDefault()
   }
   return (
@@ -3566,7 +3483,7 @@ export const PostForm = () => {
           type='text'
           placeholder='User ID'
           value={userId}
-          onChange={(e) => setUserId(e.target.value)}
+          onChange={e => setUserId(e.target.value)}
         />
       </div>
       <div>
@@ -3574,7 +3491,7 @@ export const PostForm = () => {
           type='text'
           placeholder='Title'
           value={title}
-          onChange={(e) => setTitle(e.target.value)}
+          onChange={e => setTitle(e.target.value)}
         />
       </div>
       <div>
@@ -3582,7 +3499,7 @@ export const PostForm = () => {
           type='text'
           placeholder='Body'
           value={body}
-          onChange={(e) => setBody(e.target.value)}
+          onChange={e => setBody(e.target.value)}
         />
       </div>
       <button type='submit'>Submit</button>
@@ -3602,7 +3519,7 @@ export const PostForm = () => {
   const [title, setTitle] = useState('')
   const [body, setBody] = useState('')
 
-  const submitHandler = (event) => {
+  const submitHandler = event => {
     event.preventDefault()
     fetch('https://jsonplaceholder.typicode.com/posts/1', {
       method: 'PUT',
@@ -3616,8 +3533,8 @@ export const PostForm = () => {
         'Content-type': 'application/json; charset=UTF-8',
       },
     })
-      .then((response) => response.json())
-      .then((json) => console.log(json))
+      .then(response => response.json())
+      .then(json => console.log(json))
   }
   return (
     <form onSubmit={submitHandler}>
@@ -3626,7 +3543,7 @@ export const PostForm = () => {
           type='text'
           placeholder='User ID'
           value={userId}
-          onChange={(e) => setUserId(e.target.value)}
+          onChange={e => setUserId(e.target.value)}
         />
       </div>
       <div>
@@ -3634,7 +3551,7 @@ export const PostForm = () => {
           type='text'
           placeholder='Title'
           value={title}
-          onChange={(e) => setTitle(e.target.value)}
+          onChange={e => setTitle(e.target.value)}
         />
       </div>
       <div>
@@ -3642,7 +3559,7 @@ export const PostForm = () => {
           type='text'
           placeholder='Body'
           value={body}
-          onChange={(e) => setBody(e.target.value)}
+          onChange={e => setBody(e.target.value)}
         />
       </div>
       <button type='submit'>Submit</button>
@@ -3662,7 +3579,7 @@ export const PostForm = () => {
   const [title, setTitle] = useState('')
   const [body, setBody] = useState('')
 
-  const submitHandler = (event) => {
+  const submitHandler = event => {
     event.preventDefault()
     fetch('https://jsonplaceholder.typicode.com/posts/1', {
       method: 'PUT',
@@ -3676,8 +3593,8 @@ export const PostForm = () => {
         'Content-type': 'application/json; charset=UTF-8',
       },
     })
-      .then((response) => response.json())
-      .then((json) => console.log(json))
+      .then(response => response.json())
+      .then(json => console.log(json))
   }
   return (
     <form onSubmit={submitHandler}>
@@ -3686,7 +3603,7 @@ export const PostForm = () => {
           type='text'
           placeholder='User ID'
           value={userId}
-          onChange={(e) => setUserId(e.target.value)}
+          onChange={e => setUserId(e.target.value)}
         />
       </div>
       <div>
@@ -3694,7 +3611,7 @@ export const PostForm = () => {
           type='text'
           placeholder='Title'
           value={title}
-          onChange={(e) => setTitle(e.target.value)}
+          onChange={e => setTitle(e.target.value)}
         />
       </div>
       <div>
@@ -3702,7 +3619,7 @@ export const PostForm = () => {
           type='text'
           placeholder='Body'
           value={body}
-          onChange={(e) => setBody(e.target.value)}
+          onChange={e => setBody(e.target.value)}
         />
       </div>
       <button type='submit'>Submit</button>
@@ -3868,7 +3785,7 @@ import NAMES from './components/data.json'
 function App() {
   return (
     <div className='App'>
-      {NAMES.map((item) => (
+      {NAMES.map(item => (
         <p key={item.id}>
           {item.first_name} {item.last_name}
         </p>
@@ -3900,7 +3817,7 @@ import { useState } from 'react'
 function App() {
   return (
     <div className='App'>
-      {NAMES.map((item) => (
+      {NAMES.map(item => (
         <p key={item.id}>
           {item.first_name} {item.last_name}
         </p>
@@ -3928,7 +3845,7 @@ function App() {
   const [query, setQuery] = useState('')
   return (
     <div className='App'>
-      {NAMES.map((item) => (
+      {NAMES.map(item => (
         <p key={item.id}>
           {item.first_name} {item.last_name}
         </p>
@@ -3957,8 +3874,12 @@ function App() {
   const [query, setQuery] = useState('')
   return (
     <div className='App'>
-      <input type='text' value={query} onChange={changeHandler} />
-      {NAMES.map((item) => (
+      <input
+        type='text'
+        value={query}
+        onChange={changeHandler}
+      />
+      {NAMES.map(item => (
         <p key={item.id}>
           {item.first_name} {item.last_name}
         </p>
@@ -3982,13 +3903,17 @@ value
 ```js
 function App() {
   const [query, setQuery] = useState('')
-  const changeHandler = (event) => {
+  const changeHandler = event => {
     setQuery(event.target.value)
   }
   return (
     <div className='App'>
-      <input type='text' value={query} onChange={changeHandler} />
-      {NAMES.map((item) => (
+      <input
+        type='text'
+        value={query}
+        onChange={changeHandler}
+      />
+      {NAMES.map(item => (
         <p key={item.id}>
           {item.first_name} {item.last_name}
         </p>
@@ -4016,16 +3941,20 @@ import { useState } from 'react'
 
 function App() {
   const [query, setQuery] = useState('')
-  const changeHandler = (event) => {
+  const changeHandler = event => {
     setQuery(event.target.value)
-    const filteredNames = NAMES.filter((item) => {
+    const filteredNames = NAMES.filter(item => {
       return item.filter_name.includes(query) || item.last_name.includes(query)
     })
   }
   return (
     <div className='App'>
-      <input type='text' value={query} onChange={changeHandler} />
-      {NAMES.map((item) => (
+      <input
+        type='text'
+        value={query}
+        onChange={changeHandler}
+      />
+      {NAMES.map(item => (
         <p key={item.id}>
           {item.first_name} {item.last_name}
         </p>
@@ -4046,16 +3975,20 @@ import { useState } from 'react'
 
 function App() {
   const [query, setQuery] = useState('')
-  const changeHandler = (event) => {
+  const changeHandler = event => {
     setQuery(event.target.value)
-    const filteredNames = NAMES.filter((item) => {
+    const filteredNames = NAMES.filter(item => {
       return item.filter_name.includes(query) || item.last_name.includes(query)
     })
   }
   return (
     <div className='App'>
-      <input type='text' value={query} onChange={changeHandler} />
-      {filteredNames.map((item) => (
+      <input
+        type='text'
+        value={query}
+        onChange={changeHandler}
+      />
+      {filteredNames.map(item => (
         <p key={item.id}>
           {item.first_name} {item.last_name}
         </p>
@@ -4130,16 +4063,20 @@ import { useState, useTransition } from 'react'
 
 function App() {
   const [query, setQuery] = useState('')
-  const changeHandler = (event) => {
+  const changeHandler = event => {
     setQuery(event.target.value)
-    const filteredNames = NAMES.filter((item) => {
+    const filteredNames = NAMES.filter(item => {
       return item.filter_name.includes(query) || item.last_name.includes(query)
     })
   }
   return (
     <div className='App'>
-      <input type='text' value={query} onChange={changeHandler} />
-      {filteredNames.map((item) => (
+      <input
+        type='text'
+        value={query}
+        onChange={changeHandler}
+      />
+      {filteredNames.map(item => (
         <p key={item.id}>
           {item.first_name} {item.last_name}
         </p>
@@ -4161,16 +4098,20 @@ import { useState, useTransition } from 'react'
 function App() {
   const [query, setQuery] = useState('')
   useTransition()
-  const changeHandler = (event) => {
+  const changeHandler = event => {
     setQuery(event.target.value)
-    const filteredNames = NAMES.filter((item) => {
+    const filteredNames = NAMES.filter(item => {
       return item.filter_name.includes(query) || item.last_name.includes(query)
     })
   }
   return (
     <div className='App'>
-      <input type='text' value={query} onChange={changeHandler} />
-      {filteredNames.map((item) => (
+      <input
+        type='text'
+        value={query}
+        onChange={changeHandler}
+      />
+      {filteredNames.map(item => (
         <p key={item.id}>
           {item.first_name} {item.last_name}
         </p>
@@ -4196,16 +4137,20 @@ import { useState, useTransition } from 'react'
 function App() {
   const [query, setQuery] = useState('')
   const [isPending, startTransition] = useTransition()
-  const changeHandler = (event) => {
+  const changeHandler = event => {
     setQuery(event.target.value)
-    const filteredNames = NAMES.filter((item) => {
+    const filteredNames = NAMES.filter(item => {
       return item.filter_name.includes(query) || item.last_name.includes(query)
     })
   }
   return (
     <div className='App'>
-      <input type='text' value={query} onChange={changeHandler} />
-      {filteredNames.map((item) => (
+      <input
+        type='text'
+        value={query}
+        onChange={changeHandler}
+      />
+      {filteredNames.map(item => (
         <p key={item.id}>
           {item.first_name} {item.last_name}
         </p>
@@ -4232,16 +4177,20 @@ function App() {
   const [query, setQuery] = useState('')
   const [inputValue, setInputValue] = useState('')
   const [isPending, startTransition] = useTransition()
-  const changeHandler = (event) => {
+  const changeHandler = event => {
     setQuery(event.target.value)
-    const filteredNames = NAMES.filter((item) => {
+    const filteredNames = NAMES.filter(item => {
       return item.filter_name.includes(query) || item.last_name.includes(query)
     })
   }
   return (
     <div className='App'>
-      <input type='text' value={query} onChange={changeHandler} />
-      {filteredNames.map((item) => (
+      <input
+        type='text'
+        value={query}
+        onChange={changeHandler}
+      />
+      {filteredNames.map(item => (
         <p key={item.id}>
           {item.first_name} {item.last_name}
         </p>
@@ -4265,16 +4214,20 @@ function App() {
   const [query, setQuery] = useState('')
   const [inputValue, setInputValue] = useState('')
   const [isPending, startTransition] = useTransition()
-  const changeHandler = (event) => {
+  const changeHandler = event => {
     setQuery(event.target.value)
-    const filteredNames = NAMES.filter((item) => {
+    const filteredNames = NAMES.filter(item => {
       return item.filter_name.includes(query) || item.last_name.includes(query)
     })
   }
   return (
     <div className='App'>
-      <input type='text' value={inputValue} onChange={changeHandler} />
-      {filteredNames.map((item) => (
+      <input
+        type='text'
+        value={inputValue}
+        onChange={changeHandler}
+      />
+      {filteredNames.map(item => (
         <p key={item.id}>
           {item.first_name} {item.last_name}
         </p>
@@ -4298,16 +4251,20 @@ function App() {
   const [query, setQuery] = useState('')
   const [inputValue, setInputValue] = useState('')
   const [isPending, startTransition] = useTransition()
-  const changeHandler = (event) => {
+  const changeHandler = event => {
     setInputValue(event.target.value)
-    const filteredNames = NAMES.filter((item) => {
+    const filteredNames = NAMES.filter(item => {
       return item.filter_name.includes(query) || item.last_name.includes(query)
     })
   }
   return (
     <div className='App'>
-      <input type='text' value={inputValue} onChange={changeHandler} />
-      {filteredNames.map((item) => (
+      <input
+        type='text'
+        value={inputValue}
+        onChange={changeHandler}
+      />
+      {filteredNames.map(item => (
         <p key={item.id}>
           {item.first_name} {item.last_name}
         </p>
@@ -4339,18 +4296,22 @@ function App() {
   const [inputValue, setInputValue] = useState('')
   const [isPending, startTransition] = useTransition()
 
-  const changeHandler = (event) => {
+  const changeHandler = event => {
     setInputValue(event.target.value)
     startTransition(() => setQuery(event.target.value))
 
-    const filteredNames = NAMES.filter((item) => {
+    const filteredNames = NAMES.filter(item => {
       return item.filter_name.includes(query) || item.last_name.includes(query)
     })
   }
   return (
     <div className='App'>
-      <input type='text' value={inputValue} onChange={changeHandler} />
-      {filteredNames.map((item) => (
+      <input
+        type='text'
+        value={inputValue}
+        onChange={changeHandler}
+      />
+      {filteredNames.map(item => (
         <p key={item.id}>
           {item.first_name} {item.last_name}
         </p>
@@ -4380,18 +4341,22 @@ function App() {
   const [inputValue, setInputValue] = useState('')
   const [isPending, startTransition] = useTransition()
 
-  const changeHandler = (event) => {
+  const changeHandler = event => {
     setInputValue(event.target.value)
     startTransition(() => setQuery(event.target.value))
   }
-  const filteredNames = NAMES.filter((item) => {
+  const filteredNames = NAMES.filter(item => {
     return item.filter_name.includes(query) || item.last_name.includes(query)
   })
   return (
     <div className='App'>
-      <input type='text' value={inputValue} onChange={changeHandler} />
+      <input
+        type='text'
+        value={inputValue}
+        onChange={changeHandler}
+      />
       {isPending && <p>Updating list...</p>}
-      {filteredNames.map((item) => (
+      {filteredNames.map(item => (
         <p key={item.id}>
           {item.first_name} {item.last_name}
         </p>
@@ -4419,7 +4384,6 @@ this is the only new feature from react 18 that you need to be concerned about
 other features include automatic batching which is out of the box and you don't have to write any additional code
 and a few other features related to suspense and server-side rendering which are again advanced
 topics
-
 
 ### **=>** Further learning
 

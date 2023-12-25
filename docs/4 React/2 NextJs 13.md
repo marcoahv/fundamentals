@@ -1,5 +1,5 @@
 ---
-sidebar_position: 1
+sidebar_position: 2
 ---
 
 # Next.js 13
@@ -284,11 +284,11 @@ export default function Page() {
 }
 ```
 
-#### delete the public folder and everything in it
+- delete the public folder and everything in it
 
-#### create a styles folder at the root of the app
+- create a styles folder at the root of the app
 
-#### in the styles folder add a globals.css file...
+- in the styles folder add a globals.css file...
 
 ```css
 html,
