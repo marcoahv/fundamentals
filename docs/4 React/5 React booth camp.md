@@ -120,13 +120,28 @@ And since we're calling the function here, it takes that undefined value and thi
 
 Using an argument passed to the `createButton` function, make it possible to dynamically change the first word within our button.
 
+```js
+function createButton(text) {
+  return `<button>${text}</button>`
+}
+
+const app = document.getElementById('app')
+app.innerHTML = createButton('Dislike Video')
+```
+
 #### Transcript
 
 In moving from JavaScript to React, we learned that functions really make it possible to add a lot of reusable elements to our applications. We saw that in the last example.
 
-Right now we have just a button that says `"like video"`. Using what we saw before, we could create a function with the name `createButton` where we might return the text.
+Right now we have just a button that says `"like video"`.
 
-Using template literals, we can once again call `createButton` here. But keep in mind that we can take the other parts of this string, the button tags and add them to the return value of our function like this. And we're still--when we remove those button tags within the string here--we're still creating our button.
+![](ReactImages/6.png)
+
+Using what we saw before, we could create a function with the name `createButton` where we might return the text.
+
+Using template literals, we can once again call `createButton` here.
+
+But keep in mind that we can take the other parts of this string, the button tags and add them to the return value of our function like this. And we're still--when we remove those button tags within the string here--we're still creating our button.
 
 We can go a step further and remove those tags, those template string tags, entirely.
 
