@@ -43,6 +43,15 @@ Let's dive in!
 
 Make our app display the text "Hello Python" using the function `getLanguage`.
 
+```js
+function getLanguage() {
+  'python'
+}
+
+const app = document.getElementById('app')
+app.innerHTML = `<h1>Hello </h1>`
+```
+
 Make sure to use the string ("python") that is already within the function. Use it to create the desired output in the `h1`.
 
 #### Transcript
@@ -51,13 +60,20 @@ In our app, we're displaying an `h1` using JavaScript.
 
 And if we want to change the string content here, for example, to say `"Hello JavaScript"`, that's going to change what we see in the HTML.
 
+![](ReactImages/1.png)
+
 But this is entirely static. So to make this dynamic, we can create a variable called `language`, we can take this value, put string value in the language variable, and output it here.
 
-To do that easily, we can use backticks, called template literals. And then insert our value using this dollar sign and curly brace syntax `${}`, and then just put in whatever dynamic value we want. In this case, its `language`.
+To do that easily, we can use backticks, called template literals. And then insert our value using this dollar sign and curly brace syntax `${}`, and then just put in whatever dynamic value we want.
+In this case, its `language`.
 
 So now if we were to say, `"Hello Python"`, this would update the UI.
 
+![](ReactImages/2.png)
+
 In this challenge, you need to display the text content that we just had ("Hello Python"), but using this function.
+
+![](ReactImages/3.png)
 
 #### SOLUTION
 
@@ -67,17 +83,32 @@ Then, make sure to call the function `getLanguage()` within the template string.
 
 Also make sure not to pass it as a reference but to call the function.
 
+```js
+function getLanguage() {
+  return 'python'
+}
+
+const app = document.getElementById('app')
+app.innerHTML = `<h1>Hello ${getLanguage()}</h1>`
+```
+
 #### Transcript
 
-To display Hello Python in our app user interface, we need to figure out how to have get language actually output the string Python in the HTML that we're creating here.
+To display Hello Python in our app user interface, we need to figure out how to have `getLanguage` actually output the string "Python" in the HTML that we're creating here.
 
-To do that, we need to return the text Python. So we need to add the return keyword first. To use an expression expression is just something that resolves to a value in JavaScript, we need to output it with our dollar sign and curly brace syntax.
+To do that, we need to return the text Python. So we need to add the `return` keyword first.
+
+To use an expression, expression is just something that resolves to a value in JavaScript, we need to output it with our dollar sign and curly brace syntax.
 
 And instead of just passing it as a reference here, says to pass it as a reference, we need to call this to make sure it resolves to an expression, in this case, the string Python.
 
 So now if we save, we see hello Python in lowercase and change that to be a capitalized string.
 
+![](ReactImages/4.png)
+
 And mind you if we did not have this return keyword if we had just Python here in the body of our function, we would see hello undefined because the implicit behavior of a function if you do not have a return keyword is to return undefined.
+
+![](ReactImages/5.png)
 
 And since we're calling the function here, it takes that undefined value and this dollar sign and curly brace syntax converts it to a string so therefore we see hello undefined
 
