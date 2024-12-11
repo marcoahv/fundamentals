@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# Vim Practice
+# Vim Shortcuts
 
 ## From the editor
 
@@ -58,6 +58,12 @@ sidebar_position: 1
 
         ALT + k
 
+## **Practice One**
+
+```jsx
+
+```
+
 ## From the terminal
 
 - Toggle Terminal/focus
@@ -79,6 +85,12 @@ sidebar_position: 1
 - Close Terminal
 
         CMD + w
+
+## **Practice Two**
+
+```jsx
+
+```
 
 ## From the file tree
 
@@ -114,6 +126,12 @@ sidebar_position: 1
 
         d
 
+## **Practice Three**
+
+```jsx
+
+```
+
 ## Basic navigation
 
 - left / down / up / right
@@ -123,6 +141,12 @@ sidebar_position: 1
 - navigate in any direction more than one space
 
         NUMBER then LETTER (ea. 13j)
+
+## **Practice Four**
+
+```jsx
+
+```
 
 ## In-line navigation
 
@@ -161,6 +185,12 @@ sidebar_position: 1
 - Find/Move to the next occurrence of a character to the left
 
         F then <char>
+
+## **Practice Five**
+
+```jsx
+
+```
 
 ## Vertical Navigation
 
@@ -204,6 +234,16 @@ sidebar_position: 1
 
         gg
 
+- Toggle between enclosing characters like (), {}, [],
+
+        %
+
+## **Practice Six**
+
+```jsx
+
+```
+
 ## Entering Insert mode
 
 - Insert before the cursor.
@@ -230,6 +270,12 @@ sidebar_position: 1
 
         O
 
+## **Practice Seven**
+
+```jsx
+
+```
+
 ## Change or Replace
 
 - delete the word from the cursor position to the end of the word and put you into insert mode
@@ -239,6 +285,32 @@ sidebar_position: 1
 - Replace a character under the cursor
 
         r <new char>
+
+- Toggle the case of a character
+
+        ~
+
+- Increase the number under the cursor by 1
+
+        Ctrl + a
+
+- Decrease the number under the cursor by 1
+
+        Ctrl + x
+
+- Increase a Number by a Specific Amount
+
+        10 Ctrl + a
+
+- Decrease a Number by a Specific Amount
+
+        10 Ctrl + x
+
+## **Practice Eight**
+
+```jsx
+
+```
 
 ## Copy and paste
 
@@ -261,3 +333,208 @@ sidebar_position: 1
 - Yank the line
 
         yy
+
+- Yank Inside a Pair of characters (not including the pair of characters)
+
+        yi( / yi{ / yi[ / yi< / yi' / yi" / yi`
+
+- Yank around a Pair of characters (including the pair of characters)
+
+        ya( / ya{ / ya[ / ya< / ya' / ya" / ya`
+
+- Yank a Tag Block (including the parent tag)
+
+        yat
+
+- Yank Inside a Tag Block (tag content only)
+
+        yit
+
+## **Practice Nine**
+
+```jsx
+
+```
+
+## undo and redo
+
+- Undo the last change
+
+        u (can be pressed repeatedly to undo multiple changes.)
+
+- Redo Last Undone Change
+
+        Ctrl + r (can be pressed repeatedly to redo multiple changes.)
+
+- Redo last command
+
+        . (can be pressed repeatedly to redo multiple changes.)
+
+## **Practice Ten**
+
+```jsx
+
+```
+
+## Deleting
+
+- Delete the character or space under the cursor
+
+        x
+
+- Delete the character or space before the cursor
+
+        X
+
+- Delete from the cursor to the end of the word (excluding the space after it).
+
+        dw
+
+- Delete the entire word including the space after it.
+
+        daw
+
+- Delete the inner word (excluding the space around it).
+
+        diw
+
+- Delete the entire current line.
+
+        dd
+
+- Delete n lines starting from the current line
+
+        ndd (For example, 3dd )
+
+- Delete from the cursor to the end of the line.
+
+        <shift> d
+
+- Delete from the cursor to the beginning of the line (excluding the character under the cursor).
+
+        d0
+
+## **Practice Eleven**
+
+```jsx
+
+```
+
+## Searching
+
+- Search forward for pattern (term)
+
+        /pattern THEN <enter>
+
+- Clear the search highlight.
+
+        :noh
+
+- Search backward for pattern (term)
+
+        ?pattern THEN <enter>
+
+- Repeat the last search in the same direction (forward or backward).
+
+        n
+
+- Repeat the last search in the opposite direction.
+
+        N
+
+- Search forward for the next instance of the word under the cursor.
+
+        *
+
+- Search backward for the previous instance of the word under the cursor.
+
+        #
+
+- Toggle between the last visited places
+
+        ``
+
+- Toggle between the last edited places
+
+        `.
+
+## **Practice Twelve**
+
+```jsx
+
+```
+
+## Visual mode
+
+- Character-wise Visual Mode
+
+        v (This mode allows you to select text character by character.)
+          Move the cursor to select the desired range of characters.
+
+- Line-wise Visual Mode
+
+        V (This mode allows you to select entire lines.)
+          Use movement keys to extend the selection to additional lines.
+
+- Block-wise Visual Mode
+
+        Ctrl + v (This mode allows you to select a rectangular block of text, useful for columnar operations.)
+                 Use movement keys to extend the selection to form a rectangle.
+
+## **Practice Thirteen**
+
+```jsx
+
+```
+
+## Common Operations in Visual Modes
+
+Deletes the selected text.
+
+        d
+
+Copies the selected text.
+
+        y
+
+Changes the selected text by deleting it and entering insert mode.
+
+        c
+
+Indents the selected text to the right.
+
+        >
+
+Un-indents the selected text to the left.
+
+        <
+
+## **Practice Fourteen**
+
+```jsx
+
+```
+
+## Folding code blocks
+
+- Close the fold under the cursor.
+
+        zc
+
+- Open the fold under the cursor.
+
+        zo
+
+- Close all folds in file
+
+        zM
+
+- Open all folds in file
+
+        zR
+
+## **Practice Fifteen**
+
+```jsx
+
+```
