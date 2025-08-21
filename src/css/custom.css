@@ -80,11 +80,12 @@ h1 {
   padding: 7px;
   border-radius: 5px;
   display: inline-block;
-  /* background-color: #2e2d48; */
+  background-color: #2d2d2d;
+  padding: 0.6rem;
 }
 
 [data-theme='dark'] strong {
-  color: rgba(245, 95, 207, 0.968);
+  color: rgba(76, 217, 248, 0.9);
   border-radius: 5px;
   display: inline-block;
   /* background-color: #2e2d48; */
@@ -95,7 +96,7 @@ h1 {
   color: rgba(255, 213, 5, 0.677);
   border-radius: 5px;
   display: inline-block;
-  background-color: #2e2d48;
+  background-color: #000000;
 }
 
 [data-theme='dark'] details {
